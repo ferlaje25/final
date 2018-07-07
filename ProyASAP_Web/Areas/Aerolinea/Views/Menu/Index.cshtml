@@ -1,0 +1,97 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    //Layout = "~/Areas/Aerolinea/Views/_ViewStart.cshtml";
+}
+<style>
+    html, body {
+        background-image: url('../../../../Imagenes/Aerolinea/Fondo_Menu.jpg');
+        height: 100%;
+        margin: 0;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    divtablatriptec {
+        background-color: #66a3ff;
+        color: #66a3ff;
+    }
+
+    .table-wrapper-2 {
+        display: block;
+        max-height: 200px;
+        overflow-y: auto;
+        -ms-overflow-style: -ms-autohiding-scrollbar;
+        background-color: #66a3ff;
+    }
+
+    .highlight {
+        background-color: dodgerblue;
+    }
+</style>
+
+
+
+
+
+<div class="card text-center">
+    <div class="card-header bg-dark text-white text-center">
+       <h1>GESTION</h1>
+    </div>
+    <div class="row align-content-sm-center">
+        <div class="col ">
+            <div class="card border-info w-100 h-100">
+                <div class="card-body">
+                    <h5 class="card-title">GESTION DE VUELOS</h5>
+                    <br />
+                    <p class="card-text">Este menu crea, monitorea y actualiza las programaciones de vuelos.</p>                   
+                    <img src="~/Imagenes/Aerolinea/Gestion_Vuelox1.png" />
+                    <br />
+                    <br />
+                    <a href="#" class="btn btn-info w-50" id="btnPrograVuelo">  Ir  </a>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card border-info w-100 h-100">
+                <div class="card-body">
+                    <h5 class="card-title">GESTION DE LAS AGENCIAS DE VIAJES</h5>
+                    <p class="card-text">Este menu crea, monitorea y actualiza las gestiones con respecto a las agencias.</p>
+                    <img src="~/Imagenes/Aerolinea/Gestion_Agencia.jpg" />
+                    <br />
+                    <br />
+                    <a href="#" class="btn btn-info w-50" id="btnAgencia">  Ir  </a>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card border-info w-100 h-100">
+                <div class="card-body">
+                    <h5 class="card-title">GESTION DEL PERSONAL</h5>
+                    <br />
+                    <p class="card-text">Este menu gestiona todo lo relacionado al personal de la aerolinea.</p>
+                    <img src="~/Imagenes/Aerolinea/Gestion_Personal.jpg" />
+                    <br />
+                    <br />
+                    <a href="#" class="btn btn-info w-50" id="btnPersonal">  Ir  </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    </div>
+
+<script>
+
+    $('#btnPrograVuelo').click(function () { //vista-controlador-area
+        window.location.href ="@Url.Action("MenuAerolinea","AerolineaMenu",new { area = "Aerolinea" })"
+    })
+    $('#btnAgencia').click(function () {
+        window.location.href ="@Url.Action("MenuAgencia","Agencia_Viaje",new { area = "Aerolinea" })"
+    })
+    $('#btnPersonal').click(function () {
+        window.location.href ="@Url.Action("MenuPersonal","Sancion",new { area = "Aerolinea" })"
+    })
+
+</script>

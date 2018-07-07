@@ -1,0 +1,138 @@
+﻿@using BL_ASAP;
+@using BE_ASAP;
+@{
+    //ViewBag.Title = "VuelosTripulacion";
+
+
+    //------------------Tripulación
+    List<Tripulacion> selec5 = (List<Tripulacion>)Session["TripulacionSelec"];
+    List<int> idselecAT = new List<int>();
+    //Si está seleccionado como jefe, no puede ser seleccionado como auxiliar de tripulación
+    //
+    foreach (Tripulacion auxcab in selec5.Where(x => x.IdRolTrip == 3).ToList())
+    {
+        idselecAT.Add(auxcab.IdEmpleTrip);
+    }
+    //Listado de Auxiliar de Tripulación seleccionados
+    List<int> idauxtripsel = new List<int>();
+    foreach (Tripulacion capsel in selec5.Where(x => x.IdRolTrip == 4).ToList())
+    {
+        idauxtripsel.Add(capsel.IdEmpleTrip);
+    }
+    //---------------------T
+
+}
+<style>
+    .table-wrapper-2 {
+        display: block;
+        max-height: 200px;
+        overflow-y: auto;
+        -ms-overflow-style: -ms-autohiding-scrollbar;
+        background-color: #ffb84d;
+    }
+</style>
+<br>
+<h2>Personal de Atención:</h2>
+<h3 class="text-center bg-warning">Auxiliar de Atención:</h3>
+<div class="container">
+    <div class="table-wrapper-2">
+        <table class="table table-hover" id="divtablatriptec">
+            <thead>
+                <tr>
+
+                    <th>Apellido</th>
+                    <th>Nombre</th>
+                    <th>Cantidad de Sanciones</th>
+                    <th>Disponibilidad</th>
+                    <th>¿Tripulación actual?</th>
+                </tr>
+            </thead>
+            <tbody>
+                @{List<Empleado> EmpleadosPorRolAtencion = BLEmpleado.EmpleadosPorRol("Atención");
+                }
+
+                @foreach (Empleado item in EmpleadosPorRolAtencion)
+            {
+                //----------Tripulación
+                if (!idselecAT.Contains(item.Id_Empleado))
+                {
+
+
+                        <tr>
+                            @{
+                                int cant = BLSancion.CantSancion(item.Id_Empleado);
+                            }
+                            <th>@item.Nombre_Emp</th>
+                            <th>@item.Apellidos_Emp</th>
+                            <th>@cant</th>
+                            <th>Disponible</th>
+                            <th>
+                                <div class="form-check">
+                                    <label>
+                                        @*--------------------Tripulación-----------------*@
+                                        @if (idauxtripsel.Contains(item.Id_Empleado))
+                                        {
+                                            <input class="chkAuxTrip" data-idemp=@item.Id_Empleado type="checkbox" name="check" checked="checked"> <span class="label-text"></span>
+                                        }
+                                        else
+                                        {
+                                            <input class="chkAuxTrip" data-idemp=@item.Id_Empleado type="checkbox" name="check"> <span class="label-text"></span>
+                                        }
+
+
+                                    </label>
+                                </div>
+                            </th>
+                        </tr>
+                                    }
+                                }
+            </tbody>
+
+        </table>
+    </div>
+    <button type="button" class="btn btn-primary align-content-end" id="btnRegistrar">Registrar Programacion</button>
+
+</div>
+
+@*---------------------Tripulación--------------------------*@
+<script>
+    $('.chkAuxTrip').click(function () {
+        if ($(this).is(':checked')) {
+
+            var id = $(this).attr("data-idemp");
+            $.ajax({
+                type: "POST",
+                url: "/Aerolinea/AerolineaMenu/FiltrarTabla",
+                data: { idselec:id, rol:4 },
+                success: function (html) {
+                    alert(/*id */ "AUXILIAR DE TRIPULACION SELECCIONADO");
+
+                }
+            });
+
+        } else {
+            var id = $(this).attr("data-idemp");
+
+            $.ajax({
+                type: "POST",
+                url: "/Aerolinea/AerolineaMenu/DeshacerFiltro",
+                data: { idselec: id, rol: 1 },
+                success: function (html) {
+                    //alert("Deselección");
+
+                }
+            });
+        }
+    });
+    $("#btnRegistrar").click(function () {
+        $.ajax({
+            type: "POST",
+            url: "/Aerolinea/AerolineaMenu/RegistrarProgramacionVuelo",
+            success: function (html) {
+                alert("PROGRAMACION DE VUELO REGISTRADO");
+
+            }
+        });
+    });
+
+</script>

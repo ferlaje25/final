@@ -1,0 +1,218 @@
+﻿
+
+<input id="btnNuevoAgencia" type="button" value="Crear Agencia" class="btn btn-success" />
+<br />
+<br />
+<div id="divListadoAgencia">
+
+</div>
+
+<div id="myModalFormAgencia" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="gridSystemModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="gridSystemModalLabel">Registrar Agencia</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-4">.col-md-4</div>
+                    <div class="col-md-4 col-md-offset-4">.col-md-4 .col-md-offset-4</div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3 col-md-offset-3">.col-md-3 .col-md-offset-3</div>
+                    <div class="col-md-2 col-md-offset-4">.col-md-2 .col-md-offset-4</div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 col-md-offset-3">.col-md-6 .col-md-offset-3</div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-9">
+                        Level 1: .col-sm-9
+                        <div class="row">
+                            <div class="col-xs-8 col-sm-6">
+                                Level 2: .col-xs-8 .col-sm-6
+                            </div>
+                            <div class="col-xs-4 col-sm-6">
+                                Level 2: .col-xs-4 .col-sm-6
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                <button id="btnGrabarAgencia" type="button" class="btn btn-primary">Grabar</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<script>
+
+    CargarListadoAgencia();
+
+    function CargarListadoAgencia() {
+
+        $.ajax({
+            type: "POST",
+            url: "/Aerolinea/Agencia_Viaje/Listado",
+            success: function (html) {
+                $("#divListadoAgencia").html(html);
+            }
+        });
+    }
+
+    $('#btnNuevoAgencia').click(function () {
+        var modal = $("#myModalFormAgencia");
+        $.ajax({
+            type: "POST",
+            url: "/Aerolinea/Agencia_Viaje/Crear",
+            success: function (html) {
+                modal.find(".modal-body").html(html);
+                modal.modal();
+            }
+        });
+    });
+
+    $('#divListadoAgencia').on('click', '.btnEditarAgencia', function () {
+        var modal = $("#myModalFormAgencia");
+        var vIdAgencia = $(this).attr("data-codigo");
+       
+        $.ajax({
+            type: "POST",
+            url: "/Aerolinea/Agencia_Viaje/EditarAgencia",
+            data: { idAgencia: vIdAgencia },
+            success: function (html) {
+                //CargarListadoAgencia();
+                modal.find(".modal-body").html(html);
+                modal.modal();
+            }
+        });
+    });
+
+    $('#btnGrabarAgencia').click(function () {
+
+        var res = validar();
+        if (res == false) {
+            return false;
+        }
+
+        var modal = $("#myModalFormAgencia");
+        var vIdAgencia = modal.find("#hidAgencia").val();
+        var vRazon_Social = modal.find("#txtRazon_Social").val();
+        var vId_Tipo_Documento = modal.find("#cboDocumento").val();
+        var vNum_Documento = modal.find("#txtNum_Documento").val();
+        var vId_Ubigeo = modal.find("#cboUbigeo").val();
+        var vDireccion = modal.find("#txtDireccion").val();
+        var vRepresentante_Legal = modal.find("#txtRepresentante_Legal").val();
+        var vTelefono = modal.find("#txtTelefono").val();
+        var vEstado = modal.find("#txtEstado").val();
+
+
+        if (vIdAgencia != null) {
+            $.ajax({
+                type: "POST",
+                url: "/Aerolinea/Agencia_Viaje/ActualizarAgencia",
+                data: { IdAgencia:vIdAgencia,Razon_Social: vRazon_Social, Id_Tipo_Documento: vId_Tipo_Documento, Num_Documento: vNum_Documento, Id_Ubigeo: vId_Ubigeo, Direccion: vDireccion, Representante_Legal: vRepresentante_Legal, Telefono: vTelefono, Estado: vEstado},
+                success: function (html) {
+                //    alert("vvk");
+                    CargarListadoAgencia();
+                    modal.modal("toggle");
+                }
+            });
+        } else {
+            //Crear
+            $.ajax({
+                type: "POST",
+                url: "/Aerolinea/Agencia_Viaje/GrabarAgencia",
+                data: { Razon_Social: vRazon_Social, Id_Tipo_Documento: vId_Tipo_Documento, Num_Documento: vNum_Documento, Id_Ubigeo: vId_Ubigeo, Direccion: vDireccion, Representante_Legal: vRepresentante_Legal, Telefono: vTelefono, Estado: vEstado },
+                success: function (html) {
+                 //   alert("kkk");
+                    CargarListadoAgencia();
+                    modal.modal("toggle");
+                }
+            });
+        }
+    })
+
+    $('#divListadoAgencia').on('click', '.btnEliminarAgencia', function () {
+        var vIdAgencia = $(this).attr("data-codigo")
+        if (confirm("Esta seguro de eliminar el registro?")) {
+
+            $.ajax({
+                type: "POST",
+                url: "/Aerolinea/Agencia_Viaje/EliminarAgencia",
+                data: { idAgencia: vIdAgencia },
+                success: function (html) {
+                    CargarListadoAgencia();
+                }
+            });
+        } else
+        {
+            alert("Cancelar");
+        }
+    });
+
+    function validar() {
+        var valido = true;
+        if ($('#txtRazon_Social').val().trim() == "") {
+            $('#txtRazon_Social').css('border-color', 'Red');
+            valido = false;
+        }
+        else {
+            $('#txtRazon_Social').css('border-color', 'lightgrey');
+        }
+        //if ($('#cboDocumento').val().trim() == "") {
+        //    $('#cboDocumento').css('border-color', 'Red');
+        //    valido = false;
+        //}
+        //else {
+        //    $('#cboDocumento').css('border-color', 'lightgrey');
+        //}
+        if ($('#txtNum_Documento').val().trim() == "") {
+            $('#txtNum_Documento').css('border-color', 'Red');
+            valido = false;
+        }
+        else {
+            $('#txtNum_Documento').css('border-color', 'lightgrey');
+        }
+        //if ($('#cboUbigeo').val().trim() == "") {
+        //    $('#cboUbigeo').css('border-color', 'Red');
+        //    valido = false;
+        //}
+        //else {
+        //    $('#cboUbigeo').css('border-color', 'lightgrey');
+        //}
+        if ($('#txtDireccion').val().trim() == "") {
+            $('#txtDireccion').css('border-color', 'Red');
+            valido = false;
+        }
+        else {
+            $('#txtDireccion').css('border-color', 'lightgrey');
+        }
+        if ($('#txtRepresentante_Legal').val().trim() == "") {
+            $('#txtRepresentante_Legal').css('border-color', 'Red');
+            valido = false;
+        }
+        else {
+            $('#txtRepresentante_Legal').css('border-color', 'lightgrey');
+        }
+        if ($('#txtTelefono').val().trim() == "") {
+            $('#txtTelefono').css('border-color', 'Red');
+            valido = false;
+        }
+        else {
+            $('#txtTelefono').css('border-color', 'lightgrey');
+        }
+        if ($('#txtEstado').val().trim() == "") {
+            $('#txtEstado').css('border-color', 'Red');
+            valido = false;
+        }
+        else {
+            $('#txtEstado').css('border-color', 'lightgrey');
+        }
+        return valido;
+    }
+
+</script>

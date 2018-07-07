@@ -1,0 +1,97 @@
+﻿@using BE_ASAP
+@{
+
+    List<DETALLE_DE_RUTA> ListadoDet_Rutas_Selec = (List<DETALLE_DE_RUTA>)ViewBag.ListadoDet_Rutas_Selec;
+    //List<Ruta_Aerea>ListadoRuta =(List<Ruta_Aerea>)ViewBag.ListadoRuta;
+    //List<Ubigeo> ListadoAeropuerto = (List<Ubigeo>)ViewBag.ListadoAeropuertos;
+    int escala = ViewBag.NumEscala;
+    //List<Tipo_Ruta> ListadoTipo_Ruta = (List<Tipo_Ruta>)ViewBag.ListadoTipo_Ruta;
+}
+
+<table class="table progress-striped">
+    <thead>
+        <tr>
+            <td>Tipo de Ruta</td>
+            <td>Origen</td>
+            @if (escala > 0)
+            {
+                <td>Escala 1 </td>
+                if (escala > 1)
+                {
+                    <td>Escala 2</td>
+                    if (escala > 2)
+                    {
+                        <td>Escala 3</td>
+                    }
+                }
+            }            
+            <td>Fin:</td>
+            <td>Kilometraje</td>
+            <td>Tiempo</td>
+        </tr>
+    <thead>
+    <tbody>
+        
+        @if (ListadoDet_Rutas_Selec != null)
+        {
+            foreach (DETALLE_DE_RUTA item in ListadoDet_Rutas_Selec)
+            {
+                <tr>
+                    <td>
+                        @item.TIPO_DE_RUTA                        
+                    </td>
+                    <td>
+                        @item.RA1_ORIGEN_AEROPUERTO
+                    </td>
+                    @if (escala > 0)
+                    {
+                       <td>
+                           @item.RA2_ORIGEN_AEROPUERTO
+                        </td>
+                    }
+                    @if (escala > 1)
+                    {
+                        <td>
+                           @item.RA3_ORIGEN_AEROPUERTO
+                        </td>
+                    }
+                   @if (escala > 2)
+                    {
+                    <td>
+                        @item.RA4_ORIGEN_AEROPUERTO
+                    </td>
+                   }
+                   <td>
+                    @switch (escala)
+                    {
+                        case 0:
+                            @item.RA1_DESTINO_AEROPUERTO
+                            break;
+                        case 1:
+                            @item.RA2_DESTINO_AEROPUERTO
+                            break;
+                        case 2:
+                            @item.RA3_DESTINO_AEROPUERTO
+                            break;
+                        case 3:
+                            @item.RA4_DESTINO_AEROPUERTO
+                            break;
+                    }
+                   </td>
+                    <td>
+                        @item.Kilometraje_Total
+                    </td>
+                    <td>
+                        @item.Tiempo_Total
+                    </td>
+                    <td>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="seleccionRuta" id="seleccionRuta" value=@item.Id_Det_Ruta_Aerea>
+
+                        </div>
+                    </td>
+                </tr>
+            }
+        }
+    </tbody>
+</table>

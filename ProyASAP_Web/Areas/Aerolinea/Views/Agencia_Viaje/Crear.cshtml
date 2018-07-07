@@ -1,0 +1,206 @@
+﻿
+@using ProyASAP_Web;
+@using BE_ASAP;
+@using BL_ASAP;
+
+@{
+    List<Tipo_Documento> listadoDocumento = new List<Tipo_Documento>();
+    if (ViewBag.ListadoDocumento != null)
+    {
+        listadoDocumento = (List<Tipo_Documento>)ViewBag.ListadoDocumento;
+    }
+
+    List<Ubigeo> listadoUbigeo = new List<Ubigeo>();
+    if (ViewBag.ListadoUbigeo != null)
+    {
+        listadoUbigeo = (List<Ubigeo>)ViewBag.ListadoUbigeo;
+    }
+
+    Agencia_Viaje agencia = new Agencia_Viaje();
+    if (ViewBag.Agencia != null)
+    {
+        agencia = (Agencia_Viaje)ViewBag.Agencia;
+    }
+}
+
+<div>
+    <form>
+        @if (ViewBag.agencia != null)
+        {
+            <input type="hidden" value=@agencia.Id_Agencia_Viaje id="hidAgencia" />
+
+            <div class="form-group">
+                <label for="exampleInputEmail1">Razón Social</label>
+                <input type="text" class="form-control" id="txtRazon_Social" name="Razon_Social" placeholder="" value="@agencia.Razon_Social">
+            </div>
+
+            <div class="form-group">
+                <label for="exampleInputPassword1">Tipo de Documento</label>
+                <select id="cboDocumento" class="form-control" name="Id_Tipo_Documento">
+                    @foreach (Tipo_Documento item in listadoDocumento)
+                    {
+                        if (item.Id_Tipo_Documento == agencia.Id_Tipo_Documento)
+                        {
+                            <option value=@item.Id_Tipo_Documento>@item.Descripcion</option>
+                            break;
+                        }
+
+                    }
+
+                   @* <option value="-1">--SELECCIONE--</option>*@
+                    @foreach (Tipo_Documento item in listadoDocumento)
+                    {
+                        if (item.Id_Tipo_Documento == agencia.Id_Tipo_Documento)
+                        {
+                            <option value=@item.Id_Tipo_Documento>@item.Descripcion</option>
+                        }
+                        else
+                        {
+                            <option value=@item.Id_Tipo_Documento>@item.Descripcion</option>
+                        }
+
+                    }
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="exampleInputPassword1">Número de Documento</label>
+                <input type="text" class="form-control" id="txtNum_Documento" name="Num_Documento" placeholder="" value="@agencia.Num_Documento">
+            </div>
+
+            <div class="form-group">
+                <label for="exampleInputPassword1">Ubigeo</label>
+                <select id="cboUbigeo" class="form-control" name="Id_Ubigeo">
+                    @foreach (Ubigeo item in listadoUbigeo)
+                    {
+                        if (item.Id_Ubigeo == agencia.Id_Ubigeo)
+                        {
+                            
+                            <option value=@item.Id_Ubigeo>@item.Pais - @item.Departamento - @item.Distrito</option>
+                         
+
+                        }
+                    }
+                    @*<option value="-1">--SELECCIONE--</option>*@
+                    @foreach (Ubigeo item in listadoUbigeo)
+                    {
+
+                        if (item.Id_Ubigeo != agencia.Id_Ubigeo)
+                        {
+
+                            <option value=@item.Id_Ubigeo>@item.Pais - @item.Departamento - @item.Distrito</option>
+
+
+                        }
+
+
+                    }
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="exampleInputPassword1">Dirección</label>
+                <input type="text" class="form-control" id="txtDireccion" name="Direccion" placeholder="" value="@agencia.Direccion">
+            </div>
+
+            <div class="form-group">
+                <label for="exampleInputPassword1">Representante Legal</label>
+                <input type="text" class="form-control" id="txtRepresentante_Legal" name="Representante_Legal" placeholder="" value="@agencia.Representante_Legal">
+            </div>
+
+            <div class="form-group">
+                <label for="exampleInputPassword1">Telefono</label>
+                <input type="text" class="form-control" id="txtTelefono" name="Telefono" placeholder="" value=@agencia.Telefono>
+            </div>
+
+            <div class="form-group">
+                <label for="exampleInputPassword1">Estado</label>
+               
+                @* <input type="text" class="form-control" id="txtEstado" name="Estado" placeholder="" value=@agencia.Estado>*@
+                 <select id="txtEstado" class="form-control" name="Estado">
+                  
+
+                         <option value="@agencia.Estado">@agencia.Estado</option>
+                         @if (agencia.Estado.Equals("Activo"))
+                         {
+                            <option value="No Activo">No Activo</option>
+                         }
+                         else
+                         {
+                            <option value="Activo">Activo</option>
+                         }
+
+
+
+                </select>
+            </div>
+        }
+        else
+        {
+            <div class="form-group">
+                <label for="exampleInputEmail1">Razón Social</label>
+                <input type="text" class="form-control" id="txtRazon_Social" placeholder="">
+            </div>
+
+            <div class="form-group">
+                <label for="exampleInputPassword1">Tipo de Documento</label>
+                <select id="cboDocumento" class="form-control">
+                    <option value="-1">--SELECCIONE--</option>
+                    @foreach (Tipo_Documento item in listadoDocumento)
+                    {
+                        <option value="@item.Id_Tipo_Documento">@item.Descripcion</option>
+                    }
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="exampleInputPassword1">Número de Documento</label>
+                <input type="text" class="form-control" id="txtNum_Documento" placeholder="">
+            </div>
+
+            <div class="form-group">
+                <label for="exampleInputPassword1">Ubigeo</label>
+                <select id="cboUbigeo" class="form-control">
+                    <option value="-1">--SELECCIONE--</option>
+                    @foreach (Ubigeo item in listadoUbigeo)
+                    {
+                        if (item.Aeropuerto != null)
+                        {
+
+                        }
+                        else
+                        {
+                            <option value="@item.Id_Ubigeo">@item.Pais - @item.Departamento - @item.Distrito</option>
+                        }
+                    }
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="exampleInputPassword1">Dirección</label>
+                <input type="text" class="form-control" id="txtDireccion" placeholder="">
+            </div>
+
+            <div class="form-group">
+                <label for="exampleInputPassword1">Representante Legal</label>
+                <input type="text" class="form-control" id="txtRepresentante_Legal" placeholder="">
+            </div>
+
+            <div class="form-group">
+                <label for="exampleInputPassword1">Telefono</label>
+                <input type="text" class="form-control" id="txtTelefono" placeholder="">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">Estado</label>
+
+                @* <input type="text" class="form-control" id="txtEstado" name="Estado" placeholder="" value=@agencia.Estado>*@
+                <select id="txtEstado" class="form-control" name="Estado">
+                    <option value="Activo">Activo</option>
+                     <option value="No Activo">No Activo</option>
+                   
+                  
+                </select>
+            </div>
+        }
+    </form>
+</div>

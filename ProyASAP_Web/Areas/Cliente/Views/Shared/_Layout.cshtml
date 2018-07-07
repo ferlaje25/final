@@ -1,0 +1,116 @@
+﻿<!DOCTYPE html>
+<html lang="en" class="translated-ltr">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - Sistema ASAP</title>
+    <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <script src="~/Scripts/modernizr-2.6.2.js"></script>
+    <script src="~/Scripts/jquery-3.3.1.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+  
+</head>
+<body>
+   
+    <nav class="navbar navbar-dark bg-dark fixed-top">
+        @*<a class="navbar-brand">Navbar</a>*@
+
+        <ul class="nav nav-tabs card-header-tabs justify-content-center">
+            <li class="nav-item">
+                <a class="nav-link" href="#" id="btnInicio">Inicio</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#" id="btnVuelos">Vuelos</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link " href="#" id="btnAerolineas">Aerolineas</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link " href="#" id="btnAgencias">Agencias</a>
+            </li>
+            <li class="nav-item">
+                @*disabled: en caso de no visible*@
+                <a class="nav-link" href="#" id="btnNosotros">Sobre Nosotros</a>
+            </li>
+        </ul>
+        <form class="form-inline">
+           <a class="btn btn-primary" href="#" id="btnLogin">
+               <img class="d-block w-100 " src="~/Imagenes/Portada/login.svg">
+           </a>
+        </form>
+    </nav>
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        @*<footer>
+            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+        </footer*@>
+    </div>
+    @* ---------------------------MY MODAAAAAL--------------------------------------------------  *@
+    <div class="modal fade" id="myModalLogin" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="myModalLabel">--LOGIN--</h5>
+                   @*<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>*@
+                </div>
+                <div class="modal-body">
+                    ...
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-primary" id="btnIniciarSesion">Iniciar Sesion</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    @* --------------------------FIN MODAL------------------------------------------------------- *@
+    <script>
+        $('#btnInicio').click(function () { //vista, controlador, area
+            window.location.href = "@Url.Action("IndexPrincipal", "Principal", new { area = "Cliente" })"
+        })
+        $('#btnVuelos').click(function () { //vista, controlador, area
+            window.location.href = "@Url.Action("IndexVentasVuelos","Ventas",new { area = "Cliente" })"
+        })
+        $('#btnAerolineas').click(function () { //vista, controlador, area
+            window.location.href = "@Url.Action("","",new { area = "" })"
+        })
+        $('#btnAgencias').click(function () { //vista, controlador, area
+            window.location.href = "@Url.Action("","",new { area = "" })"
+        })
+        $('#btnNosotros').click(function () { //vista, controlador, area
+            window.location.href = "@Url.Action("","",new { area = "" })"
+        })
+        $('#btnLogin').click(function () { //vista, controlador, area
+            //window.alert("JOL");
+            var formModelo = $("#myModalLogin");
+            $.ajax({
+                type: "POST",
+                url: "/Cliente/Principal/Login",
+                success: function (view) {
+                    formModelo.find(".modal-body").html(view);
+                    formModelo.modal();
+                }
+            });
+           // window.location.href = "Url.Action("Login","Principal",new { area = "Cliente" })"
+        });
+        $('#btnIniciarSesion').click(function () {
+            var formModelo = $("#myModalLogin");
+            var vUsuario = formModelo.find("#user").val();
+            var vContra = formModelo.find("#contr").val();
+            formModelo.modal("toggle");
+            var x = 1;
+            if (x == 1) {
+                window.location.href ="@Url.Action("Index","Menu",new { area = "Aerolinea" })"
+            }//                vista/ controlador/ area
+           // return RedirecToAction("MenuAerolinea", "AerolineaMenu", new{area : "Aerolinea"});
+        });
+    </script>
+  
+  
+</body>
+</html>
+

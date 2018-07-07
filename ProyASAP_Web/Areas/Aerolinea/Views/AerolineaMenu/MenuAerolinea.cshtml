@@ -1,0 +1,71 @@
+﻿
+@{
+    ViewBag.Title = "MenuAerolinea";
+}
+
+
+
+<div class="card border-info w-100">
+    <div class="card-header text-center  bg-secondary">
+        <div class="btn-group btn-group-toggle" @*container"*@>
+              <ul class="nav" id="menuAerolinea" role="tablist">
+                <li class="nav-item">
+                    <a class="btn btn-info active" role="button" href="#" id="btn_PrograVuelos">Programacion de Vuelos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="btn btn-info"  role="button"  href="#" id="btn_MoniVuelos">Monitoreo Vuelos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="btn btn-info active"  role="button"  href="#" id="btn_ActuVuelos">Actualizacion de Vuelos</a>
+                </li>               
+            </ul>
+        </div>
+    </div>
+    <div class="card-body">
+        
+        <div class="container body-content" id="cuerpo">
+
+        </div>
+       </div>
+</div>
+
+       
+        <script>
+            $.ajax({
+                type: "GET",
+                url: "/Aerolinea/AerolineaMenu/ProgradeVuelos",
+                success: function (view) {
+                    $(cuerpo).html(view);
+                }
+            })
+            $('#btn_PrograVuelos').click(function () {
+                $.ajax({
+                    type: "GET",
+                    url: "/Aerolinea/AerolineaMenu/ProgradeVuelos",
+                    success: function (view) {
+                        $(cuerpo).html(view);
+                    }
+                });
+            })
+            $('#btn_MoniVuelos').click(function () {
+                $.ajax({
+                    type: "GET",
+                    url: "/Aerolinea/AerolineaMenu/MonitoreoVuelos",
+                    success: function (view) {
+                        $(cuerpo).html(view);
+                    }
+                });
+            })
+            $('#btn_ActuVuelos').click(function () {
+                $.ajax({
+                    type: "GET",
+                    url: "/Aerolinea/AerolineaMenu/ActualizacionVuelo",
+                    success: function (view) {
+                        $(cuerpo).html(view);
+                    }
+                });
+            })
+
+            
+
+        </script>

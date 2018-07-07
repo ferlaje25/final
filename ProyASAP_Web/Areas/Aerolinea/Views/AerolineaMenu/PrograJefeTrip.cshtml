@@ -1,0 +1,119 @@
+﻿@using BL_ASAP;
+@using BE_ASAP;
+@{
+    //--------------Tripulación-------------------
+
+    List<Tripulacion> selec4 = (List<Tripulacion>)Session["TripulacionSelec"];
+    List<int> idselecJT = new List<int>();
+    //Si está seleccionado como auxiliar de Tripulación, no puede ser seleccionado como Jefe
+    //Listado de Auxiliares de Tripulación
+    foreach (Tripulacion auxcab in selec4.Where(x => x.IdRolTrip == 4).ToList())
+    {
+        idselecJT.Add(auxcab.IdEmpleTrip);
+    }
+    //Listado de Jefes Trip, deben salir marcados
+    List<int> idcapsel = new List<int>();
+    foreach (Tripulacion capsel in selec4.Where(x => x.IdRolTrip == 3).ToList())
+    {
+        idcapsel.Add(capsel.IdEmpleTrip);
+    }
+    //---------------T-----------------
+}
+<style>
+    .table-wrapper-2 {
+        display: block;
+        max-height: 200px;
+        overflow-y: auto;
+        -ms-overflow-style: -ms-autohiding-scrollbar;
+        background-color: #66a3ff;
+    }
+</style>
+
+<br>
+<h2>Personal de Atención:</h2>
+<h3 class="text-center bg-primary">Jefe de Tripulación:</h3>
+<div class="table-wrapper-2">
+    <table class="table table-hover" id="divtablatriptec">
+        <thead>
+            <tr>
+
+                <th>Apellido</th>
+                <th>Nombre</th>
+                <th>Cantidad de Sanciones</th>
+                <th>Disponibilidad</th>
+                <th>¿Tripulación actual?</th>
+            </tr>
+        </thead>
+        <tbody>
+
+            @{List<Empleado> EmpleadosPorRolAtencion = BLEmpleado.EmpleadosPorRol("Atención");
+            }
+            @foreach (Empleado item in EmpleadosPorRolAtencion)
+
+            {
+                if (!idselecJT.Contains(item.Id_Empleado))
+                {
+                    <tr>
+                        @{
+                            int cant = BLSancion.CantSancion(item.Id_Empleado);
+                        }
+                        <th>@item.Nombre_Emp</th>
+                        <th>@item.Apellidos_Emp</th>
+                        <th>@cant</th>
+                        <th>Disponibilidad</th>
+                        <th>
+                            <div class="form-check">
+                                <label>
+                                    @*----------------Tripulación--------------------*@
+                                    @if (idcapsel.Contains(item.Id_Empleado))
+                                    {
+                                        <input class="chkJefeTrip" data-idemp=@item.Id_Empleado type="radio" checked="checked"> <span class="label-text"></span>
+                                    }
+                                    else
+                                    {
+                                        <input class="chkJefeTrip" data-idemp=@item.Id_Empleado type="radio" name="check"> <span class="label-text"></span>
+                                    }
+                                    @*----------------T-------------------*@
+                                </label>
+                            </div>
+                        </th>
+                    </tr>
+                                }
+                            }
+
+        </tbody>
+    </table>
+</div>
+
+@*---------------------Tripulación--------------------------*@
+<script>
+    $('.chkJefeTrip').click(function () {
+        if ($(this).is(':checked')) {
+
+            var id = $(this).attr("data-idemp");
+            $.ajax({
+                type: "POST",
+                url: "/Aerolinea/AerolineaMenu/FiltrarTabla",
+                data: { idselec:id, rol:3 },
+                success: function (html) {
+                    alert(/*id +*/ "JEFE DE TRIPULACION SELECCIONADO");
+
+                }
+            });
+
+        } else {
+            var id = $(this).attr("data-idemp");
+
+            $.ajax({
+                type: "POST",
+                url: "/Aerolinea/AerolineaMenu/DeshacerFiltro",
+                data: { idselec: id, rol: 1 },
+                success: function (html) {
+                    //alert( "Deselección");
+
+                }
+            });
+        }
+        });
+
+</script>

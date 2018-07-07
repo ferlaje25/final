@@ -1,0 +1,218 @@
+﻿
+@using ProyASAP_Web;
+@using BE_ASAP;
+@using BL_ASAP;
+
+@{
+    List<Agencia_Viaje> listadoAgencia = new List<Agencia_Viaje>();
+    if (ViewBag.ListadoAgencia != null)
+    {
+        listadoAgencia = (List<Agencia_Viaje>)ViewBag.ListadoAgencia;
+    }
+
+    List<Aerolinea> listadoAerolinea = new List<Aerolinea>();
+    if (ViewBag.ListadoAerolinea != null)
+    {
+        listadoAerolinea = (List<Aerolinea>)ViewBag.ListadoAerolinea;
+    }
+    var fecha_ini2 = "";
+    var fecha_fin2 = "";
+    Contrato_Agencia contrato = new Contrato_Agencia();
+    if (ViewBag.Contrato != null)
+    {
+        contrato = (Contrato_Agencia)ViewBag.Contrato;
+        var fecha_ini = contrato.Fecha_Ini_Contrato;
+        var fecha_fin = contrato.Fecha_Fin_Contrato;
+        fecha_ini2 = fecha_ini.Value.ToString("yyyy-MM-dd");
+        fecha_fin2 = fecha_fin.Value.ToString("yyyy-MM-dd");
+
+
+    }
+
+
+    //fecha_ini = fecha_ini.split("");
+}
+
+<div>
+    <form>
+        @if (ViewBag.contrato != null)
+        {
+            <input type="hidden" value=@contrato.Id_Contrato_Agencia id="hidContrato" />
+
+            <div class="form-group">
+                <label for="exampleInputEmail1">Fecha Inicio:@fecha_ini2 </label>
+                <input  type="date" class="form-control" id="dtFecha_Ini_Contrato" name="Fecha_Ini_Contrato" placeholder="" value=@fecha_ini2   @* min=@DateTime.Now.Year-@DateTime.Now.Month-@DateTime.Now.Day*@>
+            </div>
+
+            <div class="form-group">
+                <label for="exampleInputPassword1">Fecha Fin</label>
+                <input type="date" class="form-control" id="dtFecha_Fin_Contrato" name="Fecha_Fin_Contrato" placeholder="" value=@fecha_fin2>
+            </div>
+
+            <div class="form-group">
+                <label for="exampleInputPassword1">Descripción</label>
+                @*<input type="text" class="form-control" id="txtDescripcion" name="Descripcion" placeholder="" value="@contrato.Descripcion">*@
+                <textarea class="form-control" id="txtDescripcion" name="Descripcion" placeholder="" value=@contrato.Descripcion>@contrato.Descripcion</textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="exampleInputPassword1">Primer Descuento (%)</label>
+                <input type="text" class="form-control" id="txtPrimer_Descuento" name="Primer_Descuento" placeholder="" value=@contrato.Primer_Descuento>
+            </div>
+
+            <div class="form-group">
+                <label for="exampleInputPassword1">Cantidad de Pasajes Hasta</label>
+                <input type="text" class="form-control" id="txtTope1" name="Tope1" placeholder="" value=@contrato.Tope1>
+            </div>
+
+            <div class="form-group">
+                <label for="exampleInputPassword1">Segundo Descuento (%)</label>
+                <input type="text" class="form-control" id="txtSegundo_Descuento" name="Segundo_Descuento" placeholder="" value=@contrato.Segundo_Descuento>
+            </div>
+
+            <div class="form-group">
+                <label for="exampleInputPassword1">Cantidad de Pasajes Desde</label>
+                <input type="text" class="form-control" id="txtTope2" name="Tope2" placeholder="" value=@contrato.Tope2>
+            </div>
+
+            <div class="form-group">
+                <label for="exampleInputPassword1">Agencia</label>
+                <select id="cboAgencia" class="form-control" name="Agencia">
+                   @* <option value="-1">@contrato.</option>*@
+                        @foreach (Agencia_Viaje item in listadoAgencia)
+                        {
+                            if (item.Id_Agencia_Viaje == contrato.Id_Agencia_Viaje)
+                            {
+                                <option value=@item.Id_Agencia_Viaje>@item.Razon_Social</option>
+                            }
+                        }
+                        @foreach (Agencia_Viaje item in listadoAgencia)
+
+                        {
+                            if (item.Id_Agencia_Viaje!= contrato.Id_Agencia_Viaje)
+                            {
+                                <option value=@item.Id_Agencia_Viaje>@item.Razon_Social</option>
+                            }
+
+                        }
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="exampleInputPassword1">Aerolinea</label>
+                <select id="cboAerolinea" class="form-control" name="Aerolinea">
+                 @*   <option value="-1">--SELECCIONE--</option>*@
+
+                    @foreach (Aerolinea item in listadoAerolinea)
+                    {
+                        if (item.Id_Aerolinea == contrato.Id_Aerolinea)
+                        {
+                            <option value=@item.Id_Aerolinea>@item.Razon_Social</option>
+                        }
+                    }
+                    @foreach (Aerolinea item in listadoAerolinea)
+                    {
+
+                        if (item.Id_Aerolinea != contrato.Id_Aerolinea)
+                        {
+                            <option value=@item.Id_Aerolinea>@item.Razon_Social</option>
+                        }
+
+
+                    }
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="exampleInputPassword1">Estado</label>
+              @* // <input type="text" class="form-control" id="txtEstado" name="Estado" placeholder="" value="@contrato.Estado">*@
+                <select id="txtEstado" class="form-control" name="Estado">
+
+
+                    <option value="@contrato.Estado">@contrato.Estado</option>
+                    @if (contrato.Estado.Equals("Activo"))
+                    {
+                        <option value="No Activo">No Activo</option>
+                    }
+                    else
+                    {
+                        <option value="Activo">Activo</option>
+                    }
+
+
+
+                </select>
+
+            </div>
+
+        }
+        else
+        {
+            <div class="form-group">
+                <label for="exampleInputEmail1">Fecha Inicio</label>
+                <input type="date" class="form-control" id="dtFecha_Ini_Contrato" placeholder="">
+            </div>
+
+            <div class="form-group">
+                <label for="exampleInputPassword1">Fecha Fin</label>
+                <input type="date" class="form-control" id="dtFecha_Fin_Contrato" placeholder="">
+            </div>
+
+            <div class="form-group">
+                <label for="exampleInputPassword1">Descripción</label>
+                @*<input type="text" class="form-control" id="txtDescripcion" placeholder="">*@
+                <textarea class="form-control" id="txtDescripcion" placeholder=""></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="exampleInputPassword1">Primer Descuento (%)</label>
+                <input type="text" class="form-control" id="txtPrimer_Descuento" placeholder="">
+            </div>
+
+            <div class="form-group">
+                <label for="exampleInputPassword1">Cantidad de Pasajes Hasta</label>
+                <input type="text" class="form-control" id="txtTope1" placeholder="">
+            </div>
+
+            <div class="form-group">
+                <label for="exampleInputPassword1">Segundo Descuento (%)</label>
+                <input type="tel" class="form-control" id="txtSegundo_Descuento" placeholder="">
+            </div>
+
+            <div class="form-group">
+                <label for="exampleInputPassword1">Cantidad de Pasajes Desde</label>
+                <input type="text" class="form-control" id="txtTope2" placeholder="">
+            </div>
+
+            <div class="form-group">
+                <label for="exampleInputPassword1">Agencia</label>
+                <select id="cboAgencia" class="form-control">
+                    <option value="-1">--SELECCIONE--</option>
+                    @foreach (Agencia_Viaje item in listadoAgencia)
+                    {
+                        <option value="@item.Id_Agencia_Viaje">@item.Razon_Social</option>
+                    }
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="exampleInputPassword1">Aerolinea</label>
+                <select id="cboAerolinea" class="form-control">
+                    <option value="-1">--SELECCIONE--</option>
+                    @foreach (Aerolinea item in listadoAerolinea)
+                    {
+                        <option value="@item.Id_Aerolinea">@item.Razon_Social</option>
+                    }
+                </select>
+            </div>
+
+            <select id="txtEstado" class="form-control" name="Estado">
+                <option value="Activo">Activo</option>
+                <option value="No Activo">No Activo</option>
+
+
+            </select>
+
+        }
+    </form>
+</div>

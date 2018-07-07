@@ -1,0 +1,109 @@
+﻿@using ProyASAP_Web;
+@using BE_ASAP;
+@using BL_ASAP;
+
+
+@{
+    ViewBag.Title = "Listado";
+
+
+    List<Agencia_Viaje> listadoAgencia = new List<Agencia_Viaje>();
+    if (ViewBag.ListadoAgencia != null)
+    {
+        listadoAgencia = (List<Agencia_Viaje>)ViewBag.ListadoAgencia;
+    }
+
+    //List<Agencia_Viaje> listadoAgencia = new List<Agencia_Viaje>();
+    //ViewBag.ListadoAgencia = BLAgencia_Viaje.ListadoPorEstado();
+
+
+    List<Tipo_Documento> listadoDocumento = new List<Tipo_Documento>();
+    if (ViewBag.ListadoDocumento != null)
+    {
+        listadoDocumento = (List<Tipo_Documento>)ViewBag.ListadoDocumento;
+    }
+
+    List<Ubigeo> listadoUbigeo = new List<Ubigeo>();
+    if (ViewBag.ListadoUbigeo != null)
+    {
+        listadoUbigeo = (List<Ubigeo>)ViewBag.ListadoUbigeo;
+    }
+
+}
+
+<table id="tbListadoAgencia" class="table table-striped">
+    <thead>
+        <tr>
+            <td>#</td>
+            <td>Razón Social</td>
+            <td>Tipo de Documento</td>
+            <td>Número de Documento</td>
+            <td>Ubigeo</td>
+            <td>Dirección</td>
+            <td>Representante Legal</td>
+            <td>Telefono</td>
+            <td>Estado</td>
+            <td></td>
+            <td></td>
+        </tr>
+    </thead>
+
+    <tbody>
+        @{
+            if (listadoAgencia != null)
+            {
+                foreach (Agencia_Viaje item in listadoAgencia)
+                {
+                    <tr>
+                        <td>@item.Id_Agencia_Viaje</td>
+                        <td>@item.Razon_Social</td>
+                        <td>@listadoDocumento.Where(x => x.Id_Tipo_Documento == item.Id_Tipo_Documento).FirstOrDefault().Descripcion</td>
+                        <td>@item.Num_Documento</td>
+                        <td>@listadoUbigeo.Where(x => x.Id_Ubigeo == item.Id_Ubigeo).First().Pais - @listadoUbigeo.Where(x => x.Id_Ubigeo == item.Id_Ubigeo).First().Departamento - @listadoUbigeo.Where(x => x.Id_Ubigeo == item.Id_Ubigeo).First().Distrito</td>
+                        <td>@item.Direccion</td>
+                        <td>@item.Representante_Legal</td>
+                        <td>@item.Telefono</td>
+                        <td>@item.Estado</td>
+                       @* <td><input type="button" class="btnEliminarAgencia btn btn-danger" value="Eliminar" id="btnEliminarAgencia" data-codigo="@item.Id_Agencia_Viaje" /></td>*@
+                        <td><input type="button" class="btnEditarAgencia btn btn-info" value="Editar" id="btnEditarAgencia" data-codigo=@item.Id_Agencia_Viaje /></td>
+                    </tr>
+                }
+            }
+        }
+    </tbody>
+
+    <tfoot>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </tfoot>
+
+</table>
+
+<script>
+    $('#btnEditarAgencia').click(function () {
+        var modal = $("#myModalFormAgencia");
+        $.ajax({
+            type: "POST",
+            url: "/Aerolinea/Agencia_Viaje/Crear",
+            success: function (html) {
+                modal.find(".modal-body").html(html);
+                modal.modal();
+            }
+        });
+    });
+
+
+</script>

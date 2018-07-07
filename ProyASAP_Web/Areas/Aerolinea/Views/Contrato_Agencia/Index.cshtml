@@ -1,0 +1,231 @@
+﻿
+<input id="btnNuevoContrato" type="button" value="Crear Contrato" class="btn btn-success" />
+<br />
+<br />
+<div id="divListadoContrato">
+
+</div>
+
+<div id="myModalFormContrato" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="gridSystemModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="gridSystemModalLabel">Registrar Contrato</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-4">.col-md-4</div>
+                    <div class="col-md-4 col-md-offset-4">.col-md-4 .col-md-offset-4</div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3 col-md-offset-3">.col-md-3 .col-md-offset-3</div>
+                    <div class="col-md-2 col-md-offset-4">.col-md-2 .col-md-offset-4</div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 col-md-offset-3">.col-md-6 .col-md-offset-3</div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-9">
+                        Level 1: .col-sm-9
+                        <div class="row">
+                            <div class="col-xs-8 col-sm-6">
+                                Level 2: .col-xs-8 .col-sm-6
+                            </div>
+                            <div class="col-xs-4 col-sm-6">
+                                Level 2: .col-xs-4 .col-sm-6
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                <button id="btnGrabarContrato" type="button" class="btn btn-primary">Grabar</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<script>
+
+    CargarListadoContrato();
+
+    function CargarListadoContrato() {
+
+        $.ajax({
+            type: "POST",
+            url: "/Aerolinea/Contrato_Agencia/Listado",
+            success: function (html) {
+                $("#divListadoContrato").html(html);
+            }
+        });
+    }
+
+    $('#btnNuevoContrato').click(function () {
+        var modal = $("#myModalFormContrato");
+        $.ajax({
+            type: "POST",
+            url: "/Aerolinea/Contrato_Agencia/Crear",
+            success: function (html) {
+                modal.find(".modal-body").html(html);
+                modal.modal();
+            }
+        });
+    });
+
+    $('#divListadoContrato').on('click', '.btnEditarContrato', function () {
+        var modal = $("#myModalFormContrato");
+        var vIdContrato = $(this).attr("data-codigo");
+        $.ajax({
+            type: "POST",
+            url: "/Aerolinea/Contrato_Agencia/EditarContrato",
+            data: { idContrato: vIdContrato },
+            success: function (html) {
+                //alert(html);
+                modal.find(".modal-body").html(html);
+                modal.modal();
+            }
+        });
+    });
+
+    $('#btnGrabarContrato').click(function () {
+
+        var res = validar();
+        if (res == false) {
+            return false;
+        }
+
+        var modal = $("#myModalFormContrato");
+        var vIdContrato = modal.find("#hidContrato").val();
+        var vFecha_Ini_Contrato = modal.find("#dtFecha_Ini_Contrato").val();
+        var vFecha_Fin_Contrato = modal.find("#dtFecha_Fin_Contrato").val();
+        var vDescripcion = modal.find("#txtDescripcion").val();
+        var vPrimer_Descuento = modal.find("#txtPrimer_Descuento").val();
+        var vTope1 = modal.find("#txtTope1").val();
+        var vSegundo_Descuento = modal.find("#txtSegundo_Descuento").val();
+        var vTope2 = modal.find("#txtTope2").val();
+        var vId_Agencia_Viaje = modal.find("#cboAgencia").val();
+        var vId_Aerolinea = modal.find("#cboAerolinea").val();
+        var vEstado = modal.find("#txtEstado").val();
+        //alert(vFecha_Fin_Contrato + vFecha_Ini_Contrato+vIdContrato)
+        if (vIdContrato != null) {
+            $.ajax({
+                type: "POST",
+                url: "/Aerolinea/Contrato_Agencia/ActualizarContrato",
+                data: { Id_Contrato_Agencia: vIdContrato, Fecha_Ini_Contrato: vFecha_Ini_Contrato, Fecha_Fin_Contrato: vFecha_Fin_Contrato, Descripcion: vDescripcion, Primer_Descuento: vPrimer_Descuento, Tope1: vTope1, Segundo_Descuento: vSegundo_Descuento, Tope2: vTope2, Id_Agencia_Viaje: vId_Agencia_Viaje, Id_Aerolinea: vId_Aerolinea, Estado: vEstado},
+                success: function (html) {
+                   // alert("actuali");
+                    CargarListadoContrato();
+                    modal.modal("toggle");
+                }
+            });
+        } else {
+            //Crear
+            $.ajax({
+                type: "POST",
+                url: "/Aerolinea/Contrato_Agencia/GrabarContrato",
+                data: { Fecha_Ini_Contrato: vFecha_Ini_Contrato, Fecha_Fin_Contrato: vFecha_Fin_Contrato, Descripcion: vDescripcion, Primer_Descuento: vPrimer_Descuento, Tope1: vTope1, Segundo_Descuento: vSegundo_Descuento, Tope2: vTope2, Id_Agencia_Viaje: vId_Agencia_Viaje, Id_Aerolinea: vId_Aerolinea, Estado: vEstado },
+                success: function (html) {
+                    alert("Nuevo");
+                    CargarListadoContrato();
+                    modal.modal("toggle");
+                }
+            });
+        }
+    })
+
+    $('#divListadoContrato').on('click', '.btnEliminarContrato', function () {
+        var vIdContrato = $(this).attr("data-codigo")
+        if (confirm("Esta seguro de eliminar el registro?")) {
+
+            $.ajax({
+                type: "POST",
+                url: "/Aerolinea/Contrato_Agencia/EliminarContrato",
+                data: { idContrato: vIdContrato },
+                success: function (html) {
+                    CargarListadoContrato();
+                }
+            });
+        } else
+        {
+            alert("Cancelar");
+        }
+    });
+
+    function validar() {
+        var valido = true;
+        if ($('#dtFecha_Ini_Contrato').val().trim() == "") {
+            $('#dtFecha_Ini_Contrato').css('border-color', 'Red');
+            valido = false;
+        }
+        else {
+            $('#dtFecha_Ini_Contrato').css('border-color', 'lightgrey');
+        }
+        if ($('#dtFecha_Fin_Contrato').val().trim() == "") {
+            $('#dtFecha_Fin_Contrato').css('border-color', 'Red');
+            valido = false;
+        }
+        else {
+            $('#dtFecha_Fin_Contrato').css('border-color', 'lightgrey');
+        }
+        if ($('#txtDescripcion').val().trim() == "") {
+            $('#txtDescripcion').css('border-color', 'Red');
+            valido = false;
+        }
+        else {
+            $('#txtDescripcion').css('border-color', 'lightgrey');
+        }
+        if ($('#txtPrimer_Descuento').val().trim() == "") {
+            $('#txtPrimer_Descuento').css('border-color', 'Red');
+            valido = false;
+        }
+        else {
+            $('#txtPrimer_Descuento').css('border-color', 'lightgrey');
+        }
+        if ($('#txtTope1').val().trim() == "") {
+            $('#txtTope1').css('border-color', 'Red');
+            valido = false;
+        }
+        else {
+            $('#txtTope1').css('border-color', 'lightgrey');
+        }
+        if ($('#txtSegundo_Descuento').val().trim() == "") {
+            $('#txtSegundo_Descuento').css('border-color', 'Red');
+            valido = false;
+        }
+        else {
+            $('#txtSegundo_Descuento').css('border-color', 'lightgrey');
+        }
+        if ($('#txtTope2').val().trim() == "") {
+            $('#txtTope2').css('border-color', 'Red');
+            valido = false;
+        }
+        else {
+            $('#txtTope2').css('border-color', 'lightgrey');
+        }
+        //if ($('#cboAgencia').val().trim() == "") {
+        //    $('#cboAgencia').css('border-color', 'Red');
+        //    valido = false;
+        //}
+        //else {
+        //    $('#cboAgencia').css('border-color', 'lightgrey');
+        //}
+        //if ($('#cboAerolinea').val().trim() == "") {
+        //    $('#cboAerolinea').css('border-color', 'Red');
+        //    valido = false;
+        //}
+        //else {
+        //    $('#cboAerolinea').css('border-color', 'lightgrey');
+        //}
+        if ($('#txtEstado').val().trim() == "") {
+            $('#txtEstado').css('border-color', 'Red');
+            valido = false;
+        }
+        else {
+            $('#txtEstado').css('border-color', 'lightgrey');
+        }
+        return valido;
+    }
+
+</script>

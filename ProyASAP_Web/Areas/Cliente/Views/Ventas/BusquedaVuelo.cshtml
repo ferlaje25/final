@@ -1,0 +1,101 @@
+﻿@using BE_ASAP;
+@using BL_ASAP;
+@{
+    ViewBag.Title = "BusquedaVuelo";
+    List<Ubigeo> Departamentos = BLUbigeo.Listado();
+}
+
+<h2>Busqueda de vuelos</h2>
+<body>
+    <div id="BusVuelo">
+        <div class="form-row">
+            <div class="form-group col-md-4">
+                <label for="inputOrigen">Origen</label>
+                <select id="inputOrigen" class="form-control">
+                    <option selected>Seleccione el origen</option>
+                    @{
+                        foreach (Ubigeo Dep in Departamentos)
+                        {
+                            if (Dep.Aeropuerto != null)
+                            {
+                                <option>@Dep.Pais - @Dep.Distrito - @Dep.Aeropuerto</option>
+                            }
+
+                        }
+                    }
+                </select>
+            </div>
+            <div class="form-group col-md-4">
+                <label for="inputDestino">Destino</label>
+                <select id="inputDestino" class="form-control">
+                    <option selected>Seleccione el destino</option>
+                    @{
+
+                        foreach (Ubigeo Dep in Departamentos)
+                        {
+                            if (Dep.Aeropuerto != null)
+                            {
+                                <option>@Dep.Pais - @Dep.Distrito - @Dep.Aeropuerto</option>
+                            }
+
+                        }
+                    }
+                </select>
+            </div>
+            <div class="form-group col-md-4">
+                <label for="inputNroPasajeros">Nro de Pasajeros</label>
+                <select id="inputNroPasajeros" class="form-control">
+                    <option selected>Seleccione Nro de Pasajeros</option>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                    <option>6</option>
+                    <option>7</option>
+                    <option>8</option>
+                    <option>9</option>
+                    <option>10</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="col-md-4">
+                <label for="inputFechaSalida">Fecha de Salida</label>
+                <input type="date" name="FechaSalida">
+            </div>
+            <div class="col-md-4">
+                <label for="inputFechaRetorno">Fecha de Retorno</label>
+                <input type="date" name="FechaRetorno">
+            </div>
+            <div>
+                <button type="submit" class="btn btn-primary" id="btnBuscar">Buscar</button>
+            </div>
+        </div>
+    </div>
+</body>
+<br />
+
+<script>
+    $('#btnBuscar').click(function () {
+        var div1 = $("#BusVuelo");
+        var origenvuelo = div1.find("#inputOrigen").val();
+        var destinovuelo = div1.find("#inputDestino").val();
+        var pasajerovuelo = div1.find("#inputNroPasajeros").val();
+
+       // alert(origenvuelo);
+        //alert(destinovuelo);
+        //alert(pasajerovuelo);
+
+        $.ajax({
+            type: "POST",
+            url: "/Cliente/Ventas/InfoBusVuelo",
+            //data: { idselec:id, rol:1 },
+
+            data: { vorigenvuelo: origenvuelo, vdestinovuelo: destinovuelo, vpasajerovuelo: pasajerovuelo },
+            success: function (view) {
+                //alert("LLego")
+            }
+        });
+    })
+</script>

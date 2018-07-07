@@ -1,0 +1,65 @@
+﻿
+@{
+    ViewBag.Title = "PasarelaPago";
+}
+
+<h2>Pago</h2>
+<br />
+
+<body>
+    <div>
+        <div>
+            <label for="inputNroTarjet">Número de Tarjeta</label>
+            <input type="text" class="form-control" placeholder="Número de tarjeta">
+        </div>
+        <br />
+        <div>
+            <label for="inputTitTarjeta">Titular de la tarjeta</label>
+            <input type="text" class="form-control" placeholder="Nombre y Apellido">
+        </div>
+    </div>
+    <br />
+    <h8>Fecha de caducidad de la tarjeta</h8>
+    <br />
+    <div class="form-row">
+        <div class="form-group col-md-3">
+            <label for="inputCiudad">Día</label>
+            <select id="inputCiudad" class="form-control">
+                <option selected>Seleccione el mes</option>
+                <option>Enero</option>
+                <option>Febrero</option>
+                <option>Marzo</option>
+                <option>Abril</option>
+                <option>Mayo</option>
+                <option>Junio</option>
+                <option>Julio</option>
+                <option>Agosto</option>
+                <option>Setiembre</option>
+                <option>Octubre</option>
+                <option>Noviembre</option>
+                <option>Diciembre</option>
+
+            </select>
+        </div>
+        <div class="form-group col-md-3">
+            <label for="inputDepartamento">Mes</label>
+            <select id="inputDepartamento" class="form-control">
+                <option selected>Seleccione el año</option>
+                @{
+                    int anio = DateTime.Now.Year;
+                    anio += 10;
+                    for (int i = DateTime.Now.Year; i < anio; i++)
+                    {
+                        <option>@i</option>
+                    }
+                }
+            </select>
+        </div>
+    </div>
+    <div>
+        <label for="inputCodPostal">Código de Seguridad (CCV)</label>
+        <input type="text" class="form-control" id="inputCodPostal" width="10">
+    </div>
+</body>
+<br />
+

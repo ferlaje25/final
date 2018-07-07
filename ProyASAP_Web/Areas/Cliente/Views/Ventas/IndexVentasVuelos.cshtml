@@ -1,0 +1,92 @@
+﻿@using BL_ASAP;
+@using BE_ASAP;
+@{
+    ViewBag.Title = "IndexVentasVuelos";
+    Layout = "~/Areas/Cliente/Views/Shared/_Layout.cshtml";
+}
+
+<h2>IndexVentasVuelos</h2>
+@{
+
+   //t<Ubigeo> ListadoAeropuertos = (List<Ubigeo>)ViewBag.ListadoAeropuertos;
+    //Programacion_vuelo prograVuelo = (Programacion_vuelo)Session["ProgramacionVuelo"];
+    Session["InfoVentas"] = new InfoDeVenta();//PARTE DE Toño y cesar
+   
+}
+
+
+<div class="card border-info w-100">
+    <div class="card-header text-center  bg-secondary">
+        <div class="btn-group btn-group-toggle" @*container"*@>
+            <ul class="nav" id="menuAerolinea" role="tablist">
+                <li class="nav-item">
+                    <a class="btn btn-info active" role="button" href="#" id="btn_BusVuelos">Busqueda de vuelo</a>
+                </li>
+                <li class="nav-item">
+                    <a class="btn btn-info" role="button" href="#" id="btn_SelVuelos">Seleccion de vuelo</a>
+                </li>
+                <li class="nav-item">
+                    <a class="btn btn-info active" role="button" href="#" id="btn_RegPasajeros">Registro de pasajero</a>
+                </li>
+                <li class="nav-item">
+                    <a class="btn btn-info " role="button" href="#" id="btn_Pago">Pago</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="card-body">
+
+        <div class="container body-content" id="cuerpo">
+
+        </div>
+    </div>
+</div>
+
+
+<script>
+            $.ajax({
+                type: "GET",
+                url: "/Cliente/Ventas/BusquedaVuelo",
+                success: function (view) {
+                    $(cuerpo).html(view);
+                }
+            })
+            $('#btn_SelVuelos').click(function () {
+                $.ajax({
+                    type: "GET",
+                    url: "/Cliente/Ventas/SeleccionVuelo",
+                    success: function (view) {
+                        $(cuerpo).html(view);
+                    }
+                });
+            })
+            $('#btn_RegPasajeros').click(function () {
+                $.ajax({
+                    type: "GET",
+                    url: "/Cliente/Ventas/RegistroPasajero",
+                    success: function (view) {
+                        $(cuerpo).html(view);
+                    }
+                });
+            })
+            $('#btn_Pago').click(function () {
+                $.ajax({
+                    type: "GET",
+                    url: "/Cliente/Ventas/PasarelaPago",
+                    success: function (view) {
+                        $(cuerpo).html(view);
+                    }
+                });
+            })
+            $('#btn_BusVuelos').click(function () {
+                $.ajax({
+                    type: "GET",
+                    url: "/Cliente/Ventas/BusquedaVuelo",
+                    success: function (view) {
+                        $(cuerpo).html(view);
+                    }
+                });
+            })
+</script>
+
+

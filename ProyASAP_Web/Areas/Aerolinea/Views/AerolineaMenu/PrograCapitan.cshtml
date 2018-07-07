@@ -1,0 +1,122 @@
+﻿@using BL_ASAP;
+@using BE_ASAP;
+@{
+    //------------------Tripulación
+    List<Tripulacion> selec3 = (List<Tripulacion>)Session["TripulacionSelec"];
+    List<int> idselec = new List<int>();
+    //Si está seleccionado como auxiliar de cabina, no puede ser seleccionado como capitan
+    //Listado de Auxiliares de Cabina
+    foreach (Tripulacion auxcab in selec3.Where(x => x.IdRolTrip == 2).ToList())
+    {
+        idselec.Add(auxcab.IdEmpleTrip);
+    }
+    //Listado de Capitanes seleccionados
+    List<int> idcapsel = new List<int>();
+    foreach (Tripulacion capsel in selec3.Where(x => x.IdRolTrip == 1).ToList())
+    {
+        idcapsel.Add(capsel.IdEmpleTrip);
+    }
+    //---------------------T
+
+}
+<style>
+    .table-wrapper-2 {
+        display: block;
+        max-height: 200px;
+        overflow-y: auto;
+        -ms-overflow-style: -ms-autohiding-scrollbar;
+        background-color: #66a3ff;
+    }
+</style>
+<br>
+<h2>Colaboradores del Personal Técnico:</h2>
+
+<h3 class="text-center bg-primary">Capitán:</h3>
+
+<div class="table-wrapper-2">
+
+    <table class="table table-hover table-responsive-md" id="divtablatriptec">
+        <thead>
+            <tr>
+
+                <th>Apellido</th>
+                <th>Nombre</th>
+                <th>Cantidad de Sanciones</th>
+                <th>Disponibilidad</th>
+                <th>¿Tripulación actual?</th>
+            </tr>
+        </thead>
+        <tbody>
+            @{List<Empleado> EmpleadosPorRol = BLEmpleado.EmpleadosPorRol("Cabina");
+            }
+            @foreach (Empleado item in EmpleadosPorRol)
+            {
+                if (!idselec.Contains(item.Id_Empleado))
+                {
+
+                    <tr>
+                        @{
+                            int cant = BLSancion.CantSancion(item.Id_Empleado);
+                        }
+                        <th>@item.Nombre_Emp</th>
+                        <th>@item.Apellidos_Emp</th>
+                        <th>
+                            @cant
+                        </th>
+                        <th>Disponible</th>
+                        <th>
+                            <div class="form-check">
+                                <label>
+                                    @*----------------Tripulación--------------------*@
+                                    @{ if (idcapsel.Contains(item.Id_Empleado))
+                                        {
+                                            <input class="chkCapitan" data-idemp=@item.Id_Empleado type="radio" name="check" checked="checked"> <span class="label-text"></span>
+                                        }
+                                        else
+                                        {
+                                            <input class="chkCapitan" data-idemp=@item.Id_Empleado type="radio" name="check"> <span class="label-text"></span>
+                                        }
+                                    }
+                                    @*----------------T--------------------*@
+                                </label>
+                            </div>
+                        </th>
+                    </tr>
+                                            }
+                                        }
+        </tbody>
+    </table>
+</div>
+
+@*---------------------Tripulación--------------------------*@
+<script>
+    $('.chkCapitan').click(function () {
+        if ($(this).is(':checked')) {
+
+            var id = $(this).attr("data-idemp");
+              $.ajax({
+                type: "POST",
+                url: "/Aerolinea/AerolineaMenu/FiltrarTabla",
+                data: { idselec:id, rol:1 },
+                success: function (html) {
+                    alert(/*id +*/ "CAPITAN SELECCIONADO");
+
+                    }
+            });
+
+        } else {
+            var id = $(this).attr("data-idemp");
+
+                $.ajax({
+                    type: "POST",
+                    url: "/Aerolinea/AerolineaMenu/DeshacerFiltro",
+                    data: { idselec: id, rol: 1 },
+                    success: function (html) {
+
+                    }
+                });
+        }
+        });
+
+
+</script>

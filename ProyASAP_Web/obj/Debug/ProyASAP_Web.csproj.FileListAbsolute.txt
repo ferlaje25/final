@@ -1,0 +1,288 @@
+C:\Users\Patty\Documents\ESAN\CICLOS\CICLO-7(2018-1)\APLICACIONES WEB\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Patty\Documents\ESAN\CICLOS\CICLO-7(2018-1)\APLICACIONES WEB\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Patty\Documents\ESAN\CICLOS\CICLO-7(2018-1)\APLICACIONES WEB\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Patty\Documents\ESAN\CICLOS\CICLO-7(2018-1)\APLICACIONES WEB\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\roslyn\VBCSCompiler.exe
+C:\Users\Patty\Documents\ESAN\CICLOS\CICLO-7(2018-1)\APLICACIONES WEB\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\roslyn\csc.exe
+C:\Users\Patty\Documents\ESAN\CICLOS\CICLO-7(2018-1)\APLICACIONES WEB\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Patty\Documents\ESAN\CICLOS\CICLO-7(2018-1)\APLICACIONES WEB\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Patty\Documents\ESAN\CICLOS\CICLO-7(2018-1)\APLICACIONES WEB\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Patty\Documents\ESAN\CICLOS\CICLO-7(2018-1)\APLICACIONES WEB\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Patty\Documents\ESAN\CICLOS\CICLO-7(2018-1)\APLICACIONES WEB\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Patty\Documents\ESAN\CICLOS\CICLO-7(2018-1)\APLICACIONES WEB\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\roslyn\vbc.exe
+C:\Users\Patty\Documents\ESAN\CICLOS\CICLO-7(2018-1)\APLICACIONES WEB\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Patty\Documents\ESAN\CICLOS\CICLO-7(2018-1)\APLICACIONES WEB\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\ProyASAP_Web.dll.config
+C:\Users\Patty\Documents\ESAN\CICLOS\CICLO-7(2018-1)\APLICACIONES WEB\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\ProyASAP_Web.dll
+C:\Users\Patty\Documents\ESAN\CICLOS\CICLO-7(2018-1)\APLICACIONES WEB\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\ProyASAP_Web.pdb
+C:\Users\Patty\Documents\ESAN\CICLOS\CICLO-7(2018-1)\APLICACIONES WEB\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Patty\Documents\ESAN\CICLOS\CICLO-7(2018-1)\APLICACIONES WEB\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Patty\Documents\ESAN\CICLOS\CICLO-7(2018-1)\APLICACIONES WEB\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\System.Web.Helpers.dll
+C:\Users\Patty\Documents\ESAN\CICLOS\CICLO-7(2018-1)\APLICACIONES WEB\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\System.Web.Mvc.dll
+C:\Users\Patty\Documents\ESAN\CICLOS\CICLO-7(2018-1)\APLICACIONES WEB\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\System.Web.Razor.dll
+C:\Users\Patty\Documents\ESAN\CICLOS\CICLO-7(2018-1)\APLICACIONES WEB\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\System.Web.Webpages.Deployment.dll
+C:\Users\Patty\Documents\ESAN\CICLOS\CICLO-7(2018-1)\APLICACIONES WEB\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\System.Web.Webpages.dll
+C:\Users\Patty\Documents\ESAN\CICLOS\CICLO-7(2018-1)\APLICACIONES WEB\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\System.Web.Webpages.Razor.dll
+C:\Users\Patty\Documents\ESAN\CICLOS\CICLO-7(2018-1)\APLICACIONES WEB\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Patty\Documents\ESAN\CICLOS\CICLO-7(2018-1)\APLICACIONES WEB\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\System.Web.Razor.xml
+C:\Users\Patty\Documents\ESAN\CICLOS\CICLO-7(2018-1)\APLICACIONES WEB\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\System.Web.Webpages.xml
+C:\Users\Patty\Documents\ESAN\CICLOS\CICLO-7(2018-1)\APLICACIONES WEB\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\System.Web.Webpages.Deployment.xml
+C:\Users\Patty\Documents\ESAN\CICLOS\CICLO-7(2018-1)\APLICACIONES WEB\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\System.Web.Webpages.Razor.xml
+C:\Users\Patty\Documents\ESAN\CICLOS\CICLO-7(2018-1)\APLICACIONES WEB\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\System.Web.Helpers.xml
+C:\Users\Patty\Documents\ESAN\CICLOS\CICLO-7(2018-1)\APLICACIONES WEB\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\System.Web.Mvc.xml
+C:\Users\Patty\Documents\ESAN\CICLOS\CICLO-7(2018-1)\APLICACIONES WEB\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\es\System.Web.Razor.resources.dll
+C:\Users\Patty\Documents\ESAN\CICLOS\CICLO-7(2018-1)\APLICACIONES WEB\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\es\System.Web.Webpages.resources.dll
+C:\Users\Patty\Documents\ESAN\CICLOS\CICLO-7(2018-1)\APLICACIONES WEB\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\es\System.Web.Webpages.Deployment.resources.dll
+C:\Users\Patty\Documents\ESAN\CICLOS\CICLO-7(2018-1)\APLICACIONES WEB\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\es\System.Web.Webpages.Razor.resources.dll
+C:\Users\Patty\Documents\ESAN\CICLOS\CICLO-7(2018-1)\APLICACIONES WEB\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\es\System.Web.Helpers.resources.dll
+C:\Users\Patty\Documents\ESAN\CICLOS\CICLO-7(2018-1)\APLICACIONES WEB\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\es\System.Web.Mvc.resources.dll
+C:\Users\Patty\Documents\ESAN\CICLOS\CICLO-7(2018-1)\APLICACIONES WEB\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\obj\Debug\ProyASAP_Web.dll
+C:\Users\Patty\Documents\ESAN\CICLOS\CICLO-7(2018-1)\APLICACIONES WEB\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\obj\Debug\ProyASAP_Web.pdb
+C:\Users\Patty\Documents\ESAN\CICLOS\CICLO-7(2018-1)\APLICACIONES WEB\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\obj\Debug\ProyASAP_Web.csprojResolveAssemblyReference.cache
+C:\Users\Patty\Documents\ESAN\CICLOS\CICLO-7(2018-1)\APLICACIONES WEB\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\EntityFramework.dll
+C:\Users\Patty\Documents\ESAN\CICLOS\CICLO-7(2018-1)\APLICACIONES WEB\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\EntityFramework.SqlServer.dll
+C:\Users\Patty\Documents\ESAN\CICLOS\CICLO-7(2018-1)\APLICACIONES WEB\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\EntityFramework.xml
+C:\Users\Patty\Documents\ESAN\CICLOS\CICLO-7(2018-1)\APLICACIONES WEB\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\EntityFramework.SqlServer.xml
+C:\Users\Juan\Documents\Visual Studio 2015\Projects\CAPSTONE WEB\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\roslyn\csc.exe
+C:\Users\Juan\Documents\Visual Studio 2015\Projects\CAPSTONE WEB\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Juan\Documents\Visual Studio 2015\Projects\CAPSTONE WEB\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Juan\Documents\Visual Studio 2015\Projects\CAPSTONE WEB\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Juan\Documents\Visual Studio 2015\Projects\CAPSTONE WEB\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Juan\Documents\Visual Studio 2015\Projects\CAPSTONE WEB\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Juan\Documents\Visual Studio 2015\Projects\CAPSTONE WEB\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Juan\Documents\Visual Studio 2015\Projects\CAPSTONE WEB\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Juan\Documents\Visual Studio 2015\Projects\CAPSTONE WEB\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Juan\Documents\Visual Studio 2015\Projects\CAPSTONE WEB\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\roslyn\vbc.exe
+C:\Users\Juan\Documents\Visual Studio 2015\Projects\CAPSTONE WEB\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\roslyn\VBCSCompiler.exe
+C:\Users\Juan\Documents\Visual Studio 2015\Projects\CAPSTONE WEB\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Juan\Documents\Visual Studio 2015\Projects\CAPSTONE WEB\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\ProyASAP_Web.dll.config
+C:\Users\Juan\Documents\Visual Studio 2015\Projects\CAPSTONE WEB\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\ProyASAP_Web.dll
+C:\Users\Juan\Documents\Visual Studio 2015\Projects\CAPSTONE WEB\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\ProyASAP_Web.pdb
+C:\Users\Juan\Documents\Visual Studio 2015\Projects\CAPSTONE WEB\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\BL_ASAP.dll
+C:\Users\Juan\Documents\Visual Studio 2015\Projects\CAPSTONE WEB\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\EntityFramework.dll
+C:\Users\Juan\Documents\Visual Studio 2015\Projects\CAPSTONE WEB\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\EntityFramework.SqlServer.dll
+C:\Users\Juan\Documents\Visual Studio 2015\Projects\CAPSTONE WEB\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Juan\Documents\Visual Studio 2015\Projects\CAPSTONE WEB\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Juan\Documents\Visual Studio 2015\Projects\CAPSTONE WEB\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\System.Web.Helpers.dll
+C:\Users\Juan\Documents\Visual Studio 2015\Projects\CAPSTONE WEB\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\System.Web.Mvc.dll
+C:\Users\Juan\Documents\Visual Studio 2015\Projects\CAPSTONE WEB\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\System.Web.Razor.dll
+C:\Users\Juan\Documents\Visual Studio 2015\Projects\CAPSTONE WEB\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\System.Web.Webpages.Deployment.dll
+C:\Users\Juan\Documents\Visual Studio 2015\Projects\CAPSTONE WEB\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\System.Web.Webpages.dll
+C:\Users\Juan\Documents\Visual Studio 2015\Projects\CAPSTONE WEB\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\System.Web.Webpages.Razor.dll
+C:\Users\Juan\Documents\Visual Studio 2015\Projects\CAPSTONE WEB\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\BE_ASAP.dll
+C:\Users\Juan\Documents\Visual Studio 2015\Projects\CAPSTONE WEB\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\DA_ASAP.dll
+C:\Users\Juan\Documents\Visual Studio 2015\Projects\CAPSTONE WEB\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\BL_ASAP.pdb
+C:\Users\Juan\Documents\Visual Studio 2015\Projects\CAPSTONE WEB\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\EntityFramework.xml
+C:\Users\Juan\Documents\Visual Studio 2015\Projects\CAPSTONE WEB\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\EntityFramework.SqlServer.xml
+C:\Users\Juan\Documents\Visual Studio 2015\Projects\CAPSTONE WEB\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Juan\Documents\Visual Studio 2015\Projects\CAPSTONE WEB\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\System.Web.Razor.xml
+C:\Users\Juan\Documents\Visual Studio 2015\Projects\CAPSTONE WEB\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\System.Web.Webpages.xml
+C:\Users\Juan\Documents\Visual Studio 2015\Projects\CAPSTONE WEB\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\System.Web.Webpages.Deployment.xml
+C:\Users\Juan\Documents\Visual Studio 2015\Projects\CAPSTONE WEB\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\System.Web.Webpages.Razor.xml
+C:\Users\Juan\Documents\Visual Studio 2015\Projects\CAPSTONE WEB\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\System.Web.Helpers.xml
+C:\Users\Juan\Documents\Visual Studio 2015\Projects\CAPSTONE WEB\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\System.Web.Mvc.xml
+C:\Users\Juan\Documents\Visual Studio 2015\Projects\CAPSTONE WEB\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\BE_ASAP.pdb
+C:\Users\Juan\Documents\Visual Studio 2015\Projects\CAPSTONE WEB\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\DA_ASAP.pdb
+C:\Users\Juan\Documents\Visual Studio 2015\Projects\CAPSTONE WEB\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\es\System.Web.Razor.resources.dll
+C:\Users\Juan\Documents\Visual Studio 2015\Projects\CAPSTONE WEB\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\es\System.Web.Webpages.resources.dll
+C:\Users\Juan\Documents\Visual Studio 2015\Projects\CAPSTONE WEB\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\es\System.Web.Webpages.Deployment.resources.dll
+C:\Users\Juan\Documents\Visual Studio 2015\Projects\CAPSTONE WEB\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\es\System.Web.Webpages.Razor.resources.dll
+C:\Users\Juan\Documents\Visual Studio 2015\Projects\CAPSTONE WEB\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\es\System.Web.Helpers.resources.dll
+C:\Users\Juan\Documents\Visual Studio 2015\Projects\CAPSTONE WEB\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\es\System.Web.Mvc.resources.dll
+C:\Users\Juan\Documents\Visual Studio 2015\Projects\CAPSTONE WEB\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\obj\Debug\ProyASAP_Web.csprojResolveAssemblyReference.cache
+C:\Users\Juan\Documents\Visual Studio 2015\Projects\CAPSTONE WEB\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\obj\Debug\ProyASAP_Web.dll
+C:\Users\Juan\Documents\Visual Studio 2015\Projects\CAPSTONE WEB\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\obj\Debug\ProyASAP_Web.pdb
+C:\Users\Patty\Documents\ESAN\CICLOS\CICLO-7(2018-1)\APLICACIONES WEB\CAPSTONE WEB\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\roslyn\csc.exe
+C:\Users\Patty\Documents\ESAN\CICLOS\CICLO-7(2018-1)\APLICACIONES WEB\CAPSTONE WEB\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Patty\Documents\ESAN\CICLOS\CICLO-7(2018-1)\APLICACIONES WEB\CAPSTONE WEB\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Patty\Documents\ESAN\CICLOS\CICLO-7(2018-1)\APLICACIONES WEB\CAPSTONE WEB\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Patty\Documents\ESAN\CICLOS\CICLO-7(2018-1)\APLICACIONES WEB\CAPSTONE WEB\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Patty\Documents\ESAN\CICLOS\CICLO-7(2018-1)\APLICACIONES WEB\CAPSTONE WEB\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Patty\Documents\ESAN\CICLOS\CICLO-7(2018-1)\APLICACIONES WEB\CAPSTONE WEB\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Patty\Documents\ESAN\CICLOS\CICLO-7(2018-1)\APLICACIONES WEB\CAPSTONE WEB\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Patty\Documents\ESAN\CICLOS\CICLO-7(2018-1)\APLICACIONES WEB\CAPSTONE WEB\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Patty\Documents\ESAN\CICLOS\CICLO-7(2018-1)\APLICACIONES WEB\CAPSTONE WEB\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\roslyn\vbc.exe
+C:\Users\Patty\Documents\ESAN\CICLOS\CICLO-7(2018-1)\APLICACIONES WEB\CAPSTONE WEB\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\roslyn\VBCSCompiler.exe
+C:\Users\Patty\Documents\ESAN\CICLOS\CICLO-7(2018-1)\APLICACIONES WEB\CAPSTONE WEB\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Patty\Documents\ESAN\CICLOS\CICLO-7(2018-1)\APLICACIONES WEB\CAPSTONE WEB\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\ProyASAP_Web.dll.config
+C:\Users\Patty\Documents\ESAN\CICLOS\CICLO-7(2018-1)\APLICACIONES WEB\CAPSTONE WEB\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\ProyASAP_Web.dll
+C:\Users\Patty\Documents\ESAN\CICLOS\CICLO-7(2018-1)\APLICACIONES WEB\CAPSTONE WEB\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\ProyASAP_Web.pdb
+C:\Users\Patty\Documents\ESAN\CICLOS\CICLO-7(2018-1)\APLICACIONES WEB\CAPSTONE WEB\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\BL_ASAP.dll
+C:\Users\Patty\Documents\ESAN\CICLOS\CICLO-7(2018-1)\APLICACIONES WEB\CAPSTONE WEB\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\EntityFramework.dll
+C:\Users\Patty\Documents\ESAN\CICLOS\CICLO-7(2018-1)\APLICACIONES WEB\CAPSTONE WEB\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\EntityFramework.SqlServer.dll
+C:\Users\Patty\Documents\ESAN\CICLOS\CICLO-7(2018-1)\APLICACIONES WEB\CAPSTONE WEB\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Patty\Documents\ESAN\CICLOS\CICLO-7(2018-1)\APLICACIONES WEB\CAPSTONE WEB\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Patty\Documents\ESAN\CICLOS\CICLO-7(2018-1)\APLICACIONES WEB\CAPSTONE WEB\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\System.Web.Helpers.dll
+C:\Users\Patty\Documents\ESAN\CICLOS\CICLO-7(2018-1)\APLICACIONES WEB\CAPSTONE WEB\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\System.Web.Mvc.dll
+C:\Users\Patty\Documents\ESAN\CICLOS\CICLO-7(2018-1)\APLICACIONES WEB\CAPSTONE WEB\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\System.Web.Razor.dll
+C:\Users\Patty\Documents\ESAN\CICLOS\CICLO-7(2018-1)\APLICACIONES WEB\CAPSTONE WEB\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\System.Web.Webpages.Deployment.dll
+C:\Users\Patty\Documents\ESAN\CICLOS\CICLO-7(2018-1)\APLICACIONES WEB\CAPSTONE WEB\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\System.Web.Webpages.dll
+C:\Users\Patty\Documents\ESAN\CICLOS\CICLO-7(2018-1)\APLICACIONES WEB\CAPSTONE WEB\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\System.Web.Webpages.Razor.dll
+C:\Users\Patty\Documents\ESAN\CICLOS\CICLO-7(2018-1)\APLICACIONES WEB\CAPSTONE WEB\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\BE_ASAP.dll
+C:\Users\Patty\Documents\ESAN\CICLOS\CICLO-7(2018-1)\APLICACIONES WEB\CAPSTONE WEB\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\DA_ASAP.dll
+C:\Users\Patty\Documents\ESAN\CICLOS\CICLO-7(2018-1)\APLICACIONES WEB\CAPSTONE WEB\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\BL_ASAP.pdb
+C:\Users\Patty\Documents\ESAN\CICLOS\CICLO-7(2018-1)\APLICACIONES WEB\CAPSTONE WEB\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\EntityFramework.xml
+C:\Users\Patty\Documents\ESAN\CICLOS\CICLO-7(2018-1)\APLICACIONES WEB\CAPSTONE WEB\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\EntityFramework.SqlServer.xml
+C:\Users\Patty\Documents\ESAN\CICLOS\CICLO-7(2018-1)\APLICACIONES WEB\CAPSTONE WEB\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Patty\Documents\ESAN\CICLOS\CICLO-7(2018-1)\APLICACIONES WEB\CAPSTONE WEB\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\System.Web.Razor.xml
+C:\Users\Patty\Documents\ESAN\CICLOS\CICLO-7(2018-1)\APLICACIONES WEB\CAPSTONE WEB\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\System.Web.Webpages.xml
+C:\Users\Patty\Documents\ESAN\CICLOS\CICLO-7(2018-1)\APLICACIONES WEB\CAPSTONE WEB\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\System.Web.Webpages.Deployment.xml
+C:\Users\Patty\Documents\ESAN\CICLOS\CICLO-7(2018-1)\APLICACIONES WEB\CAPSTONE WEB\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\System.Web.Webpages.Razor.xml
+C:\Users\Patty\Documents\ESAN\CICLOS\CICLO-7(2018-1)\APLICACIONES WEB\CAPSTONE WEB\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\System.Web.Helpers.xml
+C:\Users\Patty\Documents\ESAN\CICLOS\CICLO-7(2018-1)\APLICACIONES WEB\CAPSTONE WEB\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\System.Web.Mvc.xml
+C:\Users\Patty\Documents\ESAN\CICLOS\CICLO-7(2018-1)\APLICACIONES WEB\CAPSTONE WEB\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\BE_ASAP.pdb
+C:\Users\Patty\Documents\ESAN\CICLOS\CICLO-7(2018-1)\APLICACIONES WEB\CAPSTONE WEB\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\DA_ASAP.pdb
+C:\Users\Patty\Documents\ESAN\CICLOS\CICLO-7(2018-1)\APLICACIONES WEB\CAPSTONE WEB\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\es\System.Web.Razor.resources.dll
+C:\Users\Patty\Documents\ESAN\CICLOS\CICLO-7(2018-1)\APLICACIONES WEB\CAPSTONE WEB\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\es\System.Web.Webpages.resources.dll
+C:\Users\Patty\Documents\ESAN\CICLOS\CICLO-7(2018-1)\APLICACIONES WEB\CAPSTONE WEB\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\es\System.Web.Webpages.Deployment.resources.dll
+C:\Users\Patty\Documents\ESAN\CICLOS\CICLO-7(2018-1)\APLICACIONES WEB\CAPSTONE WEB\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\es\System.Web.Webpages.Razor.resources.dll
+C:\Users\Patty\Documents\ESAN\CICLOS\CICLO-7(2018-1)\APLICACIONES WEB\CAPSTONE WEB\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\es\System.Web.Helpers.resources.dll
+C:\Users\Patty\Documents\ESAN\CICLOS\CICLO-7(2018-1)\APLICACIONES WEB\CAPSTONE WEB\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\es\System.Web.Mvc.resources.dll
+C:\Users\Patty\Documents\ESAN\CICLOS\CICLO-7(2018-1)\APLICACIONES WEB\CAPSTONE WEB\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\obj\Debug\ProyASAP_Web.csprojResolveAssemblyReference.cache
+C:\Users\Patty\Documents\ESAN\CICLOS\CICLO-7(2018-1)\APLICACIONES WEB\CAPSTONE WEB\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\obj\Debug\ProyASAP_Web.dll
+C:\Users\Patty\Documents\ESAN\CICLOS\CICLO-7(2018-1)\APLICACIONES WEB\CAPSTONE WEB\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\obj\Debug\ProyASAP_Web.pdb
+C:\Users\laboratorioesan\Desktop\Completo\CAPSTONE WEB_V6\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\roslyn\csc.exe
+C:\Users\laboratorioesan\Desktop\Completo\CAPSTONE WEB_V6\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\laboratorioesan\Desktop\Completo\CAPSTONE WEB_V6\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\laboratorioesan\Desktop\Completo\CAPSTONE WEB_V6\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\laboratorioesan\Desktop\Completo\CAPSTONE WEB_V6\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\laboratorioesan\Desktop\Completo\CAPSTONE WEB_V6\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\laboratorioesan\Desktop\Completo\CAPSTONE WEB_V6\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\laboratorioesan\Desktop\Completo\CAPSTONE WEB_V6\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\laboratorioesan\Desktop\Completo\CAPSTONE WEB_V6\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\laboratorioesan\Desktop\Completo\CAPSTONE WEB_V6\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\roslyn\vbc.exe
+C:\Users\laboratorioesan\Desktop\Completo\CAPSTONE WEB_V6\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\roslyn\VBCSCompiler.exe
+C:\Users\laboratorioesan\Desktop\Completo\CAPSTONE WEB_V6\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\laboratorioesan\Desktop\Completo\CAPSTONE WEB_V6\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\ProyASAP_Web.dll.config
+C:\Users\laboratorioesan\Desktop\Completo\CAPSTONE WEB_V6\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\ProyASAP_Web.dll
+C:\Users\laboratorioesan\Desktop\Completo\CAPSTONE WEB_V6\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\ProyASAP_Web.pdb
+C:\Users\laboratorioesan\Desktop\Completo\CAPSTONE WEB_V6\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\BE_ASAP.dll
+C:\Users\laboratorioesan\Desktop\Completo\CAPSTONE WEB_V6\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\BL_ASAP.dll
+C:\Users\laboratorioesan\Desktop\Completo\CAPSTONE WEB_V6\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\EntityFramework.dll
+C:\Users\laboratorioesan\Desktop\Completo\CAPSTONE WEB_V6\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\EntityFramework.SqlServer.dll
+C:\Users\laboratorioesan\Desktop\Completo\CAPSTONE WEB_V6\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\laboratorioesan\Desktop\Completo\CAPSTONE WEB_V6\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\laboratorioesan\Desktop\Completo\CAPSTONE WEB_V6\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\System.Web.Helpers.dll
+C:\Users\laboratorioesan\Desktop\Completo\CAPSTONE WEB_V6\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\System.Web.Mvc.dll
+C:\Users\laboratorioesan\Desktop\Completo\CAPSTONE WEB_V6\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\System.Web.Razor.dll
+C:\Users\laboratorioesan\Desktop\Completo\CAPSTONE WEB_V6\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\System.Web.Webpages.Deployment.dll
+C:\Users\laboratorioesan\Desktop\Completo\CAPSTONE WEB_V6\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\System.Web.Webpages.dll
+C:\Users\laboratorioesan\Desktop\Completo\CAPSTONE WEB_V6\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\System.Web.Webpages.Razor.dll
+C:\Users\laboratorioesan\Desktop\Completo\CAPSTONE WEB_V6\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\DA_ASAP.dll
+C:\Users\laboratorioesan\Desktop\Completo\CAPSTONE WEB_V6\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\BE_ASAP.pdb
+C:\Users\laboratorioesan\Desktop\Completo\CAPSTONE WEB_V6\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\BL_ASAP.pdb
+C:\Users\laboratorioesan\Desktop\Completo\CAPSTONE WEB_V6\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\EntityFramework.xml
+C:\Users\laboratorioesan\Desktop\Completo\CAPSTONE WEB_V6\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\EntityFramework.SqlServer.xml
+C:\Users\laboratorioesan\Desktop\Completo\CAPSTONE WEB_V6\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\laboratorioesan\Desktop\Completo\CAPSTONE WEB_V6\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\System.Web.Razor.xml
+C:\Users\laboratorioesan\Desktop\Completo\CAPSTONE WEB_V6\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\System.Web.Webpages.xml
+C:\Users\laboratorioesan\Desktop\Completo\CAPSTONE WEB_V6\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\System.Web.Webpages.Deployment.xml
+C:\Users\laboratorioesan\Desktop\Completo\CAPSTONE WEB_V6\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\System.Web.Webpages.Razor.xml
+C:\Users\laboratorioesan\Desktop\Completo\CAPSTONE WEB_V6\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\System.Web.Helpers.xml
+C:\Users\laboratorioesan\Desktop\Completo\CAPSTONE WEB_V6\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\System.Web.Mvc.xml
+C:\Users\laboratorioesan\Desktop\Completo\CAPSTONE WEB_V6\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\DA_ASAP.pdb
+C:\Users\laboratorioesan\Desktop\Completo\CAPSTONE WEB_V6\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\es\System.Web.Razor.resources.dll
+C:\Users\laboratorioesan\Desktop\Completo\CAPSTONE WEB_V6\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\es\System.Web.Webpages.resources.dll
+C:\Users\laboratorioesan\Desktop\Completo\CAPSTONE WEB_V6\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\es\System.Web.Webpages.Deployment.resources.dll
+C:\Users\laboratorioesan\Desktop\Completo\CAPSTONE WEB_V6\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\es\System.Web.Webpages.Razor.resources.dll
+C:\Users\laboratorioesan\Desktop\Completo\CAPSTONE WEB_V6\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\es\System.Web.Helpers.resources.dll
+C:\Users\laboratorioesan\Desktop\Completo\CAPSTONE WEB_V6\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\es\System.Web.Mvc.resources.dll
+C:\Users\laboratorioesan\Desktop\Completo\CAPSTONE WEB_V6\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\obj\Debug\ProyASAP_Web.csprojResolveAssemblyReference.cache
+C:\Users\laboratorioesan\Desktop\Completo\CAPSTONE WEB_V6\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\obj\Debug\ProyASAP_Web.dll
+C:\Users\laboratorioesan\Desktop\Completo\CAPSTONE WEB_V6\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\obj\Debug\ProyASAP_Web.pdb
+C:\Users\Patty\Desktop\Capstonex4\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\obj\Debug\ProyASAP_Web.csprojResolveAssemblyReference.cache
+C:\Users\Patty\Desktop\Capstonex4\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\obj\Debug\ProyASAP_Web.dll
+C:\Users\Patty\Desktop\Capstonex4\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\obj\Debug\ProyASAP_Web.pdb
+C:\Users\Patty\Desktop\Capstonex4\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\roslyn\csc.exe
+C:\Users\Patty\Desktop\Capstonex4\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Patty\Desktop\Capstonex4\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Patty\Desktop\Capstonex4\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Patty\Desktop\Capstonex4\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Patty\Desktop\Capstonex4\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Patty\Desktop\Capstonex4\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Patty\Desktop\Capstonex4\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Patty\Desktop\Capstonex4\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Patty\Desktop\Capstonex4\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\roslyn\vbc.exe
+C:\Users\Patty\Desktop\Capstonex4\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\roslyn\VBCSCompiler.exe
+C:\Users\Patty\Desktop\Capstonex4\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Patty\Desktop\Capstonex4\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\ProyASAP_Web.dll.config
+C:\Users\Patty\Desktop\Capstonex4\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\ProyASAP_Web.dll
+C:\Users\Patty\Desktop\Capstonex4\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\ProyASAP_Web.pdb
+C:\Users\Patty\Desktop\Capstonex4\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\BE_ASAP.dll
+C:\Users\Patty\Desktop\Capstonex4\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\BL_ASAP.dll
+C:\Users\Patty\Desktop\Capstonex4\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\EntityFramework.dll
+C:\Users\Patty\Desktop\Capstonex4\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\EntityFramework.SqlServer.dll
+C:\Users\Patty\Desktop\Capstonex4\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Patty\Desktop\Capstonex4\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Patty\Desktop\Capstonex4\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\System.Web.Helpers.dll
+C:\Users\Patty\Desktop\Capstonex4\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\System.Web.Mvc.dll
+C:\Users\Patty\Desktop\Capstonex4\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\System.Web.Razor.dll
+C:\Users\Patty\Desktop\Capstonex4\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\System.Web.Webpages.Deployment.dll
+C:\Users\Patty\Desktop\Capstonex4\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\System.Web.Webpages.dll
+C:\Users\Patty\Desktop\Capstonex4\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\System.Web.Webpages.Razor.dll
+C:\Users\Patty\Desktop\Capstonex4\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\DA_ASAP.dll
+C:\Users\Patty\Desktop\Capstonex4\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\BE_ASAP.pdb
+C:\Users\Patty\Desktop\Capstonex4\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\BL_ASAP.pdb
+C:\Users\Patty\Desktop\Capstonex4\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\EntityFramework.xml
+C:\Users\Patty\Desktop\Capstonex4\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\EntityFramework.SqlServer.xml
+C:\Users\Patty\Desktop\Capstonex4\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Patty\Desktop\Capstonex4\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\System.Web.Razor.xml
+C:\Users\Patty\Desktop\Capstonex4\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\System.Web.Webpages.xml
+C:\Users\Patty\Desktop\Capstonex4\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\System.Web.Webpages.Deployment.xml
+C:\Users\Patty\Desktop\Capstonex4\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\System.Web.Webpages.Razor.xml
+C:\Users\Patty\Desktop\Capstonex4\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\System.Web.Helpers.xml
+C:\Users\Patty\Desktop\Capstonex4\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\System.Web.Mvc.xml
+C:\Users\Patty\Desktop\Capstonex4\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\DA_ASAP.pdb
+C:\Users\Patty\Desktop\Capstonex4\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\es\System.Web.Razor.resources.dll
+C:\Users\Patty\Desktop\Capstonex4\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\es\System.Web.Webpages.resources.dll
+C:\Users\Patty\Desktop\Capstonex4\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\es\System.Web.Webpages.Deployment.resources.dll
+C:\Users\Patty\Desktop\Capstonex4\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\es\System.Web.Webpages.Razor.resources.dll
+C:\Users\Patty\Desktop\Capstonex4\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\es\System.Web.Helpers.resources.dll
+C:\Users\Patty\Desktop\Capstonex4\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\es\System.Web.Mvc.resources.dll
+C:\Users\laboratorioesan\Desktop\VersionCasiFinal\CAPSTONE WEB-PROGRAMACION-CRUD\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\roslyn\csc.exe
+C:\Users\laboratorioesan\Desktop\VersionCasiFinal\CAPSTONE WEB-PROGRAMACION-CRUD\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\laboratorioesan\Desktop\VersionCasiFinal\CAPSTONE WEB-PROGRAMACION-CRUD\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\laboratorioesan\Desktop\VersionCasiFinal\CAPSTONE WEB-PROGRAMACION-CRUD\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\laboratorioesan\Desktop\VersionCasiFinal\CAPSTONE WEB-PROGRAMACION-CRUD\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\laboratorioesan\Desktop\VersionCasiFinal\CAPSTONE WEB-PROGRAMACION-CRUD\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\laboratorioesan\Desktop\VersionCasiFinal\CAPSTONE WEB-PROGRAMACION-CRUD\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\laboratorioesan\Desktop\VersionCasiFinal\CAPSTONE WEB-PROGRAMACION-CRUD\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\laboratorioesan\Desktop\VersionCasiFinal\CAPSTONE WEB-PROGRAMACION-CRUD\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\laboratorioesan\Desktop\VersionCasiFinal\CAPSTONE WEB-PROGRAMACION-CRUD\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\roslyn\vbc.exe
+C:\Users\laboratorioesan\Desktop\VersionCasiFinal\CAPSTONE WEB-PROGRAMACION-CRUD\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\roslyn\VBCSCompiler.exe
+C:\Users\laboratorioesan\Desktop\VersionCasiFinal\CAPSTONE WEB-PROGRAMACION-CRUD\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\laboratorioesan\Desktop\VersionCasiFinal\CAPSTONE WEB-PROGRAMACION-CRUD\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\ProyASAP_Web.dll.config
+C:\Users\laboratorioesan\Desktop\VersionCasiFinal\CAPSTONE WEB-PROGRAMACION-CRUD\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\ProyASAP_Web.dll
+C:\Users\laboratorioesan\Desktop\VersionCasiFinal\CAPSTONE WEB-PROGRAMACION-CRUD\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\ProyASAP_Web.pdb
+C:\Users\laboratorioesan\Desktop\VersionCasiFinal\CAPSTONE WEB-PROGRAMACION-CRUD\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\BE_ASAP.dll
+C:\Users\laboratorioesan\Desktop\VersionCasiFinal\CAPSTONE WEB-PROGRAMACION-CRUD\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\BL_ASAP.dll
+C:\Users\laboratorioesan\Desktop\VersionCasiFinal\CAPSTONE WEB-PROGRAMACION-CRUD\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\EntityFramework.dll
+C:\Users\laboratorioesan\Desktop\VersionCasiFinal\CAPSTONE WEB-PROGRAMACION-CRUD\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\EntityFramework.SqlServer.dll
+C:\Users\laboratorioesan\Desktop\VersionCasiFinal\CAPSTONE WEB-PROGRAMACION-CRUD\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\laboratorioesan\Desktop\VersionCasiFinal\CAPSTONE WEB-PROGRAMACION-CRUD\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\laboratorioesan\Desktop\VersionCasiFinal\CAPSTONE WEB-PROGRAMACION-CRUD\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\System.Web.Helpers.dll
+C:\Users\laboratorioesan\Desktop\VersionCasiFinal\CAPSTONE WEB-PROGRAMACION-CRUD\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\System.Web.Mvc.dll
+C:\Users\laboratorioesan\Desktop\VersionCasiFinal\CAPSTONE WEB-PROGRAMACION-CRUD\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\System.Web.Razor.dll
+C:\Users\laboratorioesan\Desktop\VersionCasiFinal\CAPSTONE WEB-PROGRAMACION-CRUD\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\System.Web.Webpages.Deployment.dll
+C:\Users\laboratorioesan\Desktop\VersionCasiFinal\CAPSTONE WEB-PROGRAMACION-CRUD\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\System.Web.Webpages.dll
+C:\Users\laboratorioesan\Desktop\VersionCasiFinal\CAPSTONE WEB-PROGRAMACION-CRUD\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\System.Web.Webpages.Razor.dll
+C:\Users\laboratorioesan\Desktop\VersionCasiFinal\CAPSTONE WEB-PROGRAMACION-CRUD\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\DA_ASAP.dll
+C:\Users\laboratorioesan\Desktop\VersionCasiFinal\CAPSTONE WEB-PROGRAMACION-CRUD\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\BE_ASAP.pdb
+C:\Users\laboratorioesan\Desktop\VersionCasiFinal\CAPSTONE WEB-PROGRAMACION-CRUD\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\BL_ASAP.pdb
+C:\Users\laboratorioesan\Desktop\VersionCasiFinal\CAPSTONE WEB-PROGRAMACION-CRUD\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\EntityFramework.xml
+C:\Users\laboratorioesan\Desktop\VersionCasiFinal\CAPSTONE WEB-PROGRAMACION-CRUD\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\EntityFramework.SqlServer.xml
+C:\Users\laboratorioesan\Desktop\VersionCasiFinal\CAPSTONE WEB-PROGRAMACION-CRUD\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\laboratorioesan\Desktop\VersionCasiFinal\CAPSTONE WEB-PROGRAMACION-CRUD\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\System.Web.Razor.xml
+C:\Users\laboratorioesan\Desktop\VersionCasiFinal\CAPSTONE WEB-PROGRAMACION-CRUD\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\System.Web.Webpages.xml
+C:\Users\laboratorioesan\Desktop\VersionCasiFinal\CAPSTONE WEB-PROGRAMACION-CRUD\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\System.Web.Webpages.Deployment.xml
+C:\Users\laboratorioesan\Desktop\VersionCasiFinal\CAPSTONE WEB-PROGRAMACION-CRUD\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\System.Web.Webpages.Razor.xml
+C:\Users\laboratorioesan\Desktop\VersionCasiFinal\CAPSTONE WEB-PROGRAMACION-CRUD\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\System.Web.Helpers.xml
+C:\Users\laboratorioesan\Desktop\VersionCasiFinal\CAPSTONE WEB-PROGRAMACION-CRUD\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\System.Web.Mvc.xml
+C:\Users\laboratorioesan\Desktop\VersionCasiFinal\CAPSTONE WEB-PROGRAMACION-CRUD\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\DA_ASAP.pdb
+C:\Users\laboratorioesan\Desktop\VersionCasiFinal\CAPSTONE WEB-PROGRAMACION-CRUD\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\es\System.Web.Razor.resources.dll
+C:\Users\laboratorioesan\Desktop\VersionCasiFinal\CAPSTONE WEB-PROGRAMACION-CRUD\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\es\System.Web.Webpages.resources.dll
+C:\Users\laboratorioesan\Desktop\VersionCasiFinal\CAPSTONE WEB-PROGRAMACION-CRUD\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\es\System.Web.Webpages.Deployment.resources.dll
+C:\Users\laboratorioesan\Desktop\VersionCasiFinal\CAPSTONE WEB-PROGRAMACION-CRUD\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\es\System.Web.Webpages.Razor.resources.dll
+C:\Users\laboratorioesan\Desktop\VersionCasiFinal\CAPSTONE WEB-PROGRAMACION-CRUD\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\es\System.Web.Helpers.resources.dll
+C:\Users\laboratorioesan\Desktop\VersionCasiFinal\CAPSTONE WEB-PROGRAMACION-CRUD\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\bin\es\System.Web.Mvc.resources.dll
+C:\Users\laboratorioesan\Desktop\VersionCasiFinal\CAPSTONE WEB-PROGRAMACION-CRUD\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\obj\Debug\ProyASAP_Web.csprojResolveAssemblyReference.cache
+C:\Users\laboratorioesan\Desktop\VersionCasiFinal\CAPSTONE WEB-PROGRAMACION-CRUD\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\obj\Debug\ProyASAP_Web.dll
+C:\Users\laboratorioesan\Desktop\VersionCasiFinal\CAPSTONE WEB-PROGRAMACION-CRUD\CAPSTONE WEB\ProyASAP_Web\ProyASAP_Web\obj\Debug\ProyASAP_Web.pdb

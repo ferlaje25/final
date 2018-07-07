@@ -1,0 +1,732 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ASAPModelStoreContainer" CdmEntityContainer="ASAPEntities">
+    <EntitySetMapping Name="Aerolinea">
+      <EntityTypeMapping TypeName="ASAPModel.Aerolinea">
+        <MappingFragment StoreEntitySet="Aerolinea">
+          <ScalarProperty Name="Id_Aerolinea" ColumnName="Id_Aerolinea" />
+          <ScalarProperty Name="Razon_Social" ColumnName="Razon_Social" />
+          <ScalarProperty Name="Num_Documento" ColumnName="Num_Documento" />
+          <ScalarProperty Name="Direccion" ColumnName="Direccion" />
+          <ScalarProperty Name="Telefono" ColumnName="Telefono" />
+          <ScalarProperty Name="Representante_Legal" ColumnName="Representante_Legal" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="Id_Tipo_Documento" ColumnName="Id_Tipo_Documento" />
+          <ScalarProperty Name="Id_Ubigeo" ColumnName="Id_Ubigeo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Agencia_Viaje">
+      <EntityTypeMapping TypeName="ASAPModel.Agencia_Viaje">
+        <MappingFragment StoreEntitySet="Agencia_Viaje">
+          <ScalarProperty Name="Id_Agencia_Viaje" ColumnName="Id_Agencia_Viaje" />
+          <ScalarProperty Name="Razon_Social" ColumnName="Razon_Social" />
+          <ScalarProperty Name="Num_Documento" ColumnName="Num_Documento" />
+          <ScalarProperty Name="Direccion" ColumnName="Direccion" />
+          <ScalarProperty Name="Representante_Legal" ColumnName="Representante_Legal" />
+          <ScalarProperty Name="Telefono" ColumnName="Telefono" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="Id_Tipo_Documento" ColumnName="Id_Tipo_Documento" />
+          <ScalarProperty Name="Id_Ubigeo" ColumnName="Id_Ubigeo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Area">
+      <EntityTypeMapping TypeName="ASAPModel.Area">
+        <MappingFragment StoreEntitySet="Area">
+          <ScalarProperty Name="Id_Area" ColumnName="Id_Area" />
+          <ScalarProperty Name="Nom_Area" ColumnName="Nom_Area" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Asiento">
+      <EntityTypeMapping TypeName="ASAPModel.Asiento">
+        <MappingFragment StoreEntitySet="Asiento">
+          <ScalarProperty Name="Id_Asiento" ColumnName="Id_Asiento" />
+          <ScalarProperty Name="Num_Asiento" ColumnName="Num_Asiento" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="Id_Avion" ColumnName="Id_Avion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Autorizacion_Operar">
+      <EntityTypeMapping TypeName="ASAPModel.Autorizacion_Operar">
+        <MappingFragment StoreEntitySet="Autorizacion_Operar">
+          <ScalarProperty Name="Id_Autorizacion_Operar" ColumnName="Id_Autorizacion_Operar" />
+          <ScalarProperty Name="Fecha_Ini_Operacion" ColumnName="Fecha_Ini_Operacion" />
+          <ScalarProperty Name="Fecha_Fin_Operacion" ColumnName="Fecha_Fin_Operacion" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="Id_Reg_Avion_ASAP" ColumnName="Id_Reg_Avion_ASAP" />
+          <ScalarProperty Name="Id_Permiso_Operacion" ColumnName="Id_Permiso_Operacion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Avion">
+      <EntityTypeMapping TypeName="ASAPModel.Avion">
+        <MappingFragment StoreEntitySet="Avion">
+          <ScalarProperty Name="Id_Avion" ColumnName="Id_Avion" />
+          <ScalarProperty Name="Nomb_Fabricante" ColumnName="Nomb_Fabricante" />
+          <ScalarProperty Name="Marca" ColumnName="Marca" />
+          <ScalarProperty Name="Modelo" ColumnName="Modelo" />
+          <ScalarProperty Name="Numero_Placa" ColumnName="Numero_Placa" />
+          <ScalarProperty Name="Cantidad_Pasajeros" ColumnName="Cantidad_Pasajeros" />
+          <ScalarProperty Name="Numero_Motores" ColumnName="Numero_Motores" />
+          <ScalarProperty Name="Fecha_Fabricacion" ColumnName="Fecha_Fabricacion" />
+          <ScalarProperty Name="Peso_Bruto" ColumnName="Peso_Bruto" />
+          <ScalarProperty Name="Peso_Neto" ColumnName="Peso_Neto" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="Tiempo_Recorrido" ColumnName="Tiempo_Recorrido" />
+          <ScalarProperty Name="Kilometraje" ColumnName="Kilometraje" />
+          <ScalarProperty Name="Id_Aerolinea" ColumnName="Id_Aerolinea" />
+          <ScalarProperty Name="Id_Servicio" ColumnName="Id_Servicio" />
+          <ScalarProperty Name="Id_Contrato_Alquiler" ColumnName="Id_Contrato_Alquiler" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Cliente">
+      <EntityTypeMapping TypeName="ASAPModel.Cliente">
+        <MappingFragment StoreEntitySet="Cliente">
+          <ScalarProperty Name="Id_Cliente" ColumnName="Id_Cliente" />
+          <ScalarProperty Name="Nomb_Cliente" ColumnName="Nomb_Cliente" />
+          <ScalarProperty Name="Ape_Cliente" ColumnName="Ape_Cliente" />
+          <ScalarProperty Name="Num_Documento" ColumnName="Num_Documento" />
+          <ScalarProperty Name="Direccion" ColumnName="Direccion" />
+          <ScalarProperty Name="Fecha_nacimiento" ColumnName="Fecha_nacimiento" />
+          <ScalarProperty Name="Sexo" ColumnName="Sexo" />
+          <ScalarProperty Name="Telefono" ColumnName="Telefono" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="Id_Tipo_Documento" ColumnName="Id_Tipo_Documento" />
+          <ScalarProperty Name="Id_Ubigeo" ColumnName="Id_Ubigeo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Comprobante_Venta">
+      <EntityTypeMapping TypeName="ASAPModel.Comprobante_Venta">
+        <MappingFragment StoreEntitySet="Comprobante_Venta">
+          <ScalarProperty Name="Id_Comprobante" ColumnName="Id_Comprobante" />
+          <ScalarProperty Name="Nom_Aerolinea" ColumnName="Nom_Aerolinea" />
+          <ScalarProperty Name="Fecha_Vuelo" ColumnName="Fecha_Vuelo" />
+          <ScalarProperty Name="Hora_Vuelo" ColumnName="Hora_Vuelo" />
+          <ScalarProperty Name="Puerta_Embarque" ColumnName="Puerta_Embarque" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="Id_Venta_Pasaje" ColumnName="Id_Venta_Pasaje" />
+          <ScalarProperty Name="Cod_Unico_Ticket" ColumnName="Cod_Unico_Ticket" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Contrato_Agencia">
+      <EntityTypeMapping TypeName="ASAPModel.Contrato_Agencia">
+        <MappingFragment StoreEntitySet="Contrato_Agencia">
+          <ScalarProperty Name="Id_Contrato_Agencia" ColumnName="Id_Contrato_Agencia" />
+          <ScalarProperty Name="Fecha_Ini_Contrato" ColumnName="Fecha_Ini_Contrato" />
+          <ScalarProperty Name="Fecha_Fin_Contrato" ColumnName="Fecha_Fin_Contrato" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="Primer_Descuento" ColumnName="Primer_Descuento" />
+          <ScalarProperty Name="Tope1" ColumnName="Tope1" />
+          <ScalarProperty Name="Segundo_Descuento" ColumnName="Segundo_Descuento" />
+          <ScalarProperty Name="Tope2" ColumnName="Tope2" />
+          <ScalarProperty Name="Id_Agencia_Viaje" ColumnName="Id_Agencia_Viaje" />
+          <ScalarProperty Name="Id_Aerolinea" ColumnName="Id_Aerolinea" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Contrato_Alquiler">
+      <EntityTypeMapping TypeName="ASAPModel.Contrato_Alquiler">
+        <MappingFragment StoreEntitySet="Contrato_Alquiler">
+          <ScalarProperty Name="Id_Contrato_Alquiler" ColumnName="Id_Contrato_Alquiler" />
+          <ScalarProperty Name="Fecha_Ini_Contrato" ColumnName="Fecha_Ini_Contrato" />
+          <ScalarProperty Name="Fecha_Fin_Contrato" ColumnName="Fecha_Fin_Contrato" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="Id_Aerolinea" ColumnName="Id_Aerolinea" />
+          <ScalarProperty Name="Id_Provee_Alq_Avion" ColumnName="Id_Provee_Alq_Avion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Contrato_Empleado">
+      <EntityTypeMapping TypeName="ASAPModel.Contrato_Empleado">
+        <MappingFragment StoreEntitySet="Contrato_Empleado">
+          <ScalarProperty Name="Id_Contrato_Emp" ColumnName="Id_Contrato_Emp" />
+          <ScalarProperty Name="Fecha_Inicio" ColumnName="Fecha_Inicio" />
+          <ScalarProperty Name="Fecha_Fin" ColumnName="Fecha_Fin" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="Id_Empleado" ColumnName="Id_Empleado" />
+          <ScalarProperty Name="Id_Area" ColumnName="Id_Area" />
+          <ScalarProperty Name="Id_Rol" ColumnName="Id_Rol" />
+          <ScalarProperty Name="Tipo_Empresa" ColumnName="Tipo_Empresa" />
+          <ScalarProperty Name="Id_Agencia" ColumnName="Id_Agencia" />
+          <ScalarProperty Name="Id_Aerolinea" ColumnName="Id_Aerolinea" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Det_Contrato_Alquiler">
+      <EntityTypeMapping TypeName="ASAPModel.Det_Contrato_Alquiler">
+        <MappingFragment StoreEntitySet="Det_Contrato_Alquiler">
+          <ScalarProperty Name="Id_Det_Contrato_Alquiler" ColumnName="Id_Det_Contrato_Alquiler" />
+          <ScalarProperty Name="Num_Placa_Avion" ColumnName="Num_Placa_Avion" />
+          <ScalarProperty Name="Fecha_Ini_Alquiler" ColumnName="Fecha_Ini_Alquiler" />
+          <ScalarProperty Name="Fecha_Fin_Alquiler" ColumnName="Fecha_Fin_Alquiler" />
+          <ScalarProperty Name="Fecha_Registro" ColumnName="Fecha_Registro" />
+          <ScalarProperty Name="Fecha_Actualizacion" ColumnName="Fecha_Actualizacion" />
+          <ScalarProperty Name="Estado_Actividad" ColumnName="Estado_Actividad" />
+          <ScalarProperty Name="Id_Contrato_Alquiler" ColumnName="Id_Contrato_Alquiler" />
+          <ScalarProperty Name="Id_Empleado" ColumnName="Id_Empleado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Det_Diagnostico">
+      <EntityTypeMapping TypeName="ASAPModel.Det_Diagnostico">
+        <MappingFragment StoreEntitySet="Det_Diagnostico">
+          <ScalarProperty Name="Id_Det_Diagnostico" ColumnName="Id_Det_Diagnostico" />
+          <ScalarProperty Name="Criticidad" ColumnName="Criticidad" />
+          <ScalarProperty Name="Fecha_Registro" ColumnName="Fecha_Registro" />
+          <ScalarProperty Name="Fecha_Actualizacion" ColumnName="Fecha_Actualizacion" />
+          <ScalarProperty Name="Estado_Actividad" ColumnName="Estado_Actividad" />
+          <ScalarProperty Name="Id_Mant" ColumnName="Id_Mant" />
+          <ScalarProperty Name="Id_Diag_Tecnico" ColumnName="Id_Diag_Tecnico" />
+          <ScalarProperty Name="Id_Empleado" ColumnName="Id_Empleado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Det_Progra_Tripulacion">
+      <EntityTypeMapping TypeName="ASAPModel.Det_Progra_Tripulacion">
+        <MappingFragment StoreEntitySet="Det_Progra_Tripulacion">
+          <ScalarProperty Name="Id_Det_Progra_Tripulacion" ColumnName="Id_Det_Progra_Tripulacion" />
+          <ScalarProperty Name="Cantidad_trip" ColumnName="Cantidad_trip" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="Fecha_Registro" ColumnName="Fecha_Registro" />
+          <ScalarProperty Name="Fecha_Actualizacion" ColumnName="Fecha_Actualizacion" />
+          <ScalarProperty Name="Estado_Actividad" ColumnName="Estado_Actividad" />
+          <ScalarProperty Name="Id_Prog_Vuelo" ColumnName="Id_Prog_Vuelo" />
+          <ScalarProperty Name="Id_Empleado" ColumnName="Id_Empleado" />
+          <ScalarProperty Name="Id_Rol_Trip" ColumnName="Id_Rol_Trip" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Det_Repuesto">
+      <EntityTypeMapping TypeName="ASAPModel.Det_Repuesto">
+        <MappingFragment StoreEntitySet="Det_Repuesto">
+          <ScalarProperty Name="Id_Det_Repuesto" ColumnName="Id_Det_Repuesto" />
+          <ScalarProperty Name="Cantidad" ColumnName="Cantidad" />
+          <ScalarProperty Name="Precio" ColumnName="Precio" />
+          <ScalarProperty Name="Fecha_Registro" ColumnName="Fecha_Registro" />
+          <ScalarProperty Name="Fecha_Actualizacion" ColumnName="Fecha_Actualizacion" />
+          <ScalarProperty Name="Estado_Actividad" ColumnName="Estado_Actividad" />
+          <ScalarProperty Name="Id_Repuesto" ColumnName="Id_Repuesto" />
+          <ScalarProperty Name="Id_Mantenimiento" ColumnName="Id_Mantenimiento" />
+          <ScalarProperty Name="Id_Empleado" ColumnName="Id_Empleado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Det_Ruta_Aerea">
+      <EntityTypeMapping TypeName="ASAPModel.Det_Ruta_Aerea">
+        <MappingFragment StoreEntitySet="Det_Ruta_Aerea">
+          <ScalarProperty Name="Id_Det_Ruta_Aerea" ColumnName="Id_Det_Ruta_Aerea" />
+          <ScalarProperty Name="Kilometraje_Total" ColumnName="Kilometraje_Total" />
+          <ScalarProperty Name="Tiempo_Total" ColumnName="Tiempo_Total" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="Fecha_Registro" ColumnName="Fecha_Registro" />
+          <ScalarProperty Name="Fecha_Actualizacion" ColumnName="Fecha_Actualizacion" />
+          <ScalarProperty Name="Estado_Actividad" ColumnName="Estado_Actividad" />
+          <ScalarProperty Name="Id_Tipo_Ruta" ColumnName="Id_Tipo_Ruta" />
+          <ScalarProperty Name="Id_Empleado" ColumnName="Id_Empleado" />
+          <ScalarProperty Name="Ruta_1" ColumnName="Ruta_1" />
+          <ScalarProperty Name="Ruta_2" ColumnName="Ruta_2" />
+          <ScalarProperty Name="Ruta_3" ColumnName="Ruta_3" />
+          <ScalarProperty Name="Ruta_4" ColumnName="Ruta_4" />
+          <ScalarProperty Name="Id_Aerolinea" ColumnName="Id_Aerolinea" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Det_Servicio">
+      <EntityTypeMapping TypeName="ASAPModel.Det_Servicio">
+        <MappingFragment StoreEntitySet="Det_Servicio">
+          <ScalarProperty Name="Id_Det_Servicio" ColumnName="Id_Det_Servicio" />
+          <ScalarProperty Name="Fecha_Registro" ColumnName="Fecha_Registro" />
+          <ScalarProperty Name="Tipo" ColumnName="Tipo" />
+          <ScalarProperty Name="Fecha_Actualizacion" ColumnName="Fecha_Actualizacion" />
+          <ScalarProperty Name="Estado_Actividad" ColumnName="Estado_Actividad" />
+          <ScalarProperty Name="Id_Aerolinea" ColumnName="Id_Aerolinea" />
+          <ScalarProperty Name="Id_Servicio" ColumnName="Id_Servicio" />
+          <ScalarProperty Name="Id_Empleado" ColumnName="Id_Empleado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Det_Venta">
+      <EntityTypeMapping TypeName="ASAPModel.Det_Venta">
+        <MappingFragment StoreEntitySet="Det_Venta">
+          <ScalarProperty Name="Id_Det_Venta" ColumnName="Id_Det_Venta" />
+          <ScalarProperty Name="Precio" ColumnName="Precio" />
+          <ScalarProperty Name="Impuestos" ColumnName="Impuestos" />
+          <ScalarProperty Name="Tip_Moneda" ColumnName="Tip_Moneda" />
+          <ScalarProperty Name="Descuento" ColumnName="Descuento" />
+          <ScalarProperty Name="Precio_Descuento" ColumnName="Precio_Descuento" />
+          <ScalarProperty Name="Cantidad" ColumnName="Cantidad" />
+          <ScalarProperty Name="Fecha_Registro" ColumnName="Fecha_Registro" />
+          <ScalarProperty Name="Fecha_Actualizacion" ColumnName="Fecha_Actualizacion" />
+          <ScalarProperty Name="Estado_Actividad" ColumnName="Estado_Actividad" />
+          <ScalarProperty Name="Id_Venta_Pasaje" ColumnName="Id_Venta_Pasaje" />
+          <ScalarProperty Name="Id_Progra_Vuelo" ColumnName="Id_Progra_Vuelo" />
+          <ScalarProperty Name="Id_Empleado_Responsable" ColumnName="Id_Empleado_Responsable" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Diagnostico_Tecnico">
+      <EntityTypeMapping TypeName="ASAPModel.Diagnostico_Tecnico">
+        <MappingFragment StoreEntitySet="Diagnostico_Tecnico">
+          <ScalarProperty Name="Id_Diag_Tecnico" ColumnName="Id_Diag_Tecnico" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Empleado">
+      <EntityTypeMapping TypeName="ASAPModel.Empleado">
+        <MappingFragment StoreEntitySet="Empleado">
+          <ScalarProperty Name="Id_Empleado" ColumnName="Id_Empleado" />
+          <ScalarProperty Name="Nombre_Emp" ColumnName="Nombre_Emp" />
+          <ScalarProperty Name="Apellidos_Emp" ColumnName="Apellidos_Emp" />
+          <ScalarProperty Name="Fecha_Nacimiento" ColumnName="Fecha_Nacimiento" />
+          <ScalarProperty Name="Num_Documento" ColumnName="Num_Documento" />
+          <ScalarProperty Name="Direccion" ColumnName="Direccion" />
+          <ScalarProperty Name="Departamento" ColumnName="Departamento" />
+          <ScalarProperty Name="Celular" ColumnName="Celular" />
+          <ScalarProperty Name="Tipo_Empresa" ColumnName="Tipo_Empresa" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="Id_Tipo_Documento" ColumnName="Id_Tipo_Documento" />
+          <ScalarProperty Name="Id_Ubigeo" ColumnName="Id_Ubigeo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Estad_Mant_Asap">
+      <EntityTypeMapping TypeName="ASAPModel.Estad_Mant_Asap">
+        <MappingFragment StoreEntitySet="Estad_Mant_Asap">
+          <ScalarProperty Name="Id_Estad_Mant_Asap" ColumnName="Id_Estad_Mant_Asap" />
+          <ScalarProperty Name="Tipo_resultado" ColumnName="Tipo_resultado" />
+          <ScalarProperty Name="Fecha_Mant" ColumnName="Fecha_Mant" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="Id_Mant_Intern" ColumnName="Id_Mant_Intern" />
+          <ScalarProperty Name="Id_Aerolinea" ColumnName="Id_Aerolinea" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Mantenimiento">
+      <EntityTypeMapping TypeName="ASAPModel.Mantenimiento">
+        <MappingFragment StoreEntitySet="Mantenimiento">
+          <ScalarProperty Name="Id_Mantenimiento" ColumnName="Id_Mantenimiento" />
+          <ScalarProperty Name="Fecha_Mant" ColumnName="Fecha_Mant" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="Tipo_Mant" ColumnName="Tipo_Mant" />
+          <ScalarProperty Name="Id_Avion" ColumnName="Id_Avion" />
+          <ScalarProperty Name="Id_Empleado" ColumnName="Id_Empleado" />
+          <ScalarProperty Name="Id_Prove_Mant" ColumnName="Id_Prove_Mant" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Medio_Compra">
+      <EntityTypeMapping TypeName="ASAPModel.Medio_Compra">
+        <MappingFragment StoreEntitySet="Medio_Compra">
+          <ScalarProperty Name="Id_Medio_Compra" ColumnName="Id_Medio_Compra" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Permiso_Operacion">
+      <EntityTypeMapping TypeName="ASAPModel.Permiso_Operacion">
+        <MappingFragment StoreEntitySet="Permiso_Operacion">
+          <ScalarProperty Name="Id_Permiso_Operacion" ColumnName="Id_Permiso_Operacion" />
+          <ScalarProperty Name="Fecha_Solicitud_Operar" ColumnName="Fecha_Solicitud_Operar" />
+          <ScalarProperty Name="Fecha_Inicio_Oper" ColumnName="Fecha_Inicio_Oper" />
+          <ScalarProperty Name="Fecha_Fin_Oper" ColumnName="Fecha_Fin_Oper" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="Id_Det_Ruta_Aerea" ColumnName="Id_Det_Ruta_Aerea" />
+          <ScalarProperty Name="Id_Empleado" ColumnName="Id_Empleado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Programacion_vuelo">
+      <EntityTypeMapping TypeName="ASAPModel.Programacion_vuelo">
+        <MappingFragment StoreEntitySet="Programacion_vuelo">
+          <ScalarProperty Name="Id_Progra_Vuelo" ColumnName="Id_Progra_Vuelo" />
+          <ScalarProperty Name="Fecha_Programacion" ColumnName="Fecha_Programacion" />
+          <ScalarProperty Name="Fecha_Vuelo" ColumnName="Fecha_Vuelo" />
+          <ScalarProperty Name="Hora_Vuelo" ColumnName="Hora_Vuelo" />
+          <ScalarProperty Name="Tiempo_Vuelo" ColumnName="Tiempo_Vuelo" />
+          <ScalarProperty Name="Estado_Vuelo" ColumnName="Estado_Vuelo" />
+          <ScalarProperty Name="Fecha_Llegada_vuelo" ColumnName="Fecha_Llegada_vuelo" />
+          <ScalarProperty Name="Hora_Llegada" ColumnName="Hora_Llegada" />
+          <ScalarProperty Name="Precio_Base" ColumnName="Precio_Base" />
+          <ScalarProperty Name="Id_Avion" ColumnName="Id_Avion" />
+          <ScalarProperty Name="Id_Empleado" ColumnName="Id_Empleado" />
+          <ScalarProperty Name="Id_Det_Ruta_Aerea" ColumnName="Id_Det_Ruta_Aerea" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Proveedor_Alq_Avion">
+      <EntityTypeMapping TypeName="ASAPModel.Proveedor_Alq_Avion">
+        <MappingFragment StoreEntitySet="Proveedor_Alq_Avion">
+          <ScalarProperty Name="Id_Provee_Alq_Avion" ColumnName="Id_Provee_Alq_Avion" />
+          <ScalarProperty Name="Razon_Social" ColumnName="Razon_Social" />
+          <ScalarProperty Name="Num_Documento" ColumnName="Num_Documento" />
+          <ScalarProperty Name="Direccion" ColumnName="Direccion" />
+          <ScalarProperty Name="Representante_Legal" ColumnName="Representante_Legal" />
+          <ScalarProperty Name="Telefono" ColumnName="Telefono" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="Id_Ubigeo" ColumnName="Id_Ubigeo" />
+          <ScalarProperty Name="Id_Tipo_Documento" ColumnName="Id_Tipo_Documento" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Proveedor_Mantenimiento">
+      <EntityTypeMapping TypeName="ASAPModel.Proveedor_Mantenimiento">
+        <MappingFragment StoreEntitySet="Proveedor_Mantenimiento">
+          <ScalarProperty Name="Id_Prove_Mant" ColumnName="Id_Prove_Mant" />
+          <ScalarProperty Name="Razon_social" ColumnName="Razon_social" />
+          <ScalarProperty Name="Num_Doc" ColumnName="Num_Doc" />
+          <ScalarProperty Name="Direccion" ColumnName="Direccion" />
+          <ScalarProperty Name="Telefono" ColumnName="Telefono" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="Representante_Legal" ColumnName="Representante_Legal" />
+          <ScalarProperty Name="Id_Tipo_Documento" ColumnName="Id_Tipo_Documento" />
+          <ScalarProperty Name="Id_Ubigeo" ColumnName="Id_Ubigeo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Reg_Cambios_Venta_vuelo">
+      <EntityTypeMapping TypeName="ASAPModel.Reg_Cambios_Venta_vuelo">
+        <MappingFragment StoreEntitySet="Reg_Cambios_Venta_vuelo">
+          <ScalarProperty Name="Id_Cambio_Venta_Vuelo" ColumnName="Id_Cambio_Venta_Vuelo" />
+          <ScalarProperty Name="Fecha_Cambio_Venta_vuelo" ColumnName="Fecha_Cambio_Venta_vuelo" />
+          <ScalarProperty Name="Id_Comprobante" ColumnName="Id_Comprobante" />
+          <ScalarProperty Name="Id_Progra_Vuelo" ColumnName="Id_Progra_Vuelo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Reg_Cambios_Vuelo">
+      <EntityTypeMapping TypeName="ASAPModel.Reg_Cambios_Vuelo">
+        <MappingFragment StoreEntitySet="Reg_Cambios_Vuelo">
+          <ScalarProperty Name="Id_Cambios_Vuelo" ColumnName="Id_Cambios_Vuelo" />
+          <ScalarProperty Name="Fecha_Programacion" ColumnName="Fecha_Programacion" />
+          <ScalarProperty Name="Fecha_Cambio_Vuelo" ColumnName="Fecha_Cambio_Vuelo" />
+          <ScalarProperty Name="Fecha_Vuelo" ColumnName="Fecha_Vuelo" />
+          <ScalarProperty Name="Hora_Vuelo" ColumnName="Hora_Vuelo" />
+          <ScalarProperty Name="Tiempo_Vuelo" ColumnName="Tiempo_Vuelo" />
+          <ScalarProperty Name="Estado_Vuelo" ColumnName="Estado_Vuelo" />
+          <ScalarProperty Name="Fecha_Llegada_vuelo" ColumnName="Fecha_Llegada_vuelo" />
+          <ScalarProperty Name="Hora_Llegada" ColumnName="Hora_Llegada" />
+          <ScalarProperty Name="Precio_Base" ColumnName="Precio_Base" />
+          <ScalarProperty Name="Id_Det_Ruta_Aerea" ColumnName="Id_Det_Ruta_Aerea" />
+          <ScalarProperty Name="Id_Progra_Vuelo" ColumnName="Id_Progra_Vuelo" />
+          <ScalarProperty Name="Id_Avion" ColumnName="Id_Avion" />
+          <ScalarProperty Name="Id_Empleado" ColumnName="Id_Empleado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Registro_Avion_ASAP">
+      <EntityTypeMapping TypeName="ASAPModel.Registro_Avion_ASAP">
+        <MappingFragment StoreEntitySet="Registro_Avion_ASAP">
+          <ScalarProperty Name="Id_Reg_Avion_ASAP" ColumnName="Id_Reg_Avion_ASAP" />
+          <ScalarProperty Name="Fecha_Registro" ColumnName="Fecha_Registro" />
+          <ScalarProperty Name="Estado_Propio" ColumnName="Estado_Propio" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="Id_Avion" ColumnName="Id_Avion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Repuestos">
+      <EntityTypeMapping TypeName="ASAPModel.Repuestos">
+        <MappingFragment StoreEntitySet="Repuestos">
+          <ScalarProperty Name="Id_repuesto" ColumnName="Id_repuesto" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="Cantidad" ColumnName="Cantidad" />
+          <ScalarProperty Name="Precio" ColumnName="Precio" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Reserva_Pasaje">
+      <EntityTypeMapping TypeName="ASAPModel.Reserva_Pasaje">
+        <MappingFragment StoreEntitySet="Reserva_Pasaje">
+          <ScalarProperty Name="Id_Reserva_Pasaje" ColumnName="Id_Reserva_Pasaje" />
+          <ScalarProperty Name="Fecha_Reserva" ColumnName="Fecha_Reserva" />
+          <ScalarProperty Name="Hora_Reserva" ColumnName="Hora_Reserva" />
+          <ScalarProperty Name="Fecha_Fin_Reserva" ColumnName="Fecha_Fin_Reserva" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="Id_Cliente" ColumnName="Id_Cliente" />
+          <ScalarProperty Name="Id_Progra_Vuelo" ColumnName="Id_Progra_Vuelo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Rol">
+      <EntityTypeMapping TypeName="ASAPModel.Rol">
+        <MappingFragment StoreEntitySet="Rol">
+          <ScalarProperty Name="Id_Rol" ColumnName="Id_Rol" />
+          <ScalarProperty Name="Nom_Rol" ColumnName="Nom_Rol" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Rol_Tripulacion">
+      <EntityTypeMapping TypeName="ASAPModel.Rol_Tripulacion">
+        <MappingFragment StoreEntitySet="Rol_Tripulacion">
+          <ScalarProperty Name="Id_Rol_Trip" ColumnName="Id_Rol_Trip" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Ruta_Aerea">
+      <EntityTypeMapping TypeName="ASAPModel.Ruta_Aerea">
+        <MappingFragment StoreEntitySet="Ruta_Aerea">
+          <ScalarProperty Name="Id_Ruta_Aerea" ColumnName="Id_Ruta_Aerea" />
+          <ScalarProperty Name="Kilometraje" ColumnName="Kilometraje" />
+          <ScalarProperty Name="Tiempo" ColumnName="Tiempo" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="Id_Tipo_Ruta" ColumnName="Id_Tipo_Ruta" />
+          <ScalarProperty Name="Id_Ubigeo_Origen" ColumnName="Id_Ubigeo_Origen" />
+          <ScalarProperty Name="Id_Ubigeo_Destino" ColumnName="Id_Ubigeo_Destino" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Sancion">
+      <EntityTypeMapping TypeName="ASAPModel.Sancion">
+        <MappingFragment StoreEntitySet="Sancion">
+          <ScalarProperty Name="Id_Sancion" ColumnName="Id_Sancion" />
+          <ScalarProperty Name="Detalle" ColumnName="Detalle" />
+          <ScalarProperty Name="Id_Tip_Sancion" ColumnName="Id_Tip_Sancion" />
+          <ScalarProperty Name="Id_Empleado" ColumnName="Id_Empleado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Servicio">
+      <EntityTypeMapping TypeName="ASAPModel.Servicio">
+        <MappingFragment StoreEntitySet="Servicio">
+          <ScalarProperty Name="Id_Servicio" ColumnName="Id_Servicio" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tarjeta">
+      <EntityTypeMapping TypeName="ASAPModel.Tarjeta">
+        <MappingFragment StoreEntitySet="Tarjeta">
+          <ScalarProperty Name="Id_Tarjeta" ColumnName="Id_Tarjeta" />
+          <ScalarProperty Name="Nombre_Tarjeta" ColumnName="Nombre_Tarjeta" />
+          <ScalarProperty Name="Tipo" ColumnName="Tipo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tip_Sancion">
+      <EntityTypeMapping TypeName="ASAPModel.Tip_Sancion">
+        <MappingFragment StoreEntitySet="Tip_Sancion">
+          <ScalarProperty Name="Id_Tip_Sancion" ColumnName="Id_Tip_Sancion" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tipo_Documento">
+      <EntityTypeMapping TypeName="ASAPModel.Tipo_Documento">
+        <MappingFragment StoreEntitySet="Tipo_Documento">
+          <ScalarProperty Name="Id_Tipo_Documento" ColumnName="Id_Tipo_Documento" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="Dominio" ColumnName="Dominio" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tipo_Pago">
+      <EntityTypeMapping TypeName="ASAPModel.Tipo_Pago">
+        <MappingFragment StoreEntitySet="Tipo_Pago">
+          <ScalarProperty Name="Id_Tipo_Pago" ColumnName="Id_Tipo_Pago" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="Id_Tarjeta" ColumnName="Id_Tarjeta" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tipo_Ruta">
+      <EntityTypeMapping TypeName="ASAPModel.Tipo_Ruta">
+        <MappingFragment StoreEntitySet="Tipo_Ruta">
+          <ScalarProperty Name="Id_Tipo_Ruta" ColumnName="Id_Tipo_Ruta" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Ubigeo">
+      <EntityTypeMapping TypeName="ASAPModel.Ubigeo">
+        <MappingFragment StoreEntitySet="Ubigeo">
+          <ScalarProperty Name="Id_Ubigeo" ColumnName="Id_Ubigeo" />
+          <ScalarProperty Name="Pais" ColumnName="Pais" />
+          <ScalarProperty Name="Departamento" ColumnName="Departamento" />
+          <ScalarProperty Name="Distrito" ColumnName="Distrito" />
+          <ScalarProperty Name="Aeropuerto" ColumnName="Aeropuerto" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Urt_Asap">
+      <EntityTypeMapping TypeName="ASAPModel.Urt_Asap">
+        <MappingFragment StoreEntitySet="Urt_Asap">
+          <ScalarProperty Name="Id_Urt_Asap" ColumnName="Id_Urt_Asap" />
+          <ScalarProperty Name="Tipo_Resultado" ColumnName="Tipo_Resultado" />
+          <ScalarProperty Name="Fecha_Resolucion" ColumnName="Fecha_Resolucion" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="Id_Avion" ColumnName="Id_Avion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Usuario">
+      <EntityTypeMapping TypeName="ASAPModel.Usuario">
+        <MappingFragment StoreEntitySet="Usuario">
+          <ScalarProperty Name="Id_Usuario" ColumnName="Id_Usuario" />
+          <ScalarProperty Name="User_Sist" ColumnName="User_Sist" />
+          <ScalarProperty Name="Contrase" ColumnName="Contrase" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="Id_Empleado" ColumnName="Id_Empleado" />
+          <ScalarProperty Name="Id_Agencia" ColumnName="Id_Agencia" />
+          <ScalarProperty Name="Id_Aerolinea" ColumnName="Id_Aerolinea" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Venta_Pasajes">
+      <EntityTypeMapping TypeName="ASAPModel.Venta_Pasajes">
+        <MappingFragment StoreEntitySet="Venta_Pasajes">
+          <ScalarProperty Name="Id_Venta_Pasajes" ColumnName="Id_Venta_Pasajes" />
+          <ScalarProperty Name="Fecha_Venta" ColumnName="Fecha_Venta" />
+          <ScalarProperty Name="Precio_Total" ColumnName="Precio_Total" />
+          <ScalarProperty Name="Divisa" ColumnName="Divisa" />
+          <ScalarProperty Name="Cantidad_Pasajes" ColumnName="Cantidad_Pasajes" />
+          <ScalarProperty Name="Id_Reserva_Pasaje" ColumnName="Id_Reserva_Pasaje" />
+          <ScalarProperty Name="Id_Cliente" ColumnName="Id_Cliente" />
+          <ScalarProperty Name="Id_Agencia_Viaje" ColumnName="Id_Agencia_Viaje" />
+          <ScalarProperty Name="Id_Medio_Compra" ColumnName="Id_Medio_Compra" />
+          <ScalarProperty Name="Id_Empleado" ColumnName="Id_Empleado" />
+          <ScalarProperty Name="Id_Tipo_Pago" ColumnName="Id_Tipo_Pago" />
+          <ScalarProperty Name="Id_Asiento" ColumnName="Id_Asiento" />
+          <ScalarProperty Name="Id_Aerolinea" ColumnName="Id_Aerolinea" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="autorizacionAvionTablaMod">
+      <EntityTypeMapping TypeName="ASAPModel.autorizacionAvionTablaMod">
+        <MappingFragment StoreEntitySet="autorizacionAvionTablaMod">
+          <ScalarProperty Name="Nomb_Fabricante" ColumnName="Nomb_Fabricante" />
+          <ScalarProperty Name="Marca" ColumnName="Marca" />
+          <ScalarProperty Name="Modelo" ColumnName="Modelo" />
+          <ScalarProperty Name="Fecha_Fabricacion" ColumnName="Fecha_Fabricacion" />
+          <ScalarProperty Name="Peso_Bruto" ColumnName="Peso_Bruto" />
+          <ScalarProperty Name="Peso_Neto" ColumnName="Peso_Neto" />
+          <ScalarProperty Name="Razon_Social" ColumnName="Razon_Social" />
+          <ScalarProperty Name="Fecha_Registro" ColumnName="Fecha_Registro" />
+          <ScalarProperty Name="Estado_Propio" ColumnName="Estado_Propio" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="Id_Avion" ColumnName="Id_Avion" />
+          <ScalarProperty Name="Id_Reg_Avion_ASAP" ColumnName="Id_Reg_Avion_ASAP" />
+          <ScalarProperty Name="Id_Autorizacion_Operar" ColumnName="Id_Autorizacion_Operar" />
+          <ScalarProperty Name="Id_Permiso_Operacion" ColumnName="Id_Permiso_Operacion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="autorizacionTablaMod">
+      <EntityTypeMapping TypeName="ASAPModel.autorizacionTablaMod">
+        <MappingFragment StoreEntitySet="autorizacionTablaMod">
+          <ScalarProperty Name="Id_Autorizacion_Operar" ColumnName="Id_Autorizacion_Operar" />
+          <ScalarProperty Name="Id_Permiso_Operacion" ColumnName="Id_Permiso_Operacion" />
+          <ScalarProperty Name="Id_Det_Ruta_Aerea" ColumnName="Id_Det_Ruta_Aerea" />
+          <ScalarProperty Name="Pais" ColumnName="Pais" />
+          <ScalarProperty Name="Departamento" ColumnName="Departamento" />
+          <ScalarProperty Name="Ruta_1" ColumnName="Ruta_1" />
+          <ScalarProperty Name="Ruta_2" ColumnName="Ruta_2" />
+          <ScalarProperty Name="Ruta_3" ColumnName="Ruta_3" />
+          <ScalarProperty Name="Ruta_4" ColumnName="Ruta_4" />
+          <ScalarProperty Name="RA1_ORIGEN_AEROPUERTO" ColumnName="RA1_ORIGEN_AEROPUERTO" />
+          <ScalarProperty Name="RA1_DESTINO_AEROPUERTO" ColumnName="RA1_DESTINO_AEROPUERTO" />
+          <ScalarProperty Name="RA2_ORIGEN_AEROPUERTO" ColumnName="RA2_ORIGEN_AEROPUERTO" />
+          <ScalarProperty Name="RA2_DESTINO_AEROPUERTO" ColumnName="RA2_DESTINO_AEROPUERTO" />
+          <ScalarProperty Name="RA3_ORIGEN_AEROPUERTO" ColumnName="RA3_ORIGEN_AEROPUERTO" />
+          <ScalarProperty Name="RA3_DESTINO_AEROPUERTO" ColumnName="RA3_DESTINO_AEROPUERTO" />
+          <ScalarProperty Name="RA4_ORIGEN_AEROPUERTO" ColumnName="RA4_ORIGEN_AEROPUERTO" />
+          <ScalarProperty Name="RA4_DESTINO_AEROPUERTO" ColumnName="RA4_DESTINO_AEROPUERTO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DETALLE_DE_RUTA">
+      <EntityTypeMapping TypeName="ASAPModel.DETALLE_DE_RUTA">
+        <MappingFragment StoreEntitySet="DETALLE_DE_RUTA">
+          <ScalarProperty Name="Id_Det_Ruta_Aerea" ColumnName="Id_Det_Ruta_Aerea" />
+          <ScalarProperty Name="Id_Aerolinea" ColumnName="Id_Aerolinea" />
+          <ScalarProperty Name="TIPO_DE_RUTA" ColumnName="TIPO_DE_RUTA" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="Tiempo_Total" ColumnName="Tiempo_Total" />
+          <ScalarProperty Name="Kilometraje_Total" ColumnName="Kilometraje_Total" />
+          <ScalarProperty Name="Ruta_1" ColumnName="Ruta_1" />
+          <ScalarProperty Name="TIEMPO_R1" ColumnName="TIEMPO_R1" />
+          <ScalarProperty Name="KILOMETRAJE_R1" ColumnName="KILOMETRAJE_R1" />
+          <ScalarProperty Name="Ruta_2" ColumnName="Ruta_2" />
+          <ScalarProperty Name="TIEMPO_R2" ColumnName="TIEMPO_R2" />
+          <ScalarProperty Name="KILOMETRAJE_R2" ColumnName="KILOMETRAJE_R2" />
+          <ScalarProperty Name="Ruta_3" ColumnName="Ruta_3" />
+          <ScalarProperty Name="TIEMPO_R3" ColumnName="TIEMPO_R3" />
+          <ScalarProperty Name="KILOMETRAJE_R3" ColumnName="KILOMETRAJE_R3" />
+          <ScalarProperty Name="Ruta_4" ColumnName="Ruta_4" />
+          <ScalarProperty Name="TIEMPO_R4" ColumnName="TIEMPO_R4" />
+          <ScalarProperty Name="KILOMETRAJE_R4" ColumnName="KILOMETRAJE_R4" />
+          <ScalarProperty Name="ID_R1ORIGEN" ColumnName="ID_R1ORIGEN" />
+          <ScalarProperty Name="ID_R1DESTINO" ColumnName="ID_R1DESTINO" />
+          <ScalarProperty Name="RA1_ORIGEN_AEROPUERTO" ColumnName="RA1_ORIGEN_AEROPUERTO" />
+          <ScalarProperty Name="RA1_DESTINO_AEROPUERTO" ColumnName="RA1_DESTINO_AEROPUERTO" />
+          <ScalarProperty Name="ID_R2DESTINO" ColumnName="ID_R2DESTINO" />
+          <ScalarProperty Name="RA2_ORIGEN_AEROPUERTO" ColumnName="RA2_ORIGEN_AEROPUERTO" />
+          <ScalarProperty Name="RA2_DESTINO_AEROPUERTO" ColumnName="RA2_DESTINO_AEROPUERTO" />
+          <ScalarProperty Name="ID_R3DESTINO" ColumnName="ID_R3DESTINO" />
+          <ScalarProperty Name="RA3_ORIGEN_AEROPUERTO" ColumnName="RA3_ORIGEN_AEROPUERTO" />
+          <ScalarProperty Name="RA3_DESTINO_AEROPUERTO" ColumnName="RA3_DESTINO_AEROPUERTO" />
+          <ScalarProperty Name="ID_R4DESTINO" ColumnName="ID_R4DESTINO" />
+          <ScalarProperty Name="RA4_ORIGEN_AEROPUERTO" ColumnName="RA4_ORIGEN_AEROPUERTO" />
+          <ScalarProperty Name="RA4_DESTINO_AEROPUERTO" ColumnName="RA4_DESTINO_AEROPUERTO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="permisoTablaMod">
+      <EntityTypeMapping TypeName="ASAPModel.permisoTablaMod">
+        <MappingFragment StoreEntitySet="permisoTablaMod">
+          <ScalarProperty Name="Id_Permiso_Operacion" ColumnName="Id_Permiso_Operacion" />
+          <ScalarProperty Name="Id_Det_Ruta_Aerea" ColumnName="Id_Det_Ruta_Aerea" />
+          <ScalarProperty Name="Pais" ColumnName="Pais" />
+          <ScalarProperty Name="Departamento" ColumnName="Departamento" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="Ruta_1" ColumnName="Ruta_1" />
+          <ScalarProperty Name="Ruta_2" ColumnName="Ruta_2" />
+          <ScalarProperty Name="Ruta_3" ColumnName="Ruta_3" />
+          <ScalarProperty Name="Ruta_4" ColumnName="Ruta_4" />
+          <ScalarProperty Name="RA1_ORIGEN_AEROPUERTO" ColumnName="RA1_ORIGEN_AEROPUERTO" />
+          <ScalarProperty Name="RA1_DESTINO_AEROPUERTO" ColumnName="RA1_DESTINO_AEROPUERTO" />
+          <ScalarProperty Name="RA2_ORIGEN_AEROPUERTO" ColumnName="RA2_ORIGEN_AEROPUERTO" />
+          <ScalarProperty Name="RA2_DESTINO_AEROPUERTO" ColumnName="RA2_DESTINO_AEROPUERTO" />
+          <ScalarProperty Name="RA3_ORIGEN_AEROPUERTO" ColumnName="RA3_ORIGEN_AEROPUERTO" />
+          <ScalarProperty Name="RA3_DESTINO_AEROPUERTO" ColumnName="RA3_DESTINO_AEROPUERTO" />
+          <ScalarProperty Name="RA4_ORIGEN_AEROPUERTO" ColumnName="RA4_ORIGEN_AEROPUERTO" />
+          <ScalarProperty Name="RA4_DESTINO_AEROPUERTO" ColumnName="RA4_DESTINO_AEROPUERTO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="registroTablaMod">
+      <EntityTypeMapping TypeName="ASAPModel.registroTablaMod">
+        <MappingFragment StoreEntitySet="registroTablaMod">
+          <ScalarProperty Name="Nomb_Fabricante" ColumnName="Nomb_Fabricante" />
+          <ScalarProperty Name="Marca" ColumnName="Marca" />
+          <ScalarProperty Name="Modelo" ColumnName="Modelo" />
+          <ScalarProperty Name="Fecha_Fabricacion" ColumnName="Fecha_Fabricacion" />
+          <ScalarProperty Name="Peso_Bruto" ColumnName="Peso_Bruto" />
+          <ScalarProperty Name="Peso_Neto" ColumnName="Peso_Neto" />
+          <ScalarProperty Name="Razon_Social" ColumnName="Razon_Social" />
+          <ScalarProperty Name="Fecha_Registro" ColumnName="Fecha_Registro" />
+          <ScalarProperty Name="Estado_Propio" ColumnName="Estado_Propio" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="Id_Avion" ColumnName="Id_Avion" />
+          <ScalarProperty Name="Id_Reg_Avion_ASAP" ColumnName="Id_Reg_Avion_ASAP" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

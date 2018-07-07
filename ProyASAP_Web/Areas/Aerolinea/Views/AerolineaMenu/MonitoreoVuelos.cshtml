@@ -1,0 +1,107 @@
+﻿@using ProyASAP_Web;
+@using BE_ASAP;
+@using BL_ASAP;
+
+@{
+    ViewBag.Title = "Listado";
+
+
+    List<Programacion_vuelo> listadoProgvuelo = new List<Programacion_vuelo>();
+    if (ViewBag.ListadoProgvuelo != null)
+    {
+        listadoProgvuelo = (List<Programacion_vuelo>)ViewBag.ListadoProgvuelo;
+    }
+
+    List<Aerolinea> listadoAerolinea = new List<Aerolinea>();
+    if (ViewBag.ListadoAerolinea != null)
+    {
+        listadoAerolinea = (List<Aerolinea>)ViewBag.ListadoAerolinea;
+    }
+
+    List<Avion> listadoAvion = new List<Avion>();
+    if (ViewBag.ListadoAvion != null)
+    {
+        listadoAvion = (List<Avion>)ViewBag.ListadoAvion;
+    }
+
+    List<Empleado> listadoEmpleado = new List<Empleado>();
+    if (ViewBag.ListadoEmpleado != null)
+    {
+        listadoEmpleado = (List<Empleado>)ViewBag.ListadoEmpleado;
+    }
+
+    List<Det_Ruta_Aerea> listadoDetRuta = new List<Det_Ruta_Aerea>();
+    if (ViewBag.ListadoDetRuta != null)
+    {
+        listadoDetRuta = (List<Det_Ruta_Aerea>)ViewBag.ListadoDetRuta;
+    }
+
+}
+
+<table id="tbListadoProgvuelo" class="table table-striped">
+    <thead>
+        <tr>
+            <td>Id</td>
+            <td>Fecha de Programación</td>
+            <td>Fecha de Vuelo</td>
+            <td>Hora de Vuelo</td>
+            <td>Tiempo de Vuelo</td>
+            <td>Fecha de Llegada de Vuelo</td>
+            <td>Hora de Llegada</td>
+            <td>Precio Base</td>
+            <td>Avión</td>
+            <td>Empleado</td>
+            <td>Detalle de Ruta Aerea</td>
+            <td>Estado de Vuelo</td>
+            <td></td>
+            <td></td>
+        </tr>
+    </thead>
+
+    <tbody>
+        @{
+            if (listadoProgvuelo != null)
+            {
+                foreach (Programacion_vuelo item in listadoProgvuelo)
+                {
+                    <tr>
+                        <td>@item.Id_Progra_Vuelo</td>
+                        <td>@item.Fecha_Programacion</td>
+                        <td>@item.Fecha_Vuelo</td>
+                        <td>@item.Hora_Vuelo</td>
+                        <td>@item.Tiempo_Vuelo hrs</td>
+                        <td>@item.Fecha_Llegada_vuelo</td>
+                        <td>@item.Hora_Llegada</td>
+                        <td>$ @item.Precio_Base</td>
+                        <td>@listadoAvion.Where(x => x.Id_Avion == item.Id_Avion).FirstOrDefault().Numero_Placa - @listadoAvion.Where(x => x.Id_Avion == item.Id_Avion).FirstOrDefault().Marca - @listadoAvion.Where(x => x.Id_Avion == item.Id_Avion).FirstOrDefault().Modelo</td>
+                        <td>@listadoEmpleado.Where(x => x.Id_Empleado == item.Id_Empleado).Distinct().FirstOrDefault().Num_Documento - @listadoEmpleado.Where(x => x.Id_Empleado == item.Id_Empleado).Distinct().FirstOrDefault().Apellidos_Emp, @listadoEmpleado.Where(x => x.Id_Empleado == item.Id_Empleado).Distinct().FirstOrDefault().Nombre_Emp</td>
+                        <td>@listadoDetRuta.Where(x => x.Id_Det_Ruta_Aerea == item.Id_Det_Ruta_Aerea).Distinct().FirstOrDefault().Ruta_1</td>
+                        <td>@item.Estado_Vuelo</td>
+                        <td><input type="button" class="btnEliminarProgvuelo btn btn-danger" value="Eliminar" id="btnEliminarProgvuelo" data-codigo="@item.Id_Progra_Vuelo" /></td>
+                        <td><input type="button" class="btnEditarProgvuelo btn btn-info" value="Editar" id="btnEliminarProgvuelo" data-codigo="@item.Id_Progra_Vuelo" /></td>
+                    </tr>
+                }
+            }
+        }
+    </tbody>
+
+    <tfoot>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </tfoot>
+
+</table>

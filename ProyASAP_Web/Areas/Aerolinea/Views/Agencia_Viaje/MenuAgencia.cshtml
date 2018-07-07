@@ -1,0 +1,59 @@
+﻿
+@{
+    ViewBag.Title = "Menu Agencia";
+   // Layout = "~/Areas/Aerolinea/Views/_ViewStart.cshtml";
+}
+
+<div class="card border-info w-100">
+    <div class="card-header text-center  bg-secondary">
+        <div class="btn-group btn-group-toggle" @*container"*@>
+            <ul class="nav" id="menuAerolinea" role="tablist">               
+                <li class="nav-item">
+                    <a class="btn btn-info " role="button" href="#" id="btn_Agencias">Agencias de Viajes</a>
+                </li>
+                <li class="nav-item">
+                    <a class="btn btn-info active" role="button" href="#" id="btn_ContraAgencias">Contrato con agencias de Viajes</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="card-body">
+
+        <div class="container body-content"  id="cuerpo" >
+
+        </div>
+    </div>
+</div>
+
+
+<script>
+            $.ajax({
+                type: "GET",
+                url: "/Aerolinea/Agencia_Viaje/Index",
+                success: function (view) {
+                    $(cuerpo).html(view);
+                }
+            })          
+
+            $('#btn_Agencias').click(function (){
+                $.ajax({
+                    type:"GET",
+                    url:"/Aerolinea/Agencia_Viaje/Index",
+                success: function(view){
+                    $(cuerpo).html(view);
+                }
+            });
+            })
+
+            $('#btn_ContraAgencias').click(function () {
+                $.ajax({
+                    type: "GET",
+                    url: "/Aerolinea/Contrato_Agencia/Index",
+                    success: function (view) {
+                        $(cuerpo).html(view);
+                    }
+                });
+            })
+
+</script>
+

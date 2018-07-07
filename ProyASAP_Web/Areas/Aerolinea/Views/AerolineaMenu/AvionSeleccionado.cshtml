@@ -1,0 +1,93 @@
+﻿@using BE_ASAP;
+@{ 
+
+    Programacion_vuelo prograSinAvion = (Programacion_vuelo)Session["ProgramacionVuelo"];
+    List<Permiso_Operacion> permi = (List<Permiso_Operacion>)ViewBag.PermisoOpera_Ruta;
+    List<Registro_Avion_ASAP> regis = (List<Registro_Avion_ASAP>)ViewBag.Registro_Avion_Asap;
+    List<Autorizacion_Operar> autori = (List<Autorizacion_Operar>)ViewBag.Autorizacion_Operar;
+    List<Avion> aviones = (List<Avion>)ViewBag.Avion;
+    List<Avion> avionAutorizados = new List<Avion>();
+    foreach (Permiso_Operacion item in permi)
+    {
+        foreach (Autorizacion_Operar item1 in autori)
+        {
+            if (item.Id_Permiso_Operacion == item1.Id_Permiso_Operacion)
+            {
+                foreach (Registro_Avion_ASAP item2 in regis)
+                {
+                    if (item1.Id_Reg_Avion_ASAP == item2.Id_Reg_Avion_ASAP)
+                    {
+                        foreach (Avion item3 in aviones)
+                        {
+                            if (item2.Id_Avion == item3.Id_Avion)
+                            {
+                                avionAutorizados.Add(item3);
+                                break;
+                            }
+
+
+                        }
+                        break;
+                    }
+                }
+                
+            }
+        }
+    }
+   // var numero = 0;
+}
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Marca </th>
+            <th scope="col">Modelo</th>
+            <th scope="col">Numero de la Placa</th>
+            <th scope="col">Numero de Asientos</th>
+            <th scope="col">Numeros de Motores</th>
+            <th scope="col">Tiempo de Recorrido</th>
+            <th scope="col">Kilometraje</th>
+            <th scope="col">Escoge</th>
+
+        </tr>
+    </thead>
+    <tbody>
+       @*@numero = 0 ;*@
+        @foreach (Avion item in avionAutorizados)
+        {
+                     <tr>
+                <th scope="row">#</th>
+                <td>@item.Marca</td>
+                <td>@item.Modelo</td>
+                <td>@item.Numero_Placa</td>
+                <td>@item.Cantidad_Pasajeros</td>
+                <td>@item.Numero_Motores</td>
+                <td>@item.Tiempo_Recorrido</td>
+                <td>@item.Kilometraje</td>
+                <td>
+                    <div class="form-check">
+                        <input class="seleccionAvion form-check-input" type="radio" name="seleccionAvion" id="seleccionAvion" value=@item.Id_Avion>
+
+                    </div>
+                </td>
+            </tr>
+        }
+
+    </tbody>
+</table>
+
+<script>
+    $(".seleccionAvion").click(function () {
+        var id = $(this).val();
+        $.ajax({
+            type: "POST",
+            url: "/Aerolinea/AerolineaMenu/prograVueloConAvion", //ADMINISTRADOR/MODELO/LISTADO
+            data: { id_avion : id },
+            success: function (view) {
+                //avion ();
+                window.alert("AVION AGREGADO A LA PROGRAMACION");
+            }
+        });
+    })
+
+</script>

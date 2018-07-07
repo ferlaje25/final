@@ -1,0 +1,165 @@
+﻿
+
+<input id="btnNuevoSancion" type="button" value="Crear Sancion" class="btn btn-success" />
+<br />
+<br />
+<div id="divListadoSancion">
+
+</div>
+
+<div id="myModalFormSancion" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="gridSystemModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="gridSystemModalLabel">Registrar Sanción</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-4">.col-md-4</div>
+                    <div class="col-md-4 col-md-offset-4">.col-md-4 .col-md-offset-4</div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3 col-md-offset-3">.col-md-3 .col-md-offset-3</div>
+                    <div class="col-md-2 col-md-offset-4">.col-md-2 .col-md-offset-4</div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 col-md-offset-3">.col-md-6 .col-md-offset-3</div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-9">
+                        Level 1: .col-sm-9
+                        <div class="row">
+                            <div class="col-xs-8 col-sm-6">
+                                Level 2: .col-xs-8 .col-sm-6
+                            </div>
+                            <div class="col-xs-4 col-sm-6">
+                                Level 2: .col-xs-4 .col-sm-6
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                <button id="btnGrabarSancion" type="button" class="btn btn-primary">Grabar</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<script>
+
+    CargarListadoSancion();
+
+    function CargarListadoSancion() {
+
+        $.ajax({
+            type: "POST",
+            url: "/Aerolinea/Sancion/Listado",
+            success: function (html) {
+                $("#divListadoSancion").html(html);
+            }
+        });
+    }
+
+    $('#btnNuevoSancion').click(function () {
+        var modal = $("#myModalFormSancion");
+        $.ajax({
+            type: "POST",
+            url: "/Aerolinea/Sancion/Crear",
+            success: function (html) {
+                modal.find(".modal-body").html(html);
+                modal.modal();
+            }
+        });
+    });
+
+    $('#divListadoSancion').on('click', '.btnEditarSancion', function () {
+        var modal = $("#myModalFormSancion");
+        var vIdSancion = $(this).attr("data-codigo");
+        $.ajax({
+            type: "POST",
+            url: "/Aerolinea/Sancion/EditarSancion",
+            data: { idSancion: vIdSancion },
+            success: function (html) {
+                //alert(html);
+                modal.find(".modal-body").html(html);
+                modal.modal();
+            }
+        });
+    });
+
+    $('#btnGrabarSancion').click(function () {
+
+        var res = validar();
+        if (res == false) {
+            return false;
+        }
+
+        var modal = $("#myModalFormSancion");
+
+        var vIdSancion = modal.find("#hidSancion").val();
+        var vId_Tip_Sancion = modal.find("#cboTipSancion").val();
+        var vId_Empleado = modal.find("#cboEmpleado").val();
+        var vDetalle = modal.find("#txtDetalle").val();
+
+        if (vIdSancion != null) {
+            $.ajax({
+                type: "POST",
+                url: "/Aerolinea/Sancion/ActualizarSancion",
+                data: { Id_Tip_Sancion: vId_Tip_Sancion, Id_Empleado: vId_Empleado, Detalle: vDetalle, IdSancion: vIdSancion },
+                success: function (html) {
+                    CargarListadoSancion();
+                    modal.modal("toggle");
+                }
+            });
+        } else {
+            //Crear
+            $.ajax({
+                type: "POST",
+                url: "/Aerolinea/Sancion/GrabarSancion",
+                data: { Id_Tip_Sancion: vId_Tip_Sancion, Id_Empleado: vId_Empleado, Detalle: vDetalle },
+                success: function (html) {
+                    //alert(html.success);
+                    CargarListadoSancion();
+                    modal.modal("toggle");
+                }
+            });
+        }
+    })
+
+    $('#divListadoSancion').on('click', '.btnEliminarSancion', function () {
+        var vIdSancion = $(this).attr("data-codigo")
+        //alert(vIdModelo);
+        //return false;
+        if (confirm("Esta seguro de eliminar el registro?")) {
+
+            $.ajax({
+                type: "POST",
+                url: "/Aerolinea/Sancion/EliminarSancion",
+                data: { idSancion: vIdSancion },
+                success: function (html) {
+                    CargarListadoSancion();
+                }
+            });
+        } else
+        {
+            alert("Cancelar");
+        }
+    });
+
+    function validar() {
+        var valido = true;
+        if ($('#txtDetalle').val().trim() == "") {
+            $('#txtDetalle').css('border-color', 'Red');
+            valido = false;
+        }
+        else {
+            $('#txtDetalle').css('border-color', 'lightgrey');
+        }
+
+        return valido;
+    }
+
+</script>

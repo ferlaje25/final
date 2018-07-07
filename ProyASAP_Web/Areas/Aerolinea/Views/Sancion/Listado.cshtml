@@ -1,0 +1,75 @@
+﻿@using ProyASAP_Web;
+@using BE_ASAP;
+@using BL_ASAP;
+
+
+@{
+    ViewBag.Title = "Listado";
+
+
+    List<Sancion> listadoSancion = new List<Sancion>();
+    if (ViewBag.ListadoSancion != null)
+    {
+        listadoSancion = (List<Sancion>)ViewBag.ListadoSancion;
+    }
+
+    List<Tip_Sancion> listadoTipSancion = new List<Tip_Sancion>();
+    if (ViewBag.ListadoTipSancion != null)
+    {
+        listadoTipSancion = (List<Tip_Sancion>)ViewBag.ListadoTipSancion;
+    }
+
+    List<Empleado> listadoEmpleado = new List<Empleado>();
+    if (ViewBag.ListadoEmpleado != null)
+    {
+        listadoEmpleado = (List<Empleado>)ViewBag.ListadoEmpleado;
+    }
+
+
+}
+
+<table id="tbListadoSancion" class="table table-striped">
+    <thead>
+        <tr>
+            <td>Id</td>
+            <td>Tipo de Sanción</td>
+            <td>Empleado</td>
+            <td>Detalle</td>
+            <td></td>
+            <td></td>
+        </tr>
+    </thead>
+
+    <tbody>
+        @{
+            if (listadoSancion != null)
+            {
+                foreach (Sancion item in listadoSancion)
+                {
+                    <tr>
+                        <td>@item.Id_Sancion</td>
+                        <td>@listadoTipSancion.Where(x => x.Id_Tip_Sancion == item.Id_Tip_Sancion).FirstOrDefault().Descripcion</td>
+                        <td>@listadoEmpleado.Where(x => x.Id_Empleado == item.Id_Empleado).FirstOrDefault().Num_Documento - @listadoEmpleado.Where(x => x.Id_Empleado == item.Id_Empleado).FirstOrDefault().Apellidos_Emp, @listadoEmpleado.Where(x => x.Id_Empleado == item.Id_Empleado).FirstOrDefault().Nombre_Emp</td>
+                        <td>@item.Detalle</td>
+                        <td><input type="button" class="btnEliminarSancion btn btn-danger" value="Eliminar" id="btnEliminarSancion" data-codigo="@item.Id_Sancion" /></td>
+                        <td><input type="button" class="btnEditarSancion btn btn-info" value="Editar" id="btnEditarSancion" data-codigo=@item.Id_Sancion /></td>
+                    </tr>
+                }
+            }
+        }
+    </tbody>
+
+    <tfoot>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+
+        </tr>
+    </tfoot>
+
+</table>
+

@@ -1,0 +1,122 @@
+﻿
+@using ProyASAP_Web;
+@using BE_ASAP;
+@using BL_ASAP;
+
+@{
+    List<Tip_Sancion> listadoTipSancion = new List<Tip_Sancion>();
+    if (ViewBag.ListadoTipSancion != null)
+    {
+        listadoTipSancion = (List<Tip_Sancion>)ViewBag.ListadoTipSancion;
+    }
+
+    List<Empleado> listadoEmpleado = new List<Empleado>();
+    if (ViewBag.ListadoEmpleado != null)
+    {
+        listadoEmpleado = (List<Empleado>)ViewBag.ListadoEmpleado;
+    }
+
+    Sancion sancion = new Sancion();
+    if (ViewBag.Sancion != null)
+    {
+        sancion = (Sancion)ViewBag.Sancion;
+    }
+}
+
+<div>
+    <form>
+        @if (ViewBag.sancion != null)
+        {
+            <input type="hidden" value=@sancion.Id_Sancion id="hidSancion" />
+
+            <div class="form-group">
+                <label for="exampleInputPassword1">Tipo de Sanción</label>
+                <select id="cboTipSancion" class="form-control" name="Id_Tip_Sancion">
+                   @foreach (Tip_Sancion item in listadoTipSancion)
+                   {
+                       if (item.Id_Tip_Sancion == sancion.Id_Tip_Sancion)
+                       {
+                           if (item.Id_Tip_Sancion == 4)
+                           {
+                            <option value=@item.Id_Tip_Sancion>No Valido</option>
+                           }
+                           else
+                           {
+                            <option value=@item.Id_Tip_Sancion>@item.Descripcion</option>
+                           }
+
+                       }
+                   }
+                    @foreach (Tip_Sancion item in listadoTipSancion)
+                    {
+                        if (item.Id_Tip_Sancion == 4)
+                        {
+                            <option value=@item.Id_Tip_Sancion>No Valido</option>
+                        }
+                        else
+                        {
+                            <option value=@item.Id_Tip_Sancion>@item.Descripcion</option>
+                        }
+                    }
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="exampleInputPassword1">Empleado</label>
+                <select id="cboEmpleado" class="form-control" name="Id_Empleado">
+                    @*<option value="-1">--SELECCIONE--</option>*@
+                        @foreach (Empleado item in listadoEmpleado)
+                        {
+                            if (item.Id_Empleado == sancion.Id_Empleado)
+                            {
+                                <option value=@item.Id_Empleado>@item.Num_Documento - @item.Apellidos_Emp, @item.Nombre_Emp</option>
+                            }
+                        }
+                    @foreach (Empleado item in listadoEmpleado)
+                    {
+                        if (item.Id_Empleado != sancion.Id_Empleado)
+                        {
+                            <option value=@item.Id_Empleado>@item.Num_Documento - @item.Apellidos_Emp, @item.Nombre_Emp</option>
+                        }
+                    }
+
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="exampleInputEmail1">Detalle</label>
+                <input type="text" class="form-control" id="txtDetalle" name="Detalle" placeholder="" value="@sancion.Detalle">
+            </div>
+        }
+        else
+        {
+
+            <div class="form-group">
+                <label for="exampleInputPassword1">Tipo de Sanción</label>
+                <select id="cboTipSancion" class="form-control">
+                    <option value="-1">--SELECCIONE--</option>
+                    @foreach (Tip_Sancion item in listadoTipSancion)
+                    {
+                        <option value="@item.Id_Tip_Sancion">@item.Descripcion</option>
+                    }
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="exampleInputPassword1">Empleado</label>
+                <select id="cboEmpleado" class="form-control">
+                    <option value="-1">--SELECCIONE--</option>
+                    @foreach (Empleado item in listadoEmpleado)
+                    {
+                        <option value="@item.Id_Empleado">@item.Num_Documento - @item.Apellidos_Emp, @item.Nombre_Emp</option>
+                    }
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="exampleInputEmail1">Detalle</label>
+                <input type="text" class="form-control" id="txtDetalle" placeholder="">
+            </div>
+        }
+    </form>
+</div>

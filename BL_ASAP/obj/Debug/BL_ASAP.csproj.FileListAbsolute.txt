@@ -1,0 +1,70 @@
+C:\Users\Patty\Documents\ESAN\CICLOS\CICLO-7(2018-1)\APLICACIONES WEB\CAPSTONE WEB\ProyASAP_Web\BL_ASAP\bin\Debug\BL_ASAP.dll
+C:\Users\Patty\Documents\ESAN\CICLOS\CICLO-7(2018-1)\APLICACIONES WEB\CAPSTONE WEB\ProyASAP_Web\BL_ASAP\bin\Debug\BL_ASAP.pdb
+C:\Users\Patty\Documents\ESAN\CICLOS\CICLO-7(2018-1)\APLICACIONES WEB\CAPSTONE WEB\ProyASAP_Web\BL_ASAP\obj\Debug\BL_ASAP.csprojResolveAssemblyReference.cache
+C:\Users\Patty\Documents\ESAN\CICLOS\CICLO-7(2018-1)\APLICACIONES WEB\CAPSTONE WEB\ProyASAP_Web\BL_ASAP\obj\Debug\BL_ASAP.dll
+C:\Users\Patty\Documents\ESAN\CICLOS\CICLO-7(2018-1)\APLICACIONES WEB\CAPSTONE WEB\ProyASAP_Web\BL_ASAP\obj\Debug\BL_ASAP.pdb
+C:\Users\Juan\Documents\Visual Studio 2015\Projects\CAPSTONE WEB\CAPSTONE WEB\ProyASAP_Web\BL_ASAP\bin\Debug\BL_ASAP.dll
+C:\Users\Juan\Documents\Visual Studio 2015\Projects\CAPSTONE WEB\CAPSTONE WEB\ProyASAP_Web\BL_ASAP\bin\Debug\BL_ASAP.pdb
+C:\Users\Juan\Documents\Visual Studio 2015\Projects\CAPSTONE WEB\CAPSTONE WEB\ProyASAP_Web\BL_ASAP\bin\Debug\BE_ASAP.dll
+C:\Users\Juan\Documents\Visual Studio 2015\Projects\CAPSTONE WEB\CAPSTONE WEB\ProyASAP_Web\BL_ASAP\bin\Debug\DA_ASAP.dll
+C:\Users\Juan\Documents\Visual Studio 2015\Projects\CAPSTONE WEB\CAPSTONE WEB\ProyASAP_Web\BL_ASAP\bin\Debug\EntityFramework.dll
+C:\Users\Juan\Documents\Visual Studio 2015\Projects\CAPSTONE WEB\CAPSTONE WEB\ProyASAP_Web\BL_ASAP\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Juan\Documents\Visual Studio 2015\Projects\CAPSTONE WEB\CAPSTONE WEB\ProyASAP_Web\BL_ASAP\bin\Debug\BE_ASAP.pdb
+C:\Users\Juan\Documents\Visual Studio 2015\Projects\CAPSTONE WEB\CAPSTONE WEB\ProyASAP_Web\BL_ASAP\bin\Debug\DA_ASAP.pdb
+C:\Users\Juan\Documents\Visual Studio 2015\Projects\CAPSTONE WEB\CAPSTONE WEB\ProyASAP_Web\BL_ASAP\bin\Debug\EntityFramework.xml
+C:\Users\Juan\Documents\Visual Studio 2015\Projects\CAPSTONE WEB\CAPSTONE WEB\ProyASAP_Web\BL_ASAP\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Juan\Documents\Visual Studio 2015\Projects\CAPSTONE WEB\CAPSTONE WEB\ProyASAP_Web\BL_ASAP\obj\Debug\BL_ASAP.csprojResolveAssemblyReference.cache
+C:\Users\Juan\Documents\Visual Studio 2015\Projects\CAPSTONE WEB\CAPSTONE WEB\ProyASAP_Web\BL_ASAP\obj\Debug\BL_ASAP.dll
+C:\Users\Juan\Documents\Visual Studio 2015\Projects\CAPSTONE WEB\CAPSTONE WEB\ProyASAP_Web\BL_ASAP\obj\Debug\BL_ASAP.pdb
+C:\Users\Patty\Documents\ESAN\CICLOS\CICLO-7(2018-1)\APLICACIONES WEB\CAPSTONE WEB\CAPSTONE WEB\ProyASAP_Web\BL_ASAP\bin\Debug\BL_ASAP.dll
+C:\Users\Patty\Documents\ESAN\CICLOS\CICLO-7(2018-1)\APLICACIONES WEB\CAPSTONE WEB\CAPSTONE WEB\ProyASAP_Web\BL_ASAP\bin\Debug\BL_ASAP.pdb
+C:\Users\Patty\Documents\ESAN\CICLOS\CICLO-7(2018-1)\APLICACIONES WEB\CAPSTONE WEB\CAPSTONE WEB\ProyASAP_Web\BL_ASAP\bin\Debug\BE_ASAP.dll
+C:\Users\Patty\Documents\ESAN\CICLOS\CICLO-7(2018-1)\APLICACIONES WEB\CAPSTONE WEB\CAPSTONE WEB\ProyASAP_Web\BL_ASAP\bin\Debug\DA_ASAP.dll
+C:\Users\Patty\Documents\ESAN\CICLOS\CICLO-7(2018-1)\APLICACIONES WEB\CAPSTONE WEB\CAPSTONE WEB\ProyASAP_Web\BL_ASAP\bin\Debug\EntityFramework.dll
+C:\Users\Patty\Documents\ESAN\CICLOS\CICLO-7(2018-1)\APLICACIONES WEB\CAPSTONE WEB\CAPSTONE WEB\ProyASAP_Web\BL_ASAP\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Patty\Documents\ESAN\CICLOS\CICLO-7(2018-1)\APLICACIONES WEB\CAPSTONE WEB\CAPSTONE WEB\ProyASAP_Web\BL_ASAP\bin\Debug\BE_ASAP.pdb
+C:\Users\Patty\Documents\ESAN\CICLOS\CICLO-7(2018-1)\APLICACIONES WEB\CAPSTONE WEB\CAPSTONE WEB\ProyASAP_Web\BL_ASAP\bin\Debug\DA_ASAP.pdb
+C:\Users\Patty\Documents\ESAN\CICLOS\CICLO-7(2018-1)\APLICACIONES WEB\CAPSTONE WEB\CAPSTONE WEB\ProyASAP_Web\BL_ASAP\bin\Debug\EntityFramework.xml
+C:\Users\Patty\Documents\ESAN\CICLOS\CICLO-7(2018-1)\APLICACIONES WEB\CAPSTONE WEB\CAPSTONE WEB\ProyASAP_Web\BL_ASAP\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Patty\Documents\ESAN\CICLOS\CICLO-7(2018-1)\APLICACIONES WEB\CAPSTONE WEB\CAPSTONE WEB\ProyASAP_Web\BL_ASAP\obj\Debug\BL_ASAP.csprojResolveAssemblyReference.cache
+C:\Users\Patty\Documents\ESAN\CICLOS\CICLO-7(2018-1)\APLICACIONES WEB\CAPSTONE WEB\CAPSTONE WEB\ProyASAP_Web\BL_ASAP\obj\Debug\BL_ASAP.dll
+C:\Users\Patty\Documents\ESAN\CICLOS\CICLO-7(2018-1)\APLICACIONES WEB\CAPSTONE WEB\CAPSTONE WEB\ProyASAP_Web\BL_ASAP\obj\Debug\BL_ASAP.pdb
+C:\Users\laboratorioesan\Desktop\Completo\CAPSTONE WEB_V6\CAPSTONE WEB\ProyASAP_Web\BL_ASAP\bin\Debug\BL_ASAP.dll
+C:\Users\laboratorioesan\Desktop\Completo\CAPSTONE WEB_V6\CAPSTONE WEB\ProyASAP_Web\BL_ASAP\bin\Debug\BL_ASAP.pdb
+C:\Users\laboratorioesan\Desktop\Completo\CAPSTONE WEB_V6\CAPSTONE WEB\ProyASAP_Web\BL_ASAP\bin\Debug\BE_ASAP.dll
+C:\Users\laboratorioesan\Desktop\Completo\CAPSTONE WEB_V6\CAPSTONE WEB\ProyASAP_Web\BL_ASAP\bin\Debug\DA_ASAP.dll
+C:\Users\laboratorioesan\Desktop\Completo\CAPSTONE WEB_V6\CAPSTONE WEB\ProyASAP_Web\BL_ASAP\bin\Debug\EntityFramework.dll
+C:\Users\laboratorioesan\Desktop\Completo\CAPSTONE WEB_V6\CAPSTONE WEB\ProyASAP_Web\BL_ASAP\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\laboratorioesan\Desktop\Completo\CAPSTONE WEB_V6\CAPSTONE WEB\ProyASAP_Web\BL_ASAP\bin\Debug\BE_ASAP.pdb
+C:\Users\laboratorioesan\Desktop\Completo\CAPSTONE WEB_V6\CAPSTONE WEB\ProyASAP_Web\BL_ASAP\bin\Debug\DA_ASAP.pdb
+C:\Users\laboratorioesan\Desktop\Completo\CAPSTONE WEB_V6\CAPSTONE WEB\ProyASAP_Web\BL_ASAP\bin\Debug\EntityFramework.xml
+C:\Users\laboratorioesan\Desktop\Completo\CAPSTONE WEB_V6\CAPSTONE WEB\ProyASAP_Web\BL_ASAP\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\laboratorioesan\Desktop\Completo\CAPSTONE WEB_V6\CAPSTONE WEB\ProyASAP_Web\BL_ASAP\obj\Debug\BL_ASAP.csprojResolveAssemblyReference.cache
+C:\Users\laboratorioesan\Desktop\Completo\CAPSTONE WEB_V6\CAPSTONE WEB\ProyASAP_Web\BL_ASAP\obj\Debug\BL_ASAP.dll
+C:\Users\laboratorioesan\Desktop\Completo\CAPSTONE WEB_V6\CAPSTONE WEB\ProyASAP_Web\BL_ASAP\obj\Debug\BL_ASAP.pdb
+C:\Users\Patty\Desktop\Capstonex4\CAPSTONE WEB\ProyASAP_Web\BL_ASAP\bin\Debug\BL_ASAP.dll
+C:\Users\Patty\Desktop\Capstonex4\CAPSTONE WEB\ProyASAP_Web\BL_ASAP\bin\Debug\BL_ASAP.pdb
+C:\Users\Patty\Desktop\Capstonex4\CAPSTONE WEB\ProyASAP_Web\BL_ASAP\bin\Debug\BE_ASAP.dll
+C:\Users\Patty\Desktop\Capstonex4\CAPSTONE WEB\ProyASAP_Web\BL_ASAP\bin\Debug\DA_ASAP.dll
+C:\Users\Patty\Desktop\Capstonex4\CAPSTONE WEB\ProyASAP_Web\BL_ASAP\bin\Debug\EntityFramework.dll
+C:\Users\Patty\Desktop\Capstonex4\CAPSTONE WEB\ProyASAP_Web\BL_ASAP\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Patty\Desktop\Capstonex4\CAPSTONE WEB\ProyASAP_Web\BL_ASAP\bin\Debug\BE_ASAP.pdb
+C:\Users\Patty\Desktop\Capstonex4\CAPSTONE WEB\ProyASAP_Web\BL_ASAP\bin\Debug\DA_ASAP.pdb
+C:\Users\Patty\Desktop\Capstonex4\CAPSTONE WEB\ProyASAP_Web\BL_ASAP\bin\Debug\EntityFramework.xml
+C:\Users\Patty\Desktop\Capstonex4\CAPSTONE WEB\ProyASAP_Web\BL_ASAP\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Patty\Desktop\Capstonex4\CAPSTONE WEB\ProyASAP_Web\BL_ASAP\obj\Debug\BL_ASAP.csprojResolveAssemblyReference.cache
+C:\Users\Patty\Desktop\Capstonex4\CAPSTONE WEB\ProyASAP_Web\BL_ASAP\obj\Debug\BL_ASAP.dll
+C:\Users\Patty\Desktop\Capstonex4\CAPSTONE WEB\ProyASAP_Web\BL_ASAP\obj\Debug\BL_ASAP.pdb
+C:\Users\laboratorioesan\Desktop\VersionCasiFinal\CAPSTONE WEB-PROGRAMACION-CRUD\CAPSTONE WEB\ProyASAP_Web\BL_ASAP\bin\Debug\BL_ASAP.dll
+C:\Users\laboratorioesan\Desktop\VersionCasiFinal\CAPSTONE WEB-PROGRAMACION-CRUD\CAPSTONE WEB\ProyASAP_Web\BL_ASAP\bin\Debug\BL_ASAP.pdb
+C:\Users\laboratorioesan\Desktop\VersionCasiFinal\CAPSTONE WEB-PROGRAMACION-CRUD\CAPSTONE WEB\ProyASAP_Web\BL_ASAP\bin\Debug\BE_ASAP.dll
+C:\Users\laboratorioesan\Desktop\VersionCasiFinal\CAPSTONE WEB-PROGRAMACION-CRUD\CAPSTONE WEB\ProyASAP_Web\BL_ASAP\bin\Debug\DA_ASAP.dll
+C:\Users\laboratorioesan\Desktop\VersionCasiFinal\CAPSTONE WEB-PROGRAMACION-CRUD\CAPSTONE WEB\ProyASAP_Web\BL_ASAP\bin\Debug\EntityFramework.dll
+C:\Users\laboratorioesan\Desktop\VersionCasiFinal\CAPSTONE WEB-PROGRAMACION-CRUD\CAPSTONE WEB\ProyASAP_Web\BL_ASAP\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\laboratorioesan\Desktop\VersionCasiFinal\CAPSTONE WEB-PROGRAMACION-CRUD\CAPSTONE WEB\ProyASAP_Web\BL_ASAP\bin\Debug\BE_ASAP.pdb
+C:\Users\laboratorioesan\Desktop\VersionCasiFinal\CAPSTONE WEB-PROGRAMACION-CRUD\CAPSTONE WEB\ProyASAP_Web\BL_ASAP\bin\Debug\DA_ASAP.pdb
+C:\Users\laboratorioesan\Desktop\VersionCasiFinal\CAPSTONE WEB-PROGRAMACION-CRUD\CAPSTONE WEB\ProyASAP_Web\BL_ASAP\bin\Debug\EntityFramework.xml
+C:\Users\laboratorioesan\Desktop\VersionCasiFinal\CAPSTONE WEB-PROGRAMACION-CRUD\CAPSTONE WEB\ProyASAP_Web\BL_ASAP\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\laboratorioesan\Desktop\VersionCasiFinal\CAPSTONE WEB-PROGRAMACION-CRUD\CAPSTONE WEB\ProyASAP_Web\BL_ASAP\obj\Debug\BL_ASAP.csprojResolveAssemblyReference.cache
+C:\Users\laboratorioesan\Desktop\VersionCasiFinal\CAPSTONE WEB-PROGRAMACION-CRUD\CAPSTONE WEB\ProyASAP_Web\BL_ASAP\obj\Debug\BL_ASAP.dll
+C:\Users\laboratorioesan\Desktop\VersionCasiFinal\CAPSTONE WEB-PROGRAMACION-CRUD\CAPSTONE WEB\ProyASAP_Web\BL_ASAP\obj\Debug\BL_ASAP.pdb

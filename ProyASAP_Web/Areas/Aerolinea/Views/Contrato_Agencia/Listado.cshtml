@@ -1,0 +1,96 @@
+﻿
+@using ProyASAP_Web;
+@using BE_ASAP;
+@using BL_ASAP;
+
+@{
+    ViewBag.Title = "Listado";
+
+
+    List<Contrato_Agencia> listadoContrato = new List<Contrato_Agencia>();
+    if (ViewBag.ListadoContrato != null)
+    {
+        listadoContrato = (List<Contrato_Agencia>)ViewBag.ListadoContrato;
+    }
+
+    List<Agencia_Viaje> listadoAgencia = new List<Agencia_Viaje>();
+    if (ViewBag.ListadoAgencia != null)
+    {
+        listadoAgencia = (List<Agencia_Viaje>)ViewBag.ListadoAgencia;
+    }
+
+    List<Aerolinea> listadoAerolinea = new List<Aerolinea>();
+    if (ViewBag.ListadoAerolinea != null)
+    {
+        listadoAerolinea = (List<Aerolinea>)ViewBag.ListadoAerolinea;
+    }
+
+
+    //List<Ubigeo> Departamentos = BLUbigeo.Listado();
+
+}
+
+<table id="tbListadoContrato" class="table table-striped">
+    <thead>
+        <tr>
+            <td>#</td>
+            <td>Fecha Inicio</td>
+            <td>Fecha Fin</td>
+            <td>Descripción</td>
+            <td>Primer Descuento (%)</td>
+            <td>Cantidad de Pasajes Hasta</td>
+            <td>Segundo Descuento (%)</td>
+            <td>Cantidad de Pasajes Desde</td>
+            <td>Agencia Viaje</td>
+            <td>Aerolinea</td>
+            <td>Estado</td>
+            <td></td>
+            <td></td>
+        </tr>
+    </thead>
+
+    <tbody>
+        @{
+            if (listadoContrato != null)
+            {
+                foreach (Contrato_Agencia item in listadoContrato)
+                {
+                    <tr>
+                        <td>@item.Id_Contrato_Agencia</td>
+                        <td>@item.Fecha_Ini_Contrato</td>
+                        <td>@item.Fecha_Fin_Contrato</td>
+                        <td>@item.Descripcion</td>
+                        <td>@item.Primer_Descuento</td>
+                        <td>@item.Tope1</td>
+                        <td>@item.Segundo_Descuento</td>
+                        <td>@item.Tope2</td>
+                        <td>@listadoAgencia.Where(x => x.Id_Agencia_Viaje == item.Id_Agencia_Viaje).Distinct().FirstOrDefault().Razon_Social</td>
+                        <td>@listadoAerolinea.Where(x => x.Id_Aerolinea == item.Id_Aerolinea).Distinct().FirstOrDefault().Razon_Social</td>
+                        <td>@item.Estado</td>
+                     @*   <td><input type="button" class="btnEliminarContrato btn btn-danger" value="Eliminar" id="btnEliminarContrato" data-codigo="@item.Id_Contrato_Agencia" /></td>*@
+                        <td><input type="button" class="btnEditarContrato btn btn-info" value="Editar" id="btnEditarContrato" data-codigo=@item.Id_Contrato_Agencia /></td>
+                    </tr>
+                }
+            }
+        }
+    </tbody>
+
+    <tfoot>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </tfoot>
+
+</table>

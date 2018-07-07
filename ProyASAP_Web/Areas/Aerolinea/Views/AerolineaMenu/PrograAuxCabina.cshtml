@@ -1,0 +1,138 @@
+﻿@using BL_ASAP;
+@using BE_ASAP;
+@{
+    //ViewBag.Title = "VuelosTripulacion";
+
+
+    //------------------Tripulación
+    List<Tripulacion> selec4 = (List<Tripulacion>)Session["TripulacionSelec"];
+    List<int> idselecAC = new List<int>();
+    //Si está seleccionado como capitan, no puede ser seleccionado como auxiliar de cabina
+    //
+    foreach (Tripulacion auxcab in selec4.Where(x => x.IdRolTrip == 1).ToList())
+    {
+        idselecAC.Add(auxcab.IdEmpleTrip);
+    }
+    //Listado de Auxiliares de cabina seleccionados
+    List<int> idauxcabsel = new List<int>();
+    foreach (Tripulacion capsel in selec4.Where(x => x.IdRolTrip == 2).ToList())
+    {
+        idauxcabsel.Add(capsel.IdEmpleTrip);
+    }
+    //---------------------T
+
+
+
+
+}
+
+<style>
+    .table-wrapper-2 {
+        display: block;
+        max-height: 200px;
+        overflow-y: auto;
+        -ms-overflow-style: -ms-autohiding-scrollbar;
+        background-color: #ffb84d;
+    }
+</style>
+
+<br>
+
+<h2>Colaboradores del Personal Técnico:</h2>
+<h3 class="text-center bg-warning">Auxiliar de Cabina:</h3>
+<div class="table-wrapper-2">
+    <table class="table table-hover" id="divtablatriptec">
+        <thead>
+            <tr>
+
+                <th>Apellido</th>
+                <th>Nombre</th>
+                <th>Cantidad de Sanciones</th>
+                <th>Disponibilidad</th>
+                <th>¿Tripulación actual?</th>
+            </tr>
+        </thead>
+        <tbody>
+            @{List<Empleado> EmpleadosPorRol = BLEmpleado.EmpleadosPorRol("Cabina");
+            }
+
+            @foreach (Empleado item in EmpleadosPorRol)
+            {
+                //------Tripu
+
+                if (!idselecAC.Contains(item.Id_Empleado))
+                {
+
+
+
+                    <tr>
+                        @{
+                            int cant = BLSancion.CantSancion(item.Id_Empleado);
+                        }
+                        <th>@item.Nombre_Emp</th>
+                        <th>@item.Apellidos_Emp</th>
+                        <th>@cant</th>
+                        <th>Disponible</th>
+                        <th>
+                            <div class="form-check">
+                                <label>
+
+
+                                    @*--------------------Tripulación-----------------*@
+                                    @if (idauxcabsel.Contains(item.Id_Empleado))
+                                    {
+                                        <input class="chkAuxCab" data-idemp=@item.Id_Empleado type="checkbox" name="check" checked="checked"> <span class="label-text"></span>
+                                    }
+                                    else
+                                    {
+                                        <input class="chkAuxCab" data-idemp=@item.Id_Empleado type="checkbox" name="check"> <span class="label-text"></span>
+                                    }
+
+
+
+                                </label>
+                            </div>
+                        </th>
+                    </tr>
+                                }
+                            }
+        </tbody>
+    </table>
+</div>@*---------------------Tripulación--------------------------*@
+<script>
+    $('.chkAuxCab').click(function () {
+        if ($(this).is(':checked')) {
+
+            var id = $(this).attr("data-idemp");
+
+            $.ajax({
+                type: "POST",
+                url: "/Aerolinea/AerolineaMenu/FiltrarTabla",
+                data: { idselec:id, rol:2},
+                success: function (html) {
+                   // alert(/*id + */"AUXILIAR DE CABINA SELECCIONADO");
+
+                }
+            });
+
+        } else {
+            var id = $(this).attr("data-idemp");
+
+            $.ajax({
+                type: "POST",
+                url: "/Aerolinea/AerolineaMenu/DeshacerFiltro",
+                data: { idselec: id, rol: 1 },
+                success: function (html) {
+                   // alert(/*id +*/ "Deselección");
+
+                }
+            });
+        }
+        });
+
+
+
+</script>
+
+
+

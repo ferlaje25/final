@@ -1,0 +1,134 @@
+﻿@using BL_ASAP
+@using BE_ASAP
+@{
+    ViewBag.Title = "RegistroPasajero";
+    List<string> Paises = BLUbigeo.Paises();
+    List<Ubigeo> Departamentos = BLUbigeo.Departamentos();
+    List<Ubigeo> Distritos = BLUbigeo.Distritos();
+
+}
+<body>
+    <form>
+        <div class="form-row">
+            <div class="col">
+                <label for="inputNombre">Nombre</label>
+                <input type="text" class="form-control" placeholder="Nombre">
+            </div>
+            <div class="col">
+                <label for="inputApellido">Apellido</label>
+                <input type="text" class="form-control" placeholder="Apellido">
+            </div>
+            <div class="col">
+                <label for="inputFechaNac">Fecha de Nacimiento</label>
+                <input type="date" class="form-control" placeholder="DD/MM/AAAA">
+            </div>
+        </div>
+        <br />
+        <div class="form-row">
+            <div class="col">
+                <label for="inputSexo">Género</label>
+                <select id="inputSexo" class="form-control">
+                    <option selected>Seleccione el Género</option>
+                    <option>Femenino</option>
+                    <option>Masculino</option>
+                </select>
+            </div>
+            <div class="col">
+                <label for="inputTipoDoc">Tipo de Documento</label>
+                <select id="inputTipoDoc" class="form-control">
+                    <option selected>Seleccione el Tipo de Documento</option>
+                    <option>DNI</option>
+                    <option>Pasaporte</option>
+                </select>
+            </div>
+            <div class="col">
+                <label for="inputNroDoc">Número de Documento</label>
+                <input id="inputNumDoc" class="form-control" placeholder="Número de Documetno">
+            </div>
+        </div>
+
+        <br />
+        <h2>Datos del Comprador</h2>
+        <br />
+
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="inputAddress">Dirección</label>
+                <input type="text" class="form-control" id="inputAddress" placeholder="">
+            </div>
+            <div class="form-group col-md-6">
+                <label for="inputPais">País</label>
+                <select id="inputPais" class="form-control">
+                    <option selected>Seleccione el País</option>
+                    @{
+
+                        foreach (string Pai in Paises)
+                        {
+                            <option>@Pai</option>
+                        }
+                    }
+                </select>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="inputDepartamento">Departamento</label>
+                <select id="inputDepartamento" class="form-control" onclick="">
+                    <option selected>Seleccione el departamento</option>
+                    @{
+                        foreach (Ubigeo Dep in Departamentos)
+                        {
+                            <option>@Dep.Departamento</option>
+                        }
+                    }
+                </select>
+            </div>
+            <div class="form-group col-md-6">
+                <label for="inputCiudad">Ciudad</label>
+                <select id="inputCiudad" class="form-control">
+                    <option selected>Seleccione la ciudad</option>
+                    @{
+                        foreach (Ubigeo Dis in Distritos)
+                        {
+                            <option>@Dis.Distrito</option>
+                        }
+                    }
+                </select>
+            </div>
+        </div>
+
+        <button type="submit" class="btn btn-primary" id="btnComprar">Comprar</button>
+        <button type="submit" class="btn btn-secondary" id="btnReservar">Reservar</button>
+    </form>
+</body>
+<br />
+
+<script>
+    $('#btnReservar').click(function () {
+        var div2 = $("#reser");
+        var nombre = div2.find("#inputNombre").val();
+        var apellido = div2.find("#inputApellido").val();
+        var fechnac = div2.find("#inputFechaNac").val();
+        var genero = div2.find("#inputSexo").val();
+        var tipDoc = div2.find("#inputTipoDoc").val();
+        var numdoc = div2.find("#inputNroDoc").val();
+        var direccion = div2.find("#inputAddress").val();
+        var pais = div2.find("#inputPais").val();
+        var depart = div2.find("#inputDepartamento").val();
+        var ciudad = div2.find("#inputCiudad").val();
+        $.ajax({
+            type: "POST",
+            url: "/Cliente/Ventas/Reservacion",
+            //data: { idselec:id, rol:1 },
+
+            data: { vnombre: nombre, vapellido: apellido, vfechnac: fechnac,vgenero :genero,vtipDoc:tipDoc,vnumdoc:numdoc,vdireccion:direccion,vpais:pais,vdepart:depart,vciudad:ciudad },
+            success: function (view) {
+                alert("LLego")
+            }
+        });
+    
+    
+    
+    })
+</script>
+

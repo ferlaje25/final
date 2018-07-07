@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="d36f42f1d4e8412d94c90488f2176b35" Name="Diagram1" ZoomLevel="25">
+        <EntityTypeShape EntityType="ASAPModel.Aerolinea" Width="1.5" PointX="3" PointY="50.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="ASAPModel.Agencia_Viaje" Width="1.5" PointX="6" PointY="50.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ASAPModel.Area" Width="1.5" PointX="12" PointY="36.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ASAPModel.Asiento" Width="1.5" PointX="13.5" PointY="42.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ASAPModel.Autorizacion_Operar" Width="1.5" PointX="15.75" PointY="62.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="ASAPModel.Avion" Width="1.5" PointX="11.25" PointY="49.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ASAPModel.Cliente" Width="1.5" PointX="6" PointY="45.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ASAPModel.Comprobante_Venta" Width="1.5" PointX="21" PointY="45.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="ASAPModel.Contrato_Agencia" Width="1.5" PointX="8.25" PointY="45" IsExpanded="true" />
+        <EntityTypeShape EntityType="ASAPModel.Contrato_Alquiler" Width="1.5" PointX="11.25" PointY="46.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ASAPModel.Contrato_Empleado" Width="1.5" PointX="14.25" PointY="50.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ASAPModel.Det_Contrato_Alquiler" Width="1.5" PointX="16.5" PointY="47.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ASAPModel.Det_Diagnostico" Width="1.5" PointX="21.75" PointY="58.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="ASAPModel.Det_Progra_Tripulacion" Width="1.5" PointX="21.75" PointY="53.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="ASAPModel.Det_Repuesto" Width="1.5" PointX="24.75" PointY="60.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ASAPModel.Det_Ruta_Aerea" Width="1.5" PointX="14.25" PointY="55.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ASAPModel.Det_Servicio" Width="1.5" PointX="14.25" PointY="46.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ASAPModel.Det_Venta" Width="1.5" PointX="23.75" PointY="45.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ASAPModel.Diagnostico_Tecnico" Width="1.5" PointX="19.5" PointY="66" IsExpanded="true" />
+        <EntityTypeShape EntityType="ASAPModel.Empleado" Width="1.5" PointX="9" PointY="49.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="ASAPModel.Estad_Mant_Asap" Width="1.5" PointX="26.75" PointY="46.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="ASAPModel.Mantenimiento" Width="1.5" PointX="16.5" PointY="54.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ASAPModel.Medio_Compra" Width="1.5" PointX="16.5" PointY="43.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ASAPModel.Permiso_Operacion" Width="1.5" PointX="18.5" PointY="58.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="ASAPModel.Programacion_vuelo" Width="1.5" PointX="19.5" PointY="52.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="ASAPModel.Proveedor_Alq_Avion" Width="1.5" PointX="3" PointY="46" IsExpanded="true" />
+        <EntityTypeShape EntityType="ASAPModel.Proveedor_Mantenimiento" Width="1.5" PointX="3" PointY="56" IsExpanded="true" />
+        <EntityTypeShape EntityType="ASAPModel.Reg_Cambios_Venta_vuelo" Width="1.5" PointX="23.25" PointY="50.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ASAPModel.Reg_Cambios_Vuelo" Width="1.5" PointX="24.75" PointY="54.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ASAPModel.Registro_Avion_ASAP" Width="1.5" PointX="13.5" PointY="62.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="ASAPModel.Repuestos" Width="1.5" PointX="22.5" PointY="62.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ASAPModel.Reserva_Pasaje" Width="1.5" PointX="25.75" PointY="50.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="ASAPModel.Rol" Width="1.5" PointX="12" PointY="72.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ASAPModel.Rol_Tripulacion" Width="1.5" PointX="19.5" PointY="62.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ASAPModel.Ruta_Aerea" Width="1.5" PointX="6" PointY="55.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="ASAPModel.Sancion" Width="1.5" PointX="17.25" PointY="51.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ASAPModel.Servicio" Width="1.5" PointX="12" PointY="39.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ASAPModel.Tarjeta" Width="1.5" PointX="14.25" PointY="39.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="ASAPModel.Tip_Sancion" Width="1.5" PointX="15" PointY="35.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ASAPModel.Tipo_Documento" Width="1.5" PointX="3.75" PointY="42.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="ASAPModel.Tipo_Pago" Width="1.5" PointX="16.5" PointY="39.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ASAPModel.Tipo_Ruta" Width="1.5" PointX="12" PointY="68.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ASAPModel.Ubigeo" Width="1.5" PointX="0.75" PointY="51" IsExpanded="true" />
+        <EntityTypeShape EntityType="ASAPModel.Urt_Asap" Width="1.5" PointX="13.5" PointY="65.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ASAPModel.Usuario" Width="1.5" PointX="11.25" PointY="57.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="ASAPModel.Venta_Pasajes" Width="1.5" PointX="18.75" PointY="44.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ASAPModel.autorizacionAvionTablaMod" Width="1.5" PointX="1.625" PointY="31.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ASAPModel.autorizacionTablaMod" Width="1.5" PointX="3.625" PointY="31.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ASAPModel.DETALLE_DE_RUTA" Width="1.5" PointX="5.625" PointY="31.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ASAPModel.permisoTablaMod" Width="1.5" PointX="7.625" PointY="31.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ASAPModel.registroTablaMod" Width="1.5" PointX="1.625" PointY="37.75" IsExpanded="true" />
+        <AssociationConnector Association="ASAPModel.FK__Aerolinea__Id_Ti__276EDEB3" ManuallyRouted="false" />
+        <AssociationConnector Association="ASAPModel.FK__Aerolinea__Id_Ub__286302EC" ManuallyRouted="false" />
+        <AssociationConnector Association="ASAPModel.FK__Avion__Id_Aeroli__47DBAE45" ManuallyRouted="false" />
+        <AssociationConnector Association="ASAPModel.FK__Contrato___Id_Ae__208CD6FA" ManuallyRouted="false" />
+        <AssociationConnector Association="ASAPModel.FK__Contrato___Id_Ae__300424B4" ManuallyRouted="false" />
+        <AssociationConnector Association="ASAPModel.FK__Contrato___Id_Ae__4222D4EF" ManuallyRouted="false" />
+        <AssociationConnector Association="ASAPModel.FK__Det_Ruta___Id_Ae__59063A47" ManuallyRouted="false" />
+        <AssociationConnector Association="ASAPModel.FK__Det_Servi__Id_Ae__398D8EEE" ManuallyRouted="false" />
+        <AssociationConnector Association="ASAPModel.FK__Estad_Man__Id_Ae__46B27FE2" ManuallyRouted="false" />
+        <AssociationConnector Association="ASAPModel.FK__Usuario__Id_Aero__4E53A1AA" ManuallyRouted="false" />
+        <AssociationConnector Association="ASAPModel.FK__Venta_Pas__Id_Ae__0A9D95DB" ManuallyRouted="false" />
+        <AssociationConnector Association="ASAPModel.FK__Agencia_V__Id_Ti__2B3F6F97" ManuallyRouted="false" />
+        <AssociationConnector Association="ASAPModel.FK__Agencia_V__Id_Ub__2C3393D0" ManuallyRouted="false" />
+        <AssociationConnector Association="ASAPModel.FK__Contrato___Id_Ag__1F98B2C1" ManuallyRouted="false" />
+        <AssociationConnector Association="ASAPModel.FK__Contrato___Id_Ag__2F10007B" ManuallyRouted="false" />
+        <AssociationConnector Association="ASAPModel.FK__Usuario__Id_Agen__4D5F7D71" ManuallyRouted="false" />
+        <AssociationConnector Association="ASAPModel.FK__Venta_Pas__Id_Ag__05D8E0BE" ManuallyRouted="false" />
+        <AssociationConnector Association="ASAPModel.FK__Contrato___Id_Ar__1DB06A4F" ManuallyRouted="false" />
+        <AssociationConnector Association="ASAPModel.FK__Asiento__Id_Avio__7A672E12" ManuallyRouted="false" />
+        <AssociationConnector Association="ASAPModel.FK__Venta_Pas__Id_As__09A971A2" ManuallyRouted="false" />
+        <AssociationConnector Association="ASAPModel.FK__Autorizac__Id_Pe__6FE99F9F" ManuallyRouted="false" />
+        <AssociationConnector Association="ASAPModel.FK__Autorizac__Id_Re__6EF57B66" ManuallyRouted="false" />
+        <AssociationConnector Association="ASAPModel.FK__Avion__Id_Contra__49C3F6B7" ManuallyRouted="false" />
+        <AssociationConnector Association="ASAPModel.FK__Avion__Id_Servic__48CFD27E" ManuallyRouted="false" />
+        <AssociationConnector Association="ASAPModel.FK__Mantenimi__Id_Av__339FAB6E" ManuallyRouted="false" />
+        <AssociationConnector Association="ASAPModel.FK__Programac__Id_Av__5DCAEF64" ManuallyRouted="false" />
+        <AssociationConnector Association="ASAPModel.FK__Reg_Cambi__Id_Av__6477ECF3" ManuallyRouted="false" />
+        <AssociationConnector Association="ASAPModel.FK__Registro___Id_Av__68487DD7" ManuallyRouted="false" />
+        <AssociationConnector Association="ASAPModel.FK__Urt_Asap__Id_Avi__498EEC8D" ManuallyRouted="false" />
+        <AssociationConnector Association="ASAPModel.FK__Cliente__Id_Tipo__72C60C4A" ManuallyRouted="false" />
+        <AssociationConnector Association="ASAPModel.FK__Cliente__Id_Ubig__73BA3083" ManuallyRouted="false" />
+        <AssociationConnector Association="ASAPModel.FK__Reserva_P__Id_Cl__76969D2E" ManuallyRouted="false" />
+        <AssociationConnector Association="ASAPModel.FK__Venta_Pas__Id_Cl__04E4BC85" ManuallyRouted="false" />
+        <AssociationConnector Association="ASAPModel.FK__Comproban__Id_Ve__123EB7A3" ManuallyRouted="false" />
+        <AssociationConnector Association="ASAPModel.FK__Reg_Cambi__Id_Co__151B244E" ManuallyRouted="false" />
+        <AssociationConnector Association="ASAPModel.FK__Contrato___Id_Pr__4316F928" ManuallyRouted="false" />
+        <AssociationConnector Association="ASAPModel.FK__Det_Contr__Id_Co__45F365D3" ManuallyRouted="false" />
+        <AssociationConnector Association="ASAPModel.FK__Contrato___Id_Em__1CBC4616" ManuallyRouted="false" />
+        <AssociationConnector Association="ASAPModel.FK__Contrato___Id_Ro__1EA48E88" ManuallyRouted="false" />
+        <AssociationConnector Association="ASAPModel.FK__Det_Contr__Id_Em__46E78A0C" ManuallyRouted="false" />
+        <AssociationConnector Association="ASAPModel.FK__Det_Diagn__Id_Di__41EDCAC5" ManuallyRouted="false" />
+        <AssociationConnector Association="ASAPModel.FK__Det_Diagn__Id_Em__42E1EEFE" ManuallyRouted="false" />
+        <AssociationConnector Association="ASAPModel.FK__Det_Diagn__Id_Ma__40F9A68C" ManuallyRouted="false" />
+        <AssociationConnector Association="ASAPModel.FK__Det_Progr__Id_Em__2BFE89A6" ManuallyRouted="false" />
+        <AssociationConnector Association="ASAPModel.FK__Det_Progr__Id_Pr__2B0A656D" ManuallyRouted="false" />
+        <AssociationConnector Association="ASAPModel.FK__Det_Progr__Id_Ro__2CF2ADDF" ManuallyRouted="false" />
+        <AssociationConnector Association="ASAPModel.FK__Det_Repue__Id_Em__3C34F16F" ManuallyRouted="false" />
+        <AssociationConnector Association="ASAPModel.FK__Det_Repue__Id_Ma__3B40CD36" ManuallyRouted="false" />
+        <AssociationConnector Association="ASAPModel.FK__Det_Repue__Id_Re__3A4CA8FD" ManuallyRouted="false" />
+        <AssociationConnector Association="ASAPModel.FK__Det_Ruta___Id_Em__5441852A" ManuallyRouted="false" />
+        <AssociationConnector Association="ASAPModel.FK__Det_Ruta___Id_Ti__534D60F1" ManuallyRouted="false" />
+        <AssociationConnector Association="ASAPModel.FK__Det_Ruta___Ruta___5535A963" ManuallyRouted="false" />
+        <AssociationConnector Association="ASAPModel.FK__Det_Ruta___Ruta___5629CD9C" ManuallyRouted="false" />
+        <AssociationConnector Association="ASAPModel.FK__Det_Ruta___Ruta___571DF1D5" ManuallyRouted="false" />
+        <AssociationConnector Association="ASAPModel.FK__Det_Ruta___Ruta___5812160E" ManuallyRouted="false" />
+        <AssociationConnector Association="ASAPModel.FK__Permiso_O__Id_De__6D0D32F4" ManuallyRouted="false" />
+        <AssociationConnector Association="ASAPModel.FK__Programac__Id_De__5FB337D6" ManuallyRouted="false" />
+        <AssociationConnector Association="ASAPModel.FK__Reg_Cambi__Id_De__628FA481" ManuallyRouted="false" />
+        <AssociationConnector Association="ASAPModel.FK__Det_Servi__Id_Em__3B75D760" ManuallyRouted="false" />
+        <AssociationConnector Association="ASAPModel.FK__Det_Servi__Id_Se__3A81B327" ManuallyRouted="false" />
+        <AssociationConnector Association="ASAPModel.FK__Det_Venta__Id_Em__0F624AF8" ManuallyRouted="false" />
+        <AssociationConnector Association="ASAPModel.FK__Det_Venta__Id_Pr__0E6E26BF" ManuallyRouted="false" />
+        <AssociationConnector Association="ASAPModel.FK__Det_Venta__Id_Ve__0D7A0286" ManuallyRouted="false" />
+        <AssociationConnector Association="ASAPModel.FK__Empleado__Id_Tip__5BE2A6F2" ManuallyRouted="false" />
+        <AssociationConnector Association="ASAPModel.FK__Empleado__Id_Ubi__5CD6CB2B" ManuallyRouted="false" />
+        <AssociationConnector Association="ASAPModel.FK__Mantenimi__Id_Em__3493CFA7" ManuallyRouted="false" />
+        <AssociationConnector Association="ASAPModel.FK__Permiso_O__Id_Em__6E01572D" ManuallyRouted="false" />
+        <AssociationConnector Association="ASAPModel.FK__Programac__Id_Em__5EBF139D" ManuallyRouted="false" />
+        <AssociationConnector Association="ASAPModel.FK__Reg_Cambi__Id_Em__656C112C" ManuallyRouted="false" />
+        <AssociationConnector Association="ASAPModel.FK__Sancion__Id_Empl__2645B050" ManuallyRouted="false" />
+        <AssociationConnector Association="ASAPModel.FK__Usuario__Id_Empl__4C6B5938" ManuallyRouted="false" />
+        <AssociationConnector Association="ASAPModel.FK__Venta_Pas__Id_Em__07C12930" ManuallyRouted="false" />
+        <AssociationConnector Association="ASAPModel.FK__Estad_Man__Id_Ma__45BE5BA9" ManuallyRouted="false" />
+        <AssociationConnector Association="ASAPModel.FK__Mantenimi__Id_Pr__3587F3E0" ManuallyRouted="false" />
+        <AssociationConnector Association="ASAPModel.FK__Venta_Pas__Id_Me__06CD04F7" ManuallyRouted="false" />
+        <AssociationConnector Association="ASAPModel.FK__Reg_Cambi__Id_Pr__160F4887" ManuallyRouted="false" />
+        <AssociationConnector Association="ASAPModel.FK__Reg_Cambi__Id_Pr__6383C8BA" ManuallyRouted="false" />
+        <AssociationConnector Association="ASAPModel.FK__Reserva_P__Id_Pr__778AC167" ManuallyRouted="false" />
+        <AssociationConnector Association="ASAPModel.FK__Proveedor__Id_Ti__3F466844" ManuallyRouted="false" />
+        <AssociationConnector Association="ASAPModel.FK__Proveedor__Id_Ub__3E52440B" ManuallyRouted="false" />
+        <AssociationConnector Association="ASAPModel.FK__Proveedor__Id_Ti__2FCF1A8A" ManuallyRouted="false" />
+        <AssociationConnector Association="ASAPModel.FK__Proveedor__Id_Ub__30C33EC3" ManuallyRouted="false" />
+        <AssociationConnector Association="ASAPModel.FK__Venta_Pas__Id_Re__03F0984C" ManuallyRouted="false" />
+        <AssociationConnector Association="ASAPModel.FK__Ruta_Aere__Id_Ti__4E88ABD4" ManuallyRouted="false" />
+        <AssociationConnector Association="ASAPModel.FK__Ruta_Aere__Id_Ub__4F7CD00D" ManuallyRouted="false" />
+        <AssociationConnector Association="ASAPModel.FK__Ruta_Aere__Id_Ub__5070F446" ManuallyRouted="false" />
+        <AssociationConnector Association="ASAPModel.FK__Sancion__Id_Tip___25518C17" ManuallyRouted="false" />
+        <AssociationConnector Association="ASAPModel.FK__Tipo_Pago__Id_Ta__02FC7413" ManuallyRouted="false" />
+        <AssociationConnector Association="ASAPModel.FK__Venta_Pas__Id_Ti__08B54D69" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

@@ -1,0 +1,320 @@
+﻿@using BL_ASAP;
+@using BE_ASAP;
+@{
+    //ViewBag.Title = "VuelosTripulacion";
+   // List<Empleado> ListadoTripulacion = (List<Empleado>)ViewBag.ListadoEmpleados;
+}
+@{ 
+
+    List<Ubigeo> ListadoAeropuertos = (List<Ubigeo>)ViewBag.ListadoAeropuertos;
+    //Programacion_vuelo prograVuelo = (Programacion_vuelo)Session["ProgramacionVuelo"];
+    Session["TripulacionSelec"] = new List<Tripulacion>();//PARTE DE TERE
+    Session["ProgramacionVuelo"] = new Programacion_vuelo();//PARTE MIA
+}
+<script src="~/Scripts/jquery-3.3.1.min.js"></script>
+<script src="~/Scripts/bootstrap.min.js"></script>
+@* ---------------------FONDO DE LA PAGINA ------------------- *@
+<style>
+    html,body {
+                background-image: url("../../../../Imagenes/Portada/nubesprueba.PNG");
+                height: 100%;
+                margin: 0;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+    }
+
+    divtablatriptec {
+        background-color: #66a3ff;
+        color: #66a3ff;
+    }
+
+    .table-wrapper-2 {
+        display: block;
+        max-height: 200px;
+        overflow-y: auto;
+        -ms-overflow-style: -ms-autohiding-scrollbar;
+        background-color: #66a3ff;
+    }
+
+    .highlight {
+        background-color: dodgerblue;
+    }
+</style>
+@* ----------------------------------------------------------- *@
+
+<html>
+    <body>
+        @* --------------------------------------------- *@
+        <div>
+            <div class="container">
+                <nav>
+                    <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                        <a class="nav-item nav-link active" id="nav-itinerario-tab" data-toggle="tab" href="#nav-itinerario" role="tab" aria-controls="nav-itinerario" aria-selected="true">Programar Itinerario</a>
+                        <a class="nav-item nav-link" id="nav-avion-tab" data-toggle="tab" href="#nav-avion" role="tab" aria-controls="nav-avion" aria-selected="true">Seleccionar Avion</a>
+                        <a class="nav-item nav-link" id="nav-tripulacion-tab" data-toggle="tab" href="#nav-tripulacion" role="tab" aria-controls="nav-tripulacion" aria-selected="true">Tripulacion</a>
+                    </div>
+                </nav>
+                <div class="tab-content" id="nav-tabContent">
+                   @* ------------PROGRAMACION DE ITINERARIO *@
+                    <div class="tab-pane fade show active" id="nav-itinerario" role="tabpanel" aria-labelledby="nav-itinerario-tab" @*style="background-image: url('../../../../Imagenes/Aerolinea/Fondo_de_Programacion.jpg'); width:auto; height:auto"*@ >
+                        <div class="d-flex bd-highlight" >
+                            <div class="mr-auto p-2 bd-highlight">
+                                <label class="float-left">Vuelos Latam</label>
+                            </div>
+                            <div class="p-2 bd-highlight">
+                                <div class="d-flex align-items-end flex-column bd-highlight">
+                                    <div class="p-2 bd-highlight"><label class="float">@DateTime.Now.Day/@DateTime.Now.Month/@DateTime.Now.Year</label></div>
+                                    <div class="p-2 bd-highlight"><label>Colaborado: Henry Perez</label> </div>
+                                </div>
+                            </div>
+                        </div>
+                            @*--------------IMAGEN Y BUSQUEDA--- *@                        
+                        <div class="media">
+                                    @* --------IMAGEN AVION----------------*@
+                            <img class="mr-3" src="~/Imagenes/Aerolinea/Avion_Latam.png" alt="Generic placeholder image">
+                                    @* -------FIN- IMAGEN AVION----------- *@
+                                    @*----------COSTADO DEL AVION----------*@
+                             <div class="media-body">
+                                 <br />
+                                 <br />
+                                 
+                                 <div>
+                                     <div class="input-group mb-3">
+                                         <div class="input-group-prepend">
+                                             <label class="input-group-text" for="entrRuta" style="width:85px">Origen:  </label>
+                                         </div>
+                                         <select class="custom-select" id="entrRuta" @*class="form-control"*@>
+                                             @foreach (Ubigeo item in ListadoAeropuertos)
+                                             {
+                                                 <option value=@item.Id_Ubigeo>@item.Pais, @item.Departamento, Aeropuerto @item.Aeropuerto</option>
+                                             }
+                                         </select>
+                                     </div>
+                                     <div class="input-group mb-3">
+                                         <div class="input-group-prepend">
+                                             <label class="input-group-text" for="destRuta" style="width:85px">Destino: </label>
+                                         </div>
+                                         <select class="custom-select" id="destRuta" @*class="form-control"*@>
+                                             @foreach (Ubigeo item in ListadoAeropuertos)
+                                             {
+                                               <option value=@item.Id_Ubigeo>@item.Pais, @item.Departamento, Aeropuerto @item.Aeropuerto</option>
+                                             }
+                                         </select>
+                                     </div>
+                                     <div class="input-group mb-3">
+                                         <div class="input-group-prepend">
+                                             <label class="input-group-text" for="escalas" style="width:85px">Escalas: </label>
+                                         </div>
+                                         <div class="form-check form-check-inline"></div>
+                                             <div class="form-check form-check-inline" id="escalas">
+                                                 <input class="selectEscala form-check-input" type="radio" name="selectEscala" id="selectEscala" value=0>
+                                                 <label class="form-check-label" for="selectEscala">0</label>
+                                             </div>
+                                             <div class="form-check form-check-inline">
+                                                 <input class="selectEscala form-check-input" type="radio" name="selectEscala" id="selectEscala" value=1>
+                                                 <label class="form-check-label" for="selectEscala">1</label>
+                                             </div>
+                                             <div class="form-check form-check-inline">
+                                                 <input class="selectEscala form-check-input" type="radio" name="selectEscala" id="selectEscala" value=2>
+                                                 <label class="form-check-label" for="selectEscala">2</label>
+                                             </div>
+                                             <div class="form-check form-check-inline">
+                                                 <input class="selectEscala form-check-input" type="radio" name="selectEscala" id="selectEscala" value=3>
+                                                 <label class="form-check-label" for="selectEscala">3</label>
+                                             </div>
+
+
+                                         </div>                                                                
+                                    
+                                     <a class="btn btn-primary" id="Buscar" href="#">Buscar</a>
+                                 </div>
+                             </div>
+                                        @* -----------FIN-COSTADO DEL AVION -------------- *@
+                          </div>
+                                @* -----------FIN IMAGEN Y BUSQUEDA -----------------------*@
+                                @* ----------------RUTA SELECCIONADA---------------------- *@ 
+                        <br />
+                        <br />
+                        
+                        <div class="form-row border-dark " style="width:1008px" id="rutaSeleccionada">                         
+                            
+                        </div>
+                                @*-------------------FIN RUTA SELECCIONADA-------------- *@
+                    </div>
+                    @* ----------------FIN VISTA PROGRAMACION DE ITINERARIO--------------- *@
+                    @* ----------------PROGRAMACION DEL AVION----------------------------- *@
+
+                    <div class="tab-pane fade" id="nav-avion" role="tabpanel" aria-labelledby="nav-avion-tab">..B
+                    <div class="container" id="Avion">
+
+                    </div>
+                    .</div>
+                    @* --------------FIN PROGRAMACION DEL AVION----------------------------- *@
+                    @* ----------------PROGRAMACION DE LA TRIPULACION----------------------------- *@
+                    <div class="tab-pane fade" id="nav-tripulacion" role="tabpanel" aria-labelledby="nav-tripulacion-tab">
+                        <br>
+                        <br>
+                        <h1 class="text-center">VuelosTripulacion</h1>
+                        <br>
+                        <a href="#" id="btncapitan" class="btn btn-primary">Capitán</a>
+                        <a href="#" id="btnauxcab" class="btn btn-warning">Auxiliar de Cabina</a>
+                        <a href="#" id="btnjefetrip" class="btn btn-primary">Jefe de Tripulación</a>
+                        <a href="#" id="btnauxtrip" class="btn btn-warning">Auxiliar de Tripulación</a>
+                        <br>
+                                           
+                            <div class="container">
+                                <div class="container body-content" id="juntos">
+
+                                </div>
+                            </div>
+                       </div>
+                    @* ----------------FIN PROGRAMACION DE LA TRIPULACION----------------------------- *@
+                </div>
+            </div>
+            @* ---------------------------MODAL---------------------------------- *@
+            <div class="modal fade" id="myModalDetRuta" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" >
+                <div class="modal-dialog modal-dialog-centered" style="width:1000px"role="document">
+                    <div class="modal-content "style="width:9000px">
+                        <div class="modal-header justify-content-center">
+                            <h5 class="modal-title" id="myModalLabel">RUTAS</h5>                            
+                        </div>
+                        <div class="modal-body">
+                            ...
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                            <button type="button" class="btn btn-primary" id="btnAceptar">Aceptar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            @* --------------------FIN DEL MODAL-------------------------------- *@
+        </div>
+    </body>
+
+</html>
+
+<script>
+    var vescala = -1;
+    //-------BUSCAR RUTA ----------------->
+    $(".selectEscala").click(function () {
+        vescala = $(this).val();
+
+    })
+    $("#Buscar").click(function () {
+        var vorigen = $("#entrRuta").val();
+        var vfind = $('#destRuta').val();
+       // alert(vescala)
+        var formModelo = $("#myModalDetRuta");
+        //----------------------------
+
+
+        $.ajax({
+            type: "POST",
+            url: "/Aerolinea/AerolineaMenu/listado", //ADMINISTRADOR/MODELO/LISTADO
+            data: { origen: vorigen, fin: vfind, escala: vescala },
+            success: function (view) {
+
+                //window.alert("Buscastes entro aqui");
+                formModelo.find(".modal-body").html(view);
+                formModelo.modal();
+               
+            }
+            //-----------------------
+
+
+        });
+    });
+    $("#btnAceptar").click(function () {
+        var formodal = $("#myModalDetRuta");
+        var vcodDetRuta = formodal.find("#seleccionRuta").val();
+       // var vescala = $(".selectEscala").val();
+        //window.alert("Ruta grande seleccionada Seleccionada: " + vcodDetRuta);
+
+        $.ajax({
+            type: "POST",
+            url: "/Aerolinea/AerolineaMenu/RutaSeleccionada",
+            data: { id_Det_Ruta: vcodDetRuta, escala:vescala },
+            success: function (view) {
+                $(rutaSeleccionada).html(view);
+                formodal.modal("toggle");
+                //$(avionPage).html(view);
+
+            }
+        })
+    });
+    $("avion").on('click', '.btnAceptarFechaTiempo', function () {
+        alert("dasdasdasd")
+        $.ajax({
+            type: "POST",
+            url: "Aerolinea/AerolineaMenu/AvionSeleccionado",
+           success: function (html) {
+               //$("#nav-avion").html(view);
+            }
+        });
+    });
+    
+    //----------------------------------------
+    //-----BUSCAR AVION --------------------->
+    $("#nav-avion-tab").click(function () {
+       // window.alert("AVIOOOOOON")
+        $.ajax({
+            type: "POST",
+            url: "/Aerolinea/AerolineaMenu/AvionSeleccionado",
+            success: function (view) {
+                $("#nav-avion").html(view);
+            }
+        })
+    })
+
+
+    //----------------------------------------
+    //-----BUSCAR TRIPULACION---------------->
+    $.ajax({
+        type: "GET",
+        url: "/Aerolinea/AerolineaMenu/PrograCapitan",
+        success: function (view) {
+            $(juntos).html(view);
+        }
+    })
+    $('#btncapitan').click(function () {
+        $.ajax({
+            type: "GET",
+            url: "/Aerolinea/AerolineaMenu/PrograCapitan",
+            success: function (view) {
+                $(juntos).html(view);
+            }
+        });
+    })
+    $('#btnauxcab').click(function () {
+        $.ajax({
+            type: "GET",
+            url: "/Aerolinea/AerolineaMenu/PrograAuxCabina",
+            success: function (view) {
+                $(juntos).html(view);
+            }
+        });
+    })
+    $('#btnjefetrip').click(function () {
+        $.ajax({
+            type: "GET",
+            url: "/Aerolinea/AerolineaMenu/PrograJefeTrip",
+            success: function (view) {
+                $(juntos).html(view);
+            }
+        });
+    })
+    $('#btnauxtrip').click(function () {
+        $.ajax({
+            type: "GET",
+            url: "/Aerolinea/AerolineaMenu/PrograAuxiliarTrip",
+            success: function (view) {
+                $(juntos).html(view);
+            }
+        });
+    })
+    //----------------------------------------
+
+    
+</script>

@@ -1,0 +1,526 @@
+﻿
+
+@using BE_ASAP
+@{
+    DETALLE_DE_RUTA Det_Rutas_Selec = (DETALLE_DE_RUTA)ViewBag.RutaSeleccionada;
+    Programacion_vuelo confirmacion = new Programacion_vuelo();
+    int escala = ViewBag.NumEscala;
+    int horaR1 = 0, horaR2 = 0, horaR3 = 0, horaR4 = 0;
+    int minuR1 = 0, minuR2 = 0, minuR3 = 0, minuR4 = 0;
+    int[] dias = new int[] { 0, 0, 0, 0 };
+    if (escala > -1)
+    {
+        int tiempoR1 = Convert.ToInt32(Det_Rutas_Selec.TIEMPO_R1);
+        horaR1 = tiempoR1 / 60;
+        minuR1 = tiempoR1 % 60;
+    }
+    if (escala > 0)
+    {
+        int tiempoR2 = Convert.ToInt32(Det_Rutas_Selec.TIEMPO_R2);
+        horaR2 = tiempoR2 / 60;
+        minuR2 = tiempoR2 % 60;
+    }
+
+    if (escala > 1)
+    {
+        int tiempoR3 = Convert.ToInt32(Det_Rutas_Selec.TIEMPO_R3);
+        horaR3 = tiempoR3 / 60;
+        minuR3 = tiempoR3 % 60;
+    }
+    if (escala > 2)
+    {
+        int tiempoR4 = Convert.ToInt32(Det_Rutas_Selec.TIEMPO_R4);
+        horaR4 = tiempoR4 / 60;
+        minuR4 = tiempoR4 % 60;
+    }
+
+}
+
+
+<body id="body">
+   
+        <div class="col-md-5" id="detalleHF1">
+            <table class="table table-bordered table-info  w-100 rounded">
+                <thead class="thead-dark" style="height:75px">
+                    <tr class="table-active">
+                        <td class="w-50 text-center align-content-center" style="height:75px">Ruta</td>
+                        <td class="w-25 text-center align-content-center" style="height:75px">Tiempo de Vuelo</td>
+                        <td class="w-25 text-center align-content-center" style="height:75px">Kilometraje</td>
+                    </tr>
+                <thead>
+                <tbody>
+                    @if (Det_Rutas_Selec != null)
+                {
+                        <tr style="height:140px">
+                            <td><p>@Det_Rutas_Selec.RA1_ORIGEN_AEROPUERTO / @Det_Rutas_Selec.RA1_DESTINO_AEROPUERTO</p></td>
+                            <td><p>@Det_Rutas_Selec.TIEMPO_R1 min.</p></td>
+                            <td><p>@Det_Rutas_Selec.KILOMETRAJE_R1</p></td>
+                        </tr>
+                    if (escala > 0)
+                    {
+                            <tr style="height:140px">
+                                <td><p>@Det_Rutas_Selec.RA2_ORIGEN_AEROPUERTO / @Det_Rutas_Selec.RA2_DESTINO_AEROPUERTO</p></td>
+                                <td><p>@Det_Rutas_Selec.TIEMPO_R2 min.</p></td>
+                                <td><p>@Det_Rutas_Selec.KILOMETRAJE_R2</p></td>
+                            </tr>
+                    }
+                    if (escala > 1)
+                    {
+                            <tr style="height:140px">
+                                <td><p>@Det_Rutas_Selec.RA3_ORIGEN_AEROPUERTO / @Det_Rutas_Selec.RA3_DESTINO_AEROPUERTO</p></td>
+                                <td><p>@Det_Rutas_Selec.TIEMPO_R3 min.</p></td>
+                                <td><p>@Det_Rutas_Selec.KILOMETRAJE_R3</p></td>
+                            </tr>
+                    }
+                    if (escala == 3)
+                    {
+                            <tr style="height:140px">
+                                <td><p>@Det_Rutas_Selec.RA4_ORIGEN_AEROPUERTO / @Det_Rutas_Selec.RA4_DESTINO_AEROPUERTO</p></td>
+                                <td><p>@Det_Rutas_Selec.TIEMPO_R4 min.</p></td>
+                                <td><p>@Det_Rutas_Selec.KILOMETRAJE_R4</p></td>
+                            </tr>
+                    }
+
+                }
+
+
+                </tbody>
+            </table>
+        </div>
+        <div class="col-md-7 " id="detalleHF2" >
+            <div class="form-row w-100 text-center" style="height:75px">
+                <div class="col align-content-center" style="width:120px">
+                    <label>Hora despegue</label>
+                    <input style="width:120px" type="time" placeholder="Escoge una hora" id="Hora">
+                </div>
+                <div class="col" style="width:120px">
+                    <label>Hora Llegada</label>
+                </div>
+                <div class="col" style="width:155px">
+                    <label>Fecha despegue</label>
+                    <input style="width:140px" type="date" placeholder="Escoge una fecha" id="Fecha">
+                </div>
+                <div class="col" style="width:155px">
+                    <label>Fecha Llegada</label>
+                </div>
+            </div>
+
+            <div class="form-row w-100 align-content-center" style="height:140px">
+                <div class="col input-group-prepend align-self-center justify-content-xl-center" style="width:120px">
+                    <img src="~/Imagenes/Aerolinea/reloj.png" />
+                    <span class="input-group-text " style="width:120px" type="time" id="HoraDespegueR1"> </span>
+                </div>
+                <div class="col input-group-prepend align-self-center justify-content-xl-center" style="width:120px">
+                    <img src="~/Imagenes/Aerolinea/reloj.png" />
+                    <span class="input-group-text " style="width:120px" type="time" id="HoraLlegadaR1" @*value=@horaR1*@> </span>
+                </div>
+                <div class="col input-group-prepend align-self-center justify-content-xl-center" style="width:150px">
+                    <img src="~/Imagenes/Aerolinea/avionDespegue.png" />
+                    <span class="input-group-text " style="width:140px" type="date" id="FechaDespegueR1"></span>
+                </div>
+                <div class="col input-group-prepend align-self-center justify-content-xl-center" style="width:150px">
+                    <img src="~/Imagenes/Aerolinea/avionLlegada.png" />
+                    <span class="input-group-text " style="width:140px" type="date" id="FechaLlegadaR1"></span>
+                </div>
+            </div>
+            @if (escala > 0)
+            {
+                <div class="form-row w-100" style="height:140px">
+                    <div class="col input-group-prepend align-self-center justify-content-xl-center" style="width:120px">
+                        <img src="~/Imagenes/Aerolinea/reloj.png" />
+                        <span class="input-group-text " style="width:120px" type="time" placeholder="Escoge una hora" id="HoraDespegueR2"></span>
+                    </div>
+                    <div class="col input-group-prepend align-self-center justify-content-xl-center" style="width:120px">
+                        <img src="~/Imagenes/Aerolinea/reloj.png" />
+                        <span class="input-group-text " style="width:120px" type="time" id="HoraLlegadaR2"></span>
+                    </div>
+                    <div class="col input-group-prepend align-self-center justify-content-xl-center" style="width:150px">
+                        <img src="~/Imagenes/Aerolinea/avionDespegue.png" />
+                        <span class="input-group-text " style="width:140px" type="date" id="FechaDespegueR2"></span>
+                    </div>
+                    <div class="col input-group-prepend align-self-center justify-content-xl-center" style="width:150px">
+                        <img src="~/Imagenes/Aerolinea/avionLlegada.png" />
+                        <span class="input-group-text" style="width:140px" type="date" id="FechaLlegadaR2"></span>
+                    </div>
+                </div>
+            }
+            @if (escala > 1)
+            {
+                <div class="form-row w-100" style="height:140px">
+                    <div class="col input-group-prepend align-self-center justify-content-xl-center" style="width:120px">
+                        <img src="~/Imagenes/Aerolinea/reloj.png" />
+                        <span class="input-group-text " style="width:120px" type="time" id="HoraDespegueR3"></span>
+                    </div>
+                    <div class="col input-group-prepend align-self-center justify-content-xl-center" style="width:120px">
+                        <img src="~/Imagenes/Aerolinea/reloj.png" />
+                        <span class="input-group-text" style="width:120px" type="time" id="HoraLlegadaR3"> </span>
+                    </div>
+                    <div class="col input-group-prepend align-self-center justify-content-xl-center" style="width:150px">
+                        <img src="~/Imagenes/Aerolinea/avionDespegue.png" />
+                        <span class="input-group-text" style="width:140px" type="date" id="FechaDespegueR3"></span>
+                    </div>
+                    <div class="col input-group-prepend align-self-center justify-content-xl-center" style="width:150px">
+                        <img src="~/Imagenes/Aerolinea/avionLlegada.png" />
+                        <span class="input-group-text" style="width:140px" type="date" id="FechaLlegadaR3"></span>
+                    </div>
+                </div>
+            }
+            @if (escala > 2)
+            {
+                <div class="form-row w-100" style="height:140px">
+                    <div class="col input-group-prepend align-self-center justify-content-xl-center" style="width:120px">
+                        <img src="~/Imagenes/Aerolinea/reloj.png" />
+                        <span class="input-group-text" style="width:120px" type="time" id="HoraLlegadaR4"></span>
+                    </div>
+                    <div class="col input-group-prepend align-self-center justify-content-xl-center" style="width:120px">
+                        <img src="~/Imagenes/Aerolinea/reloj.png" />
+                        <span class="input-group-text" style="width:120px" type="time" id="HoraDespegueR4"></span>
+                    </div>
+                    <div class="col input-group-prepend align-self-center justify-content-xl-center" style="width:150px">
+                        <img src="~/Imagenes/Aerolinea/avionDespegue.png" />
+                        <span class="input-group-text" style="width:140px" type="date" id="FechaDespegueR4"></span>
+                    </div>
+                    <div class="col input-group-prependt align-self-center justify-content-xl-center" style="width:150px">
+                        <img src="~/Imagenes/Aerolinea/avionLlegada.png" />
+                        <span class="input-group-tex" style="width:140px" type="date" id="FechaLlegadaR4"></span>
+                    </div>
+                </div>
+            }
+            <button type="button" class="btnAceptarFechaTiempo btn btn-primary align-content-end" id="btnAceptarFechaTiempo">Confirmar Itinerario</button>
+            
+        </div>
+   
+    
+    @* MODAL DE ADVENTENCIA *@
+    <div class="modal fade  " id="modal_Vali" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-sm">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <img src="~/Imagenes/Aerolinea/error.png" />
+                    <h5 class="modal-title" id="myModalLabel">ALERTA!</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <a>Se requiere llenar los datos del tiempo y/o la fecha.</a>
+                </div>
+               
+            </div>
+        </div>
+    </div>
+    @* MODAL DE CARGANDO  style="background-image: url('../../../../Imagenes/Aerolinea/Fondo_de_Programacion.jpg'); width:1000px; height:5000px" *@
+    <div class="modal  " id="modal_Cargando" tabindex="-1" role="dialog" >
+        <div class="modal-dialog modal-dialog-centered" >
+            <div class="modal-content align-self-center">
+                <div class="modal-body text-center">
+                    <img class="justify-content-md-center" src="~/Imagenes/Aerolinea/Cargandox2.gif" />
+                </div>
+                <div class="modal-footer">
+                   <h1>Cargando</h1>
+                    <div class="progress">
+                        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%"></div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</body>
+<div id="body1">
+    <div id="viejo">
+        <button type="button" class="Editar btn btn-primary align-content-center" id="btnEditar">Editar</button>
+    </div>
+</div>
+
+<script>
+    document.getElementById('body1').style.display = 'none' ;
+    var ModalValida  =$("#modal_Vali");
+    var ModalCargan = $("#modal_Cargando");
+    var Hora = document.getElementById("Hora")
+    var Fecha = document.getElementById("Fecha")
+    var HoraDespegueR1 = document.getElementById("HoraDespegueR1")
+    var HoraLlegadaR1 = document.getElementById("HoraLlegadaR1")
+    var HoraDespegueR2 = document.getElementById("HoraDespegueR2")
+    var HoraLlegadaR2 = document.getElementById("HoraLlegadaR2")
+    var HoraDespegueR3 = document.getElementById("HoraDespegueR3")
+    var HoraLlegadaR3 = document.getElementById("HoraLlegadaR3")
+    var HoraDespegueR4 = document.getElementById("HoraDespegueR4")
+    var HoraLlegadaR4 = document.getElementById("HoraLlegadaR4")
+    var FechaDespegueR1 = document.getElementById("FechaDespegueR1")
+    var FechaLlegadaR1 = document.getElementById("FechaLlegadaR1")
+    var FechaDespegueR2 = document.getElementById("FechaDespegueR2")
+    var FechaLlegadaR2 = document.getElementById("FechaLlegadaR2")
+    var FechaDespegueR3 = document.getElementById("FechaDespegueR3")
+    var FechaLlegadaR3 = document.getElementById("FechaLlegadaR3")
+    var FechaDespegueR4 = document.getElementById("FechaDespegueR4")
+    var FechaLlegadaR4 = document.getElementById("FechaLlegadaR4")
+    Hora.addEventListener("input", function () {
+        // alert("#hoal" +Hora.value+"het");
+        if(Hora.value==""){
+            HoraDespegueR1.innerText = "" ;
+            HoraLlegadaR1.innerText = "" ;
+            if(@escala>0){
+                HoraDespegueR2.innerText = "" ;
+                HoraLlegadaR2.innerText = "" ;}
+            if(@escala>1){
+                HoraDespegueR3.innerText = "" ;
+                HoraLlegadaR3.innerText = "" ;}
+            if(@escala>2){
+                HoraDespegueR4.innerText = "" ;
+                HoraLlegadaR4.innerText = "" ;}
+        }
+        Fecha.innerText = "" ;
+        FechaDespegueR1.innerText = "";
+        FechaLlegadaR1.innerText = "";
+        if(@escala>0){
+            FechaDespegueR2.innerText = "";
+            FechaLlegadaR2.innerText = "";
+        }
+        if(@escala>1){
+            FechaDespegueR3.innerText = "";
+            FechaLlegadaR3.innerText = "";
+        }
+        if(@escala>2){
+            FechaDespegueR4.innerText = "";
+            FechaLlegadaR4.innerText = "";
+        }
+
+        if(Hora.value!= ""){
+
+            HoraDespegueR1.innerText = Hora.value;
+            var x = Hora.value;
+            HoraLlegadaR1.innerText= TiempoCambiante(x, @horaR1, @minuR1);
+            if(@escala>0){
+                HoraDespegueR2.innerText= TiempoCambiante(HoraLlegadaR1.innerText, 3, 0);
+                HoraLlegadaR2.innerText = TiempoCambiante( HoraDespegueR2.innerText, @horaR2, @minuR2);
+            }
+            if(@escala>1){
+                HoraDespegueR3.innerText= TiempoCambiante(HoraLlegadaR2.innerText, 3, 0);
+                HoraLlegadaR3.innerText = TiempoCambiante( HoraDespegueR3.innerText, @horaR3, @minuR3);
+            }
+            if(@escala>2){
+                HoraDespegueR4.innerText= TiempoCambiante(HoraLlegadaR3.innerText, 3, 0);
+                HoraLlegadaR4.innerText = TiempoCambiante( HoraDespegueR4.innerText, @horaR4, @minuR4);
+            }
+
+        }
+    }, false);
+    Fecha.addEventListener("input",function(){
+        if(Fecha.value==""){
+            FechaDespegueR1.innerText = "";
+            FechaLlegadaR1.innerText = "";
+            if(@escala>0){
+                FechaDespegueR2.innerText = "";
+                FechaLlegadaR2.innerText = "";
+            }
+            if(@escala>1){
+                FechaDespegueR3.innerText = "";
+                FechaLlegadaR3.innerText = "";
+            }
+            if(@escala>2){
+                FechaDespegueR4.innerText = "";
+                FechaLlegadaR4.innerText = "";
+            }
+        }else{
+            FechaDespegueR1.innerText = Fecha.value;
+            FechaLlegadaR1.innerText = FechaCambiante(FechaDespegueR1.innerText, HoraDespegueR1.innerText,HoraLlegadaR1.innerText, @horaR1);
+            if(@escala>0){
+                FechaDespegueR2.innerText = FechaCambiante(FechaLlegadaR1.innerText, HoraLlegadaR1.innerText,HoraDespegueR2.innerText, 1);
+                FechaLlegadaR2.innerText = FechaCambiante(FechaDespegueR2.innerText, HoraDespegueR2.innerText,HoraLlegadaR2.innerText, @horaR2);
+            }
+            if(@escala>1){
+                FechaDespegueR3.innerText = FechaCambiante(FechaLlegadaR2.innerText, HoraLlegadaR2.innerText,HoraDespegueR3.innerText, 1);
+                FechaLlegadaR3.innerText = FechaCambiante(FechaDespegueR3.innerText, HoraDespegueR3.innerText,HoraLlegadaR3.innerText, @horaR3);
+            }
+            if(@escala>2){
+                FechaDespegueR4.innerText = FechaCambiante(FechaLlegadaR3.innerText, HoraLlegadaR3.innerText,HoraDespegueR4.innerText, 1);
+                FechaLlegadaR4.innerText = FechaCambiante(FechaDespegueR4.innerText, HoraDespegueR4.innerText,HoraLlegadaR4.innerText, @horaR4);
+            }
+        }
+    },false);
+
+    function TiempoCambiante(tiempo, adicionH, adicionM ){
+        var separacion= tiempo.split(":");
+        var hora = separacion[0];
+        // window.alert(separacion[0] + separacion[1]);
+        var minutos = separacion[1];
+        var hora1 = parseInt(hora);
+        var minu1 = parseInt(minutos);
+        // window.alert(minu1);
+        hora1 = hora1 + adicionH;
+        minu1 = minu1 + adicionM;
+        //window.alert(hora1);
+        //window.alert(minu1);
+        if (minu1 > 59) {
+            hora1 = hora1 + parseInt(minu1 / 60);
+            minu1 = minu1 % 60;
+        }
+        var dia = false;
+        if (hora1 > 23 && hora < 48) {
+            var dia = true;
+            hora1 = hora1 - 24;
+
+        }
+        if (minu1 < 10) {
+            tiempo = hora1.toString() + ":0" + minu1.toString();
+        } else {
+            tiempo = hora1.toString() + ":" + minu1.toString();
+        }
+        //window.alert(tiempo);
+        return tiempo;
+    }
+
+    function FechaCambiante(fecha, hora1 , hora2, cant){
+        var separacion = fecha.split("-");
+        var xh1 =hora1.split(":");
+        var h1 = parseInt(xh1[0]);
+        var xh2 = hora2.split(":");
+        var h2 = parseInt(xh2[0]);
+        var anio = parseInt(separacion[0]);
+        var mes = parseInt(separacion[1]);
+        var dia = parseInt(separacion[2]);
+        //         alert(h1)
+        //        alert(h2)
+        if(h1 > h2  && cant < 24){
+            dia = dia + 1;
+        }else if((h1 == h2 || h1 <h2) && cant >23 ){
+            dia = dia + 2;
+        }
+
+        if(mes == 1 || mes == 3 || mes == 5 || mes == 7 || mes == 8 ||mes == 10 ||mes == 12 ){
+            //31 dias
+            if(dia>31){
+                mes = mes + 1;
+                dia = dia - 31 ;
+            }
+        }else if(mes == 4 || mes == 6 || mes == 9 || mes == 11){
+            if(dia>30){
+                mes = mes + 1;
+                dia = dia - 30 ;
+            }
+        }else if(mes ==2){
+            if((((anio%100)!=0)&&((anio%4)==0))||((anio%400)==0)){
+                if(dia>29){
+                    mes = mes + 1;
+                    dia = dia -29;
+                }
+            }else{
+                if(dia>28){
+                    mes = mes + 1;
+                    dia = dia - 28 ;
+                }
+            }
+        }
+        if(mes > 12){
+            anio = anio + 1 ;
+            mes = mes - 12 ;
+        }
+        if (dia < 10 && mes >9) {
+            fecha = anio.toString() + "-" + mes.toString() + "-0" + dia.toString();
+        } else if(dia < 10 && mes < 10){
+            fecha = anio.toString() + "-0" + mes.toString() + "-0" + dia.toString();
+        }else if(dia >9 && mes < 10){
+            fecha = anio.toString() + "-0" + mes.toString() + "-" + dia.toString();
+        }else {
+            fecha = anio.toString() + "-" + mes.toString() + "-" + dia.toString();
+        }
+
+        return fecha;
+    }
+    $("#btnEditar").click(function () {
+        document.getElementById('body1').style.display = 'none' ;
+        document.getElementById('detalleHF1').style.display = 'block' ;
+        document.getElementById('detalleHF2').style.display = 'block' ;
+    
+    })
+
+    $("#btnAceptarFechaTiempo").click(function () {
+        if(HoraDespegueR1!= "" &&  FechaDespegueR1.innerText!=""){
+            // window.alert("Itinerario Confirmado");
+            var Fecha_Programacion = "@DateTime.Now.Year-@DateTime.Now.Month-@DateTime.Now.Day";
+            var Fecha_Vuelo = FechaDespegueR1.innerText;
+            var Hora_Vuelo = HoraDespegueR1.innerText;
+            var Tiempo_Vuelo = @Det_Rutas_Selec.Tiempo_Total;
+            var Estado_Vuelo = "Activo";
+            switch (@escala)
+            {
+                case 0:
+                    var ab = FechaLlegadaR1.innerText
+                    var bc = HoraLlegadaR1.innerText;
+                    var Fecha_Llegada_vuelo = ab ;
+                    var Hora_Llegada = bc ;
+                    var Precio_Base = Tiempo_Vuelo * 1 ;
+                    break;
+                case 1:
+                    var ab = FechaLlegadaR2.innerText
+                    var bc = HoraLlegadaR2.innerText;
+                    var Fecha_Llegada_vuelo = ab ;
+                    var Hora_Llegada = bc ;
+                    var Precio_Base = Tiempo_Vuelo * 0.05 ;
+                    break;
+                case 2:
+                    var ab = FechaLlegadaR3.innerText
+                    var bc = HoraLlegadaR3.innerText;
+                    var Fecha_Llegada_vuelo = ab ;
+                    var Hora_Llegada = bc ;
+                    var Precio_Base = Tiempo_Vuelo * 0.025 ;
+                    break;
+                case 3:
+                    var ab = FechaLlegadaR4.innerText
+                    var bc = HoraLlegadaR4.innerText;
+                    var Fecha_Llegada_vuelo = ab ;
+                    var Hora_Llegada = bc ;
+                    var Precio_Base = Tiempo_Vuelo * 0.0125 ;
+                    break;
+            }
+            var Id_Empleado = 11; //ESTO AUN FALTA PROGRAMAR
+            var Id_Det_Ruta_Aerea = @Det_Rutas_Selec.Id_Det_Ruta_Aerea;
+
+            $.ajax({
+                type: "POST",
+                url: "/Aerolinea/AerolineaMenu/prograVueloSinAvion", //ADMINISTRADOR/MODELO/LISTADO
+                data: {vFecha_Programacion: Fecha_Programacion,vFecha_Vuelo : Fecha_Vuelo , vHora_Vuelo:Hora_Vuelo, vTiempo_Vuelo: Tiempo_Vuelo, vEstado_Vuelo: Estado_Vuelo , vFecha_Llegada_vuelo:Fecha_Llegada_vuelo, vHora_Llegada : Hora_Llegada, vPrecio_Base:Precio_Base, vId_Empleado:Id_Empleado,vId_Det_Ruta_Aerea:Id_Det_Ruta_Aerea },
+                success: function (view) {
+                    //$('detalleHF').attr('disabled, true');
+                    document.getElementById('detalleHF1').style.display = 'none' ;
+                    document.getElementById('detalleHF2').style.display = 'none' ;
+                    document.getElementById('body1').style.display = 'block' ;
+                }
+            });
+
+
+
+           /* $(document).ready(function(){
+
+            
+                ModalCargan.show(5000);
+                ModalCargan.show("slow");
+              
+                ModalCargan.hide(3000);
+                ModalCargan.hide("fast");
+              //document.getElementById('idDelDiv').style.display = 'block';
+            });*/
+           // alert("asdasdsadsa")
+           // $(".body").show();
+
+
+        }else{
+           
+                    ModalValida.modal('show');
+        }
+        
+    });
+    function avion(){
+        $.ajax({
+            type: "POST",
+            url: "/Aerolinea/AerolineaMenu/AvionSeleccionado", //ADMINISTRADOR/MODELO/LISTADO
+            data: {vId_Det_Ruta_Aerea:@Det_Rutas_Selec.Id_Det_Ruta_Aerea },
+            success: function (view) {
+            }
+        });
+
+    }
+
+
+</script>
